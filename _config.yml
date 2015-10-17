@@ -1,0 +1,44 @@
+# Dependencies
+markdown:         redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+# relative_permalinks: true
+
+# Setup
+title:               johannesotterbach
+tagline:             'Data Science, Physics'
+url:                 http://www.johannesotterbach.com
+
+paginate:            1
+# baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Johannes Otterbach
+  url:               https://twitter.com/jsotterbach
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/jotterbach
+
+
+# This is the list of pages to include in the header of the website.
+pages_list:       
+  About: '/about/'
+  Archive: '/archive/'
+  Feed: '/atom.xml'
