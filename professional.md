@@ -10,6 +10,7 @@ Dr. Johannes Otterbach is a Data Scientist at LendUp with a passion for big data
 More details are in the (more or less up-to-date) [resume](/resources/resume/Otterbach_resume.pdf)
 
 ## Publications
+
 ####2014
 - J. Otterbach and M. Lemeshko  
 	Dissipative Preparation of Spatial Order in Rydberg-Dressed Bose-Einstein Condensates  

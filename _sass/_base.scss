@@ -52,6 +52,8 @@ img {
   max-width: 100%;
   margin: 0 0 1rem;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table {
@@ -75,4 +77,13 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #ffffff;
+}
+
+.profile.img {
+  display: inline;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }

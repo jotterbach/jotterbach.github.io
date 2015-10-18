@@ -3,7 +3,7 @@ layout: page
 title: About ... me
 ---
 
-![Johannes' profile](/resources/johannes.png)
+![Johannes' profile](/resources/johannes.png){: .profile.img display="inline"}
 
 Hej there!
 
@@ -13,13 +13,5 @@ During that time I became increasingly interested in the potentials of "Big Data
 Apart from that I am always interested in statistical, computational, physics-related and Machine Learning problems and spend my free time pondering about these and enjoying the California outdoors.
 
 You can also find me on
-<center>
-<table border="0" style="width:60%">
-  <tr>
-    <td>[![LinkedIn](/resources/socialMediaIcons/LinkedIn.png)](http://www.linkedin.com/in/jotterbach)</td>
-    <td>[![Twitter](/resources/socialMediaIcons/Twitter.png)](https://twitter.com/jsotterbach)</td> 
-    <td>[![GitHub](/resources/socialMediaIcons/GitHub.png)](http://github.com/jotterbach)</td>
-    <td>[![ResearchGate](/resources/socialMediaIcons/ResearchGate.png)](http://www.researchgate.net/profile/Johannes_Otterbach)</td>
-  </tr>
-</table>
-</center>
+
+| [![LinkedIn](/resources/socialMediaIcons/LinkedIn.png)](http://www.linkedin.com/in/jotterbach) | [![Twitter](/resources/socialMediaIcons/Twitter.png)](https://twitter.com/jsotterbach) | [![GitHub](/resources/socialMediaIcons/GitHub.png)](http://github.com/jotterbach) | [![ResearchGate](/resources/socialMediaIcons/ResearchGate.png)](http://www.researchgate.net/profile/Johannes_Otterbach) |
