@@ -47,7 +47,7 @@ The expression '*Be data informed, not data driven*' seems to originate with Fac
 
 Another shortcoming of the data-driven approach is that not everything can be formulated as an [optimization problem](https://en.wikipedia.org/wiki/Optimization_problem), i.e. the fundamental mathematical formulation of Machine Learning. Hence the collection of proper data is not always guaranteed; convince yourself, by thinking about collecting data for a problem, where you don't have a good idea of a what a satisfying answer has to look like. To circumvent these problems one can apply
 
-- The **Data Informed** way of viewing a problem aims to avoids micro-optimization [^] as mentioned above. Furthermore it allows to include decision-making inputs that cannot be cast into a "standard ML form", such as:
+- The **Data Informed** way of viewing a problem aims to avoids micro-optimization as mentioned above. Furthermore it allows to include decision-making inputs that cannot be cast into a "standard ML form", such as:
 	- Qualitative data
 	- Strategic interests
 	- Regulatory bodies
@@ -66,7 +66,9 @@ However, apart from prepaparing students for life outside the Academy, is there 
 
 ![Pi-shaped skill set](/resources/cdl_blog/pi_shaped_skills.png)
 
-The second, to-be-developed, leg contains the broad segment of advanced computational literacy, as the domain knowledge is certainly already established. As more and more people are starting to leave the Academy it becomes obvious that the current system [dis-incentivices this development](https://jakevdp.github.io/blog/2014/08/22/hacking-academia/). However, it also hints at very low-hanging fruits to improve the handling of scientific data by starting to adopt simple best-practices and encouraging students to develop these skills, rather than creating an irreproducible, one-off study. Recognizing efforts to make studies repeatable, transparent and well-documented is crucial to advance the ever-more-diversified scientific fields into the next century, to preserve their efforts and more importantly make them *discoverable*. As Denis Diderot put it in his 1755 Encyclpedie:
+The first leg, a.k.a. the domain speciality or domain knowledge, is certainly already established after years of efforts to advance a field. However, this already hints at a fundamental problem that 'Data Science' as a scientific field will face. A domain-agnostic approach to it must be fundamentally flawed as it would lack the domain expertise as its third important pillar. Consequently, establishing a scientific field with the goal of a standalone model like 'Data Science as a Service' is likely to fail - the Data Scientist will have to be embedded in a field with sufficient domain expertise and need to learn cross-disciplinary techniques to successfully tackle the data challenges at hand.
+
+This directly feeds into the second, to-be-developed, leg, which  contains the broad segment of advanced computational literacy. As more and more people are starting to leave the Academy it becomes obvious that the current system [dis-incentivices this development](https://jakevdp.github.io/blog/2014/08/22/hacking-academia/). However, it also hints at very low-hanging fruits to improve the handling of scientific data by starting to adopt simple best-practices and encouraging students to develop these skills, rather than creating an irreproducible, one-off study. Recognizing efforts to make studies repeatable, transparent and well-documented is crucial to advance the ever-more-diversified scientific fields into the next century, to preserve their efforts and more importantly make them *discoverable*. As Denis Diderot put it in his 1755 Encyclopedie:
 
 > As long as the centuries continue to unfold, the number of books will grow continually, and one can predict that a time will come when it will be almost as difficult to learn anything from books as from the direct study of the whole universe. It will be almost as convenient to search for some bit of truth concealed in nature as it will be to find it hidden away in an immense multitude of bound volumes.
 
@@ -79,3 +81,6 @@ It is clear that Data Science will have [major impacts](http://www.pewinternet.o
 [^fn-comparedToStatistics]: There is an ongoing and hot debate if Data Science is not just Statistics in disguise. I believe it is not as it adds several components not found in the classical studies of Statistics. However, I do not want to engage in this almost religiously fought discussion. 
 
 [^fn-googleCounts]: Searching for `Data Science` on Google Search yields about 283,000,000 results in 0.48 seconds (!) and the count is rising.
+
+##About the author
+Dr. Johannes Otterbach is a Data Scientist at LendUp with a passion for big data technologies and applications to real world problems. He is an established scientist with more than 15 publications in high impact journals and he has won several awards. Before joining LendUp he worked as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
