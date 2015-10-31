@@ -81,6 +81,3 @@ It is clear that Data Science will have [major impacts](http://www.pewinternet.o
 [^fn-comparedToStatistics]: There is an ongoing and hot debate if Data Science is not just Statistics in disguise. I believe it is not as it adds several components not found in the classical studies of Statistics. However, I do not want to engage in this almost religiously fought discussion. 
 
 [^fn-googleCounts]: Searching for `Data Science` on Google Search yields about 283,000,000 results in 0.48 seconds (!) and the count is rising.
-
-##About the author
-Dr. Johannes Otterbach is a Data Scientist at LendUp with a passion for big data technologies and applications to real world problems. He is an established scientist with more than 15 publications in high impact journals and he has won several awards. Before joining LendUp he worked as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
