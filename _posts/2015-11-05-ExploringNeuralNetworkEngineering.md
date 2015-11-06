@@ -7,7 +7,7 @@ Since quite a while I am interested in playing with and building Neural Networks
 
 So, what is a good engineering way of thinking about Neural Networks? Mathematically, simple NNs --such as feed-forward networks-- are nothing else than chained non-linear variable transformation. Let's begin to take this statement apart. To begin with, feed-forward networks (FFN) can be visualized as a graph with arrows going only in one direction, indicating a directed flow of information and hence implying a causal relation between the input and output/target variables.
 
-![Simple FNN with a single hidden unit](/resources/AbstractionInAnn/SimpleNN.svg)
+![Simple FNN with a single hidden unit](/resources/AbstractionInAnn/SimpleNN.png)
 
 ###Neurons, Layers and Activations
 The graph has some hierarchical structure in it, where the nodes are called **units or neurons** and the collection of neurons within a level form a **layer**. The size of the input layer corresponds to the number of features in the input data and its dimension equals the number of input data we are trying to learn from. The final level is the output layer with a size corresponding to the dimensionality of the target variable we are interested in (e.g. for a binary classification we have two units -- one for each class). The full magic of FFNs happen in between these two layers, i.e. in the hidden layers. Within such a layer, the input of the previous layer is being processed and the output is being fed forward as input to the next layer until we arrive at the final output layer. For a single layer $$i$$, we can write the processing as a simple matrix multiplication
@@ -28,7 +28,7 @@ which is of the same linear form as the previous equation (note that $$\tilde b_
 y_i = \varphi_i(W_i y_{i-1} + b_i).
 \end{equation}
 
-![Various activation functions and their impact](/resources/AbstractionInAnn/activations.svg)
+![Various activation functions and their impact](/resources/AbstractionInAnn/activations.png)
 
 $$\varphi_i(x)$$ is called the activation function and there are several different ones that are being used in practice, such as [ReLUs](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) (rectified linear units), [Sigmoids](https://en.wikipedia.org/wiki/Sigmoid_function), [SoftMax](https://en.wikipedia.org/wiki/Softmax_function), [Heaviside](https://en.wikipedia.org/wiki/Heaviside_step_function), [Tanh](https://en.wikipedia.org/wiki/Hyperbolic_function), and many more. Some of them are depicted in the graph above and demonstrate their impact on a linear function. Iterating this relation it becomes clear that we now have a chain of non-linear transformations:
 
