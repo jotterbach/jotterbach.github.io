@@ -4,7 +4,7 @@ title: Data Science meets Academia
 ---
 
 {: .disclaimer}
-*(Disclaimer: This post is a has originally been published on the [Data Pub Blog](http://datapub.cdlib.org/2015/11/10/data-science-meets-academia/) of the [California Digital Library](http://www.cdlib.org/))*
+*(Disclaimer: This post was originally published on the [Data Pub Blog](http://datapub.cdlib.org/2015/11/10/data-science-meets-academia/) of the [California Digital Library](http://www.cdlib.org/))*
 
 First Big Data and Data Science, then Data Driven and Data Informed. Even before I changed job titles---from Physicist to Data Scientist---I spent a good bit of time pondering what makes everyone so excited about these things, and whether they have a place in the academy. 
 
