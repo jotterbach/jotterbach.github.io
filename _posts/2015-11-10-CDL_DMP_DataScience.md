@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Science meets Academia?
+title: Data Science meets Academia
 ---
 
 {: .disclaimer}
