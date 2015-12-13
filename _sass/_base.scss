@@ -88,6 +88,26 @@ tbody tr:nth-child(odd) th {
   margin-right: auto;
 }
 
+.text.img-left {
+  display: inline;
+  max-width: 100%;
+  margin: 10px;
+  float: left;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.text.img-right {
+  display: inline;
+  max-width: 100%;
+  margin: 10px;
+  float: right;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .python {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 9pt;
