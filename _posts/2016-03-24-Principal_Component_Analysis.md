@@ -9,7 +9,7 @@ In this case [*exploratory data analysis* (EDA)](https://en.wikipedia.org/wiki/E
 
 One approach is to reduce the dimensionality of the feature space and poke around in this reduced feature space. A basic technique well-suited for this problem is the [*Principal Component Analysis*](https://en.wikipedia.org/wiki/Principal_component_analysis) which tries to find the directions of most variation in your data set. Let's look at a simple 2D plot to understand what that means
 
-![PCA in 2 dimensions](/resources/pca_blog/pca_2d.png){: img width="500px"}
+![PCA in 2 dimensions](/resources/pca_blog/pca_2D.png){: img width="500px"}
 
 Looking a the 'original' data points (blue dots) it is quite obvious that dimensions 1 and 2 are not independent and that neither of them is ideally suited for describing the data. However, looking at the two indicated vectors in the data it seems we can find a transformation that will result in completely independent dimension -- or put another way it will de-correlate the features in the new coordinate system. As an added benefit, the new dimensions align with the directions of maximal variation, and hence we can assign a sense of *importance* with that dimension.
 
