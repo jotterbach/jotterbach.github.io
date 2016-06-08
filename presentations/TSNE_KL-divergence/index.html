@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>The Curse of Dimensionality - Visualizing High Dimensional Datasets</title>
+
+        <meta name="description" content="A talk on the Curse of Dimensionality, t-SNE and Kullback-Leibler">
+        <meta name="author" content="Johannes S. Otterbach">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black_customized.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section id="title">
+                    <h2><a href="http://jotterbach.github.io/2016/05/23/TSNE/">The Curse of Dimensionality</a></h2>
+                    <h4>Visualizing High Dimensional Datasets using <a href="http://lvdmaaten.github.io/tsne/">t-SNE</a></h4>
+                    <p>
+                        <small>Engineering Tech Talk, MemSQL, San Francisco</small><br>
+                        <small>&copy; <a href="https://jotterbach.github.io/professional/">Dr. Johannes S. Otterbach</a> / <a href="http://twitter.com/jsotterbach">@jsotterbach</a></small>
+                    </p>
+
+                    <aside class="notes">
+                        Thank you for ... <br>
+                    </aside>
+                </section>
+
+                <section id="Data life cycle">
+                    <h3>Data life cycle</h3>
+                    <img height="200" data-src="resources/data-pipeline2.png" alt="data-pipeline">
+                    <p>
+                        <span class="fragment">Visualization influences how we use and think about data</span>
+                    </p>
+                </section>
+
+                <section id="Problem">
+                    <h3>Visualize high-dimensional data?</h3>
+                    <ul>
+                        <span class="fragment"><li>1D: Histogram</li></span>
+                        <span class="fragment"><li>2D: scatter plot <br>histograms don't capture information between variables</li></span>
+                        <span class="fragment"><li>3D: scatter plot <br>we start to hide information</li></span>
+                        <span class="fragment"><li>$n>3$ D: I have no idea ...</li></span>
+                    </ul>
+                </section>
+
+                <section id="What's the goal of visualization">
+                    <h3>What are we looking for in the data?</h3>
+                    <h4 class="fragment">Looking for patterns!</h4>
+                    <ul>
+                        <span class="fragment"><li>clustering, repulsion</li></span>
+                        <span class="fragment"><li>linear relationships</li></span>
+                        <span class="fragment"><li>...</li></span>
+                    </ul>
+                </section>
+
+                <section id="cancerDetection">
+                    <h3><i>Example:</i> Cancer detection</h3>
+                    <img height="300" data-src="resources/mitosis.gif" alt="mitosis">
+                    <br>
+                    <a href="http://people.idsia.ch/~juergen/deeplearningwinsMICCAIgrandchallenge.html">Contest on Mitosis Detection, J&uuml;rgen Schmidhuber</a>
+                    <br>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>More real world examples of this ... Computers better than humans!</li>
+                            <li>New Cancer features discovered due to machine learning!</li>
+                            <li>So how do we do this ... ?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="curseOfDim1">
+                    <h3>Curse of dimensionality</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br><br>
+                                <ul>
+                                    <span class="fragment"><li>Einstein is $512 \times 512$ px</li></span>
+                                    <span class="fragment"><li>Einstein is colorful</li></span>
+                                    <span class="fragment"><li>Dimensionality: $512^2 \times 3 = 786432$!</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <img height="300" data-src="resources/transparent_einstein.png" alt="PathPlanning">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>As mentioned before: space is high dimensional -> Curse Of Dim!</li>
+                            <li>simple example: colorful Einstein (even though he doesn't look like it!)</li>
+                            <li>Each pixel is a feature (dimension)!</li>
+                            <li>Each color channel is a dimension!</li>
+                            <li>Is this a problem? Technologically: no (exp. improvement of comp. power). Theoretically: YES!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="curseOfDim2">
+                    <h3>Curse of dimensionality - cont'd</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br>
+                                <ul>
+                                    <span class="fragment"><li>$d$-dimensional unit ball:
+                                    $$ V(d) \sim \frac{\text{e}^{d}}{d^{d-1/2}} \stackrel{d\rightarrow\infty}{\longrightarrow} 0$$</li></span>
+                                    <span class="fragment"><li>$\mathbb{x} \in \text{Unif}^d(0,1)$</li></span>
+                                    <span class="fragment"><li>Most data lies outside unit ball!</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <img height="300" data-src="resources/transparent_einstein.png" alt="PathPlanning">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <ul>
+                        <span class="fragment"><li>data becomes sparse</li></span>
+                        <span class="fragment"><li>difficult to detect patterns!</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>So why is this a problem?</li>
+                            <li>Volume of unit ball is vanishingly small in high dimensions</li>
+                            <li>now take random point in unit cube</li>
+                            <li>most points will lie OUTSIDE of the unit ball</li>
+                            <li>on average points are further and further apart (think of epsion-delta criterion)</li>
+                            <li>hence: sparse data and no patterns</li>
+                            <li>this is a design constraint for ML systems!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="avg distance in high dim">
+                    <h3>Curse of dimensionality - cont'd</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br>
+                                <ul>
+                                    <span class="fragment"><li>uniform random points in $d$ dimensions</li></span>
+                                    <span class="fragment"><li>avg. distance grows $\sim \sqrt{d}$</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <img height="200" data-src="resources/avg_distance_random_pnts.png" alt="PathPlanning">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="idea">
+                    <h3>clustering properties</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br>
+                                <ul>
+                                    <span class="fragment"><li>ideal clusters have separation of scale!
+                                        <ul>
+                                            <span class="fragment"><li>small intra-cluster distances</li></span>
+                                            <span class="fragment"><li>large inter-cluster distances</li></span>
+                                        </ul>
+                                    </li></span>
+
+                                    <span class="fragment"><li>hypercube in 10d</li></span>
+                                    <span class="fragment"><li>Gaussian clusters at the corners</li></span>
+                                    <span class="fragment"><li>calculate distance distribution</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <br><br>
+                                <span class="fragment">
+                                    <img height="200" data-src="resources/cluster_distances_10d.png" alt="PathPlanning">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="MatchingDistributions">
+                    <h3>Dimensional Reduction via Distribution Matching</h3>
+
+                    <span class="fragment"><blockquote >
+                        Can we model the distance distribution using "fake" data from a lower dimensional subspace?
+                    </blockquote></span>
+
+                    <span class="fragment"><p>
+                        need a concept to measure "distance" between distributions
+                    </p></span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="Kullback-Leibler">
+                    <h3>Kullback-Leibler Divergence</h3>
+                    <h4>Measuring Similarity of Distributions</h4>
+                    <p>
+                        $$
+                        \begin{align}
+                        \text{KL}(P||Q) = & \sum_i P_i \log \left( \frac{P_i}{Q_i} \right) \\
+                        = & \sum_i P_i \log \left( P_i \right) - \sum_i P_i \log \left( Q_i \right) \\
+                        = & - H(P) + H(P, Q)
+                        \end{align}
+                        $$
+                    </p>
+
+                    <p>
+                        How much information does $Q$ contain about $P$?
+                    </p>
+                </section>
+
+                <section id="KL properties">
+                    <h3>Some Properties of KLD</h3>
+                    <ul>
+                        <span class="fragment"><li>positive semi-definite: $KL(P \vert \vert Q) \geq 0$</li></span>
+                        <span class="fragment"><li>If $P = P_1 \cdot P_2$ then $KL(P\vert \vert Q) = KL(P_1 \vert \vert Q_1) + KL(P_2\vert \vert Q_2)$</li></span>
+                        <span class="fragment"><li>KLD is <b>NOT</b> a metric
+                            <ul>
+                                <li>$KL(P\vert \vert Q) \neq KL(Q\vert \vert P)$</li>
+                                <li>$\vert \vert x + y\vert \vert \leq \vert \vert x \vert \vert + \vert \vert y\vert \vert$</li>
+                            </ul>
+                        </li></span>
+                    </ul>
+                </section>
+
+                <section id="KLD in Practice">
+                    <h3>KLD in Practice</h3>
+                    <h4>Application to the Central Limit Theorem</h4>
+                    <div class="equaltwocolmask">
+                        <div class="equaltwocolleft">
+                            <div class="equaltwocol1">
+                                <br>
+                                <ul>
+                                    <span class="fragment"><li>$Y_i \sim \text{Bern} (p)$, $i \in \{1, n\}$</li></span>
+                                    <span class="fragment"><li>$Y = \sum_{i=1}^n Y_i$ <br> $\qquad\rightarrow \mathcal{N} \big(np, np(1-p)\big)$</li></span>
+                                    <span class="fragment"><li>How fast do we approach Gaussian?</li></span>
+                                </ul>
+
+                            </div>
+                            <div class="equaltwocol2">
+                                <span class="fragment"><a href="http://jotterbach.github.io/2016/05/23/TSNE/"><img height="300" data-src="resources/KLD_CLT.png" alt="PathPlanning"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="tsne">
+                    <h3>t-SNE</h3>
+                    <h4><a href="http://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf">t-distributed Stochastic Neighbor Embedding</a></h4>
+                    <ul>
+                        <span class="fragment"><li>Use softmax probability distribution in high-dim space
+                            $$p_{ij} = \frac{\text{exp}(-||x_i-x_j||^2)}{\sum_{r\neq s}\text{exp}(-||x_r-x_s||^2)}$$</li></span>
+                    </ul>
+                    <span class="fragment"><img height="225" data-src="resources/softmax_distribution_10d.png" alt="PathPlanning"></span>
+                    <br>
+                    <ul>
+                        <span class="fragment"><li>small probability $=$ large distance</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>other kind of ML&PR is unsupervised</li>
+                            <li>why expensive:
+                                <ul>
+                                    <li>human time to label data</li>
+                                    <li>unsecured credit to get repayment data</li>
+                                    <li>might need long time to obtain labels in long running exp</li>
+                                    <li>labels might be "soft/informal", e.g. where do I set a threshold</li>
+                                </ul>
+                            </li>
+                            <li>why useful: outlier detection; segmentation problems (assign label to cluster)</li>
+
+                        </ol>
+                    </aside>
+                </section>
+
+
+                <section id="tsne cont'd">
+                    <h3>t-SNE cont'd</h3>
+                    <ul>
+                        <span class="fragment"><li>Use Cauchy (student-t) probability distribution in low-dim space
+                            $$q_{ij} =  \frac{(1+||y_i-y_j||^2)^{-1}}{\sum_{r\neq s}(1+||y_r-y_s||^2)^{-1}}$$</li></span>
+                    </ul>
+                    <span class="fragment"><img height="225" data-src="resources/cauchy_distribution_2d.png" alt="PathPlanning"></span>
+                    <br>
+                    <ul>
+                        <span class="fragment"><li>with some squinting: 16-18 clusters</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="tsne cont'd">
+                    <h3>Crowding Problem</h3>
+                    <h4>Why use the t-distibution</h4>
+                    <ul>
+                        <span class="fragment"><li>high-dimension has "more directions" to have same distance in</li></span>
+                        <span class="fragment"><li>low-dimensions would be over-crowded at the same distance</li></span>
+                        <span class="fragment"><li>no separation of clusters</li></span>
+                        <br>
+                        <span class="fragment"><li>Cauchy is "scale" invariant</li></span>
+                        <span class="fragment"><li>points within a cluster interact the same with points in other clusters</li></span>
+                        <span class="fragment"><li>similar to gravity</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="learning the tsne rep">
+                    <h3>How do we learn the t-SNE representation?</h3>
+                    <ul>
+                        <span class="fragment"><li>Stochastic gradient descent</li></span>
+                        <span class="fragment"><li>$\frac{\partial C}{\partial y_{i}} = \frac{\partial \text{ KL}(P \vert \vert Q)}{\partial y_{i}}
+                             = 4\sum_{j}(p_{ij}-q_{ij})(y_i-y_j)(1+||y_i-y_j||^2)^{-1}$</li></span>
+                    </ul>
+                    <span class="fragment">><a href="http://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf">
+                        <img height="350" data-src="resources/tSNE_simple_alg.png" alt="PathPlanning">
+                    </a></span>
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3><a href="https://github.com/jotterbach/Data-Exploration-and-Numerical-Experimentation/blob/master/Numerical-Experimentation/t-SNE%20and%20the%20KL%20Divergence.ipynb">in Python</a></h3>
+                    <pre><code class="hljs" data-trim contenteditable>
+                        import sklearn.manifold as mf
+
+tsne =mf.TSNE(n_components=2, n_iter=1000, perplexity=87.5)
+Y = tsne.fit_transform(data)
+                    </code></pre>
+                </section>
+
+                <section id="tsne of the hypercube">
+                    <h3>Back to Our Hypercube</h3>
+                    <span class="fragment"><img height="350" data-src="resources/tsne_hypercube_10d.png" alt="PathPlanning"></span>
+                </section>
+
+                <section id="clustering">
+                    <h3>MNIST dataset</h3>
+                    <span class="fragment" data-fragment-index="2"><a href="https://lvdmaaten.github.io/tsne/"><img height="450" data-src="resources/mnist_tsne.jpg" alt="PathPlanning"></a></span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </aside>
+                </section>
+
+
+                <section id="theEnd">
+                    <h4>Take away ...</h4>
+                    <ul>
+                        <span class="fragment"><li>Intuition is almost always wrong in high dimensions</li></span>
+                        <span class="fragment"><li>Visualization can help to understand structure of the data</li></span>
+                        <br>
+                        <span class="fragment"><li>t-SNE is a dimensionality reduction technique</li></span>
+                        <span class="fragment"><li>reduction by matching two pairwise distance distribution</li></span>
+
+                    </ul>
+
+                    <br>
+                    <span class="fragment">
+                        <blockquote>Thanks!</blockquote>
+                    </span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

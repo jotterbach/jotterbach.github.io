@@ -11,6 +11,8 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 ## Talks
 
+- [The Curese Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
+
 - [AI - En Route to Passing Turing's Test](http://jotterbach.github.io/presentations/AI_enRouteToTuringsTest), TU Kaiserslautern, April 2016
 
 - [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
