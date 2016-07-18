@@ -43,3 +43,6 @@ pages_list:
   Professional: '/professional/'
   Archive: '/archive/'
   Feed: '/atom.xml'
+
+gems:
+  - jekyll-sitemap
