@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unsupervised Representation Learning a.k.a. Denoising Autoencoders
+title: Unsupervised Representation Learning a.k.a. Autoencoders
 ---
 
 Quite in line with the last blog posts about [Principal Component Analysis (PCA)](https://jotterbach.github.io/2016/03/24/Principal_Component_Analysis/) and [t-distributed Stochastic Neighbor Embedding (t-SNE)](https://jotterbach.github.io/2016/05/23/TSNE/) I want to discuss another dimensionality reduction technique that originated in the Neural Network (NN) community, known as [Autoencoders](https://?).
