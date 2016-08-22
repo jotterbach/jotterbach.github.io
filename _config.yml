@@ -12,12 +12,13 @@ permalink:           pretty
 # relative_permalinks: true
 
 # Setup
-title:               johannesotterbach
-tagline:             'Data Science, Physics'
-url:                 http://www.johannesotterbach.com
+title:               Johannes Otterbach
+tagline:             'All things data'
+url:                 https//jotterbach.github.io
+description:        'Musings about all things Data.'
 
 paginate:            1
-# baseurl:             ""
+# baseurl:           ""
 
 # Assets
 #
@@ -30,6 +31,11 @@ sass:
 author:
   name:              Johannes Otterbach
   url:               https://twitter.com/jsotterbach
+
+twitter:
+  username: jsotterbach
+
+logo:     /public/jo_icon.png
 
 # Custom vars
 version:             1.0.0
@@ -46,3 +52,4 @@ pages_list:
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate

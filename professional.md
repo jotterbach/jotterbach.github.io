@@ -19,7 +19,14 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 ## Publications
 
-###2014
+### 2016 
+
+- Q. Wang, J. Otterbach, S. F. Yelin  
+	Interacting in-plane molecular dipoles in a zig-zag chain  
+	[arXiv:1607.01851](https://arxiv.org/abs/1607.01851) (sumbitted to PRA)
+
+### 2014
+
 - J. Otterbach and M. Lemeshko  
 	Dissipative Preparation of Spatial Order in Rydberg-Dressed Bose-Einstein Condensates  
 	[Phys. Rev. Lett. 113, 070401](http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.070401)
@@ -28,7 +35,8 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 	Single-atom quantum control of macroscopic mechanical oscillators  
 	[Phys. Rev. A 89, 011801(R) (2014)](http://pra.aps.org/abstract/PRA/v89/i1/e011801)
 
-###2013
+### 2013
+
 - J. Otterbach, M. Moos, D. Muth, M. Fleischhauer  
 	Wigner Crystallization of Single Photons in Cold Rydberg Ensembles  
 	[Phys. Rev. Lett. 111, 113001 (2013)](http://prl.aps.org/abstract/PRL/v111/i11/e113001)
@@ -41,12 +49,14 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 	Phonon-induced spin-spin interactions in diamond nanostructures: application to spin squeezing  
 	[Phys. Rev. Lett. 110, 156402 (2013)](http://prl.aps.org/abstract/PRL/v110/i15/e156402)
 
-###2012
+### 2012
+
 - M. J. Edmonds, J. Otterbach, R. G. Unanyan, M. Fleischhauer, M. Titov, P. Öhberg  
 	From Anderson to anomalous localization in cold atomic gases with effective spin-orbit coupling  
 	[New J. Phys. 14, 073056 (2012)](http://iopscience.iop.org/1367-2630/14/7/073056/)
 
-###2011
+### 2011
+
 - J. Ruseckas, V. Kudriasov, G. Juzeliunas, R. G. Unanyan, J. Otterbach, M. Fleischhauer  
 	Photonic band-gap properties for two-component slow light  
 	[Phys. Rev. A 83, 063811 (2011)](http://pra.aps.org/abstract/PRA/v83/i6/e063811)
@@ -59,7 +69,8 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 	Electromagnetically induced transparency with Rydberg atoms  
 	[Phys. Rev. Lett. 107, 213601 (2011)](http://link.aps.org/doi/10.1103/PhysRevLett.107.213601)
 
-###2010
+### 2010
+
 - J. Otterbach, J. Ruseckas, R. G. Unanyan, G. Juzeliunas, and M. Fleischhauer  
 	Effective magnetic fields for stationary light  
 	[Phys. Rev. Lett. 104, 033903 (2010)](http://prl.aps.org/abstract/PRL/v104/i3/e033903)
@@ -72,7 +83,8 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 	Spinor Slow-Light and Dirac particles with variable mass  
 	[Phys. Rev. Lett. 105, 173603 (2010)](http://prl.aps.org/abstract/PRL/v105/i17/e173603)
 
-###2009
+### 2009
+
 - J. Otterbach, R. G. Unanyan, M. Fleischhauer  
 	Confining stationary light: Dirac dynamics and Klein tunneling  
 	[Phys. Rev. Lett. 102, 063602 (2009)](http://link.aps.org/abstract/PRL/v102/e063602)
@@ -81,7 +93,8 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 	Confinement Limit of Dirac particles in scalar 1D potentials  
 	[Phys. Rev. A 79, 044101 (2009)](http://pra.aps.org/abstract/PRA/v79/i4/e044101)
 
-###2008
+### 2008
+
 - F. E. Zimmer, J. Otterbach, R. G. Unanyan, B. W. Shore, M. Fleischhauer  
 	Dark-State Polaritons for multi-component and stationary light fields  
 	[Phys. Rev. A 77, 063823 (2008)](http://link.aps.org/abstract/PRA/v77/e063823)
