@@ -1,5 +1,5 @@
 % LaTeX resume using res.cls
-\documentclass[11pt,centered]{./res} %use line for small header
+\documentclass[10pt,centered]{./res} %use line for small header
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font
 \setlength{\topmargin}{-.8in}  % Start text higher on the page
@@ -32,21 +32,25 @@
 % Again, the address lines must be centered over entire width of resume:
 \moveleft.5\hoffset\centerline{1305 Hampshire St, San Francisco, CA 94110 $\vspace*{.2cm}\bullet\vspace*{.2cm}$ (857) 756-2022 $\vspace*{.2cm}\bullet\vspace*{.2cm}$ johannesotterbach@gmail.com }
 \vspace{-.7cm}
-\moveleft.5\hoffset\centerline{linkedin.com/in/jotterbach $\vspace*{.2cm}\bullet\vspace*{.2cm}$ johannesotterbach.com $\vspace*{.2cm}\bullet\vspace*{.2cm}$ github.com/jotterbach}
+\moveleft.5\hoffset\centerline{linkedin.com/in/jotterbach $\vspace*{.2cm}\bullet\vspace*{.2cm}$ jotterbach.github.io $\vspace*{.2cm}\bullet\vspace*{.2cm}$ github.com/jotterbach}
 
 \vspace*{-1.5cm}
 \begin{resume}
 \vspace{0.4cm}
 
 \section{\color{ResumeBlue}PROFILE}
-Self-motivated Ph.D.-level physicist with a curious, analytical mind and a passion for data. Experience managing and analyzing data using Python (NumPy, SciPy, pandas, scikit-learn), Apache Spark (SparkSQL, MLlib), Hadoop HDFS, MATLAB, {\sc Mathematica} and familiarity with MySQL and R. Extensive experience with advanced mathematics and statistics, and {presenting and visualizing complex concepts} to diverse audiences.
+Self-motivated Ph.D.-level Physicist \& Data Scientist with a curious, analytical mind and a passion for data. Experience managing and analyzing data using Python (NumPy, SciPy, pandas, scikit-learn), Apache Spark (SparkSQL, MLlib), Postgres, MATLAB, {\sc Mathematica} and familiarity with R. Extensive experience with advanced mathematics, statistics and machine learning, as well as presenting and visualizing complex concepts to diverse audiences.
 
 \section{\color{ResumeBlue}PROFESSIONAL DEVELOPMENT}
 {\bf Data Scientist} \hfill8/2015 - present \\
 {\it LendUp, San Francisco, CA}
 \begin{itemize}
-  \item Integrated new data sources to increase model redundancy for loan underwriting.
-  \item Contributed to the development of a new Data Warehouse infrastructure.
+  \item Architect for new machine learning model scoring service with ability to serve models built in several different languages and frameworks.
+  \item Implemented a Python variation of a learning algorithm for Generalized Additive Models.
+  \item Contributed to key algorithms to generate model insights and auditability.
+  \item Supported Data Scientists with ad-hoc and production algorithms for feature analysis and selection. Provided dashboards and automated reports for business stakeholders.
+  \item Developed and deployed several models for underwriting, including models for new products.
+  \item Analysed and integrated new data sources into production systems to increase data redundancy.
 \end{itemize}
 
 {\bf Infrastructure Quality Engineer} (Machine Learning)\hfill4/2014 - 7/2015 \\
@@ -58,6 +62,7 @@ Self-motivated Ph.D.-level physicist with a curious, analytical mind and a passi
   \item Deployed, debugged and maintained complex, distributed software stacks, containing Apache Spark, Hadoop HDFS and IPython Notebook servers, on cloud-based AWS systems. Optimized the stacks for best computational performance and stability.
   \item Developed CometD-based user-scale testing and analytics framework resulting in a $\sim$10x improvement in handled users.
 \end{itemize}
+
 {\bf Postdoctoral Research Fellow} (Theoretical Quantum Physics)\hfill 9/2011 - 3/2014 \\
 {\it Harvard Quantum Optics Center, Cambridge, MA}
 \begin{itemize}
@@ -67,8 +72,6 @@ Self-motivated Ph.D.-level physicist with a curious, analytical mind and a passi
   \item Presented research results to general as well as expert audiences through invited seminars, conferences, talks and posters.
   \item Collaborated, influenced and contributed to research projects with international teams.
 \end{itemize}
-
-\pagebreak
 
 \section{\color{ResumeBlue}EDUCATION}
 
@@ -80,7 +83,7 @@ Self-motivated Ph.D.-level physicist with a curious, analytical mind and a passi
       \item Research internship at Harvard University, Cambridge, MA, Spring 2010
     \end{itemize}
 \end{itemize}
-
+\vspace*{-0.2cm}
 {\bf B.S./M.S. in Physics}, {\it GPA: 3.93}, 5/2008
 \begin{itemize}
  \item[] University of Kaiserslautern, Germany
@@ -95,10 +98,8 @@ Self-motivated Ph.D.-level physicist with a curious, analytical mind and a passi
 \hspace*{-.9cm}
 \begin{tabular}{p{5.85in}>{\raggedleft\arraybackslash}p{.1in}}
 \begin{itemize}
-  \item Experience with mathematical and statistical python libraries such as pandas, scikit-learn, NumPy and SciPy and software such as MATLAB and {\sc Mathematica}.
-  \item Programming languages: Python, Java, Apache Spark, Scala, some Gradle (Groovy), SQL and Shell scripting.
-  \item Familiarity Hadoop HDFS, AWS S3 and R.
-  \item Text processing and presentation software such as \LaTeX{} and the MS Office suite.
+  \item Experience with mathematical and statistical Python libraries such as pandas, scikit-learn, NumPy and SciPy and software such as MATLAB and {\sc Mathematica}.
+  \item Programming languages: Python, Java, Apache Spark, Scala, SQL and Shell scripting. Familiarity with Hadoop HDFS, AWS S3 and R.
 \end{itemize}
  & \\
 \end{tabular}
@@ -118,7 +119,7 @@ Self-motivated Ph.D.-level physicist with a curious, analytical mind and a passi
 
 \section{\color{ResumeBlue}SELECTED PUBLICATIONS}
 \vspace*{0.2cm}
-14 in total with 200+ citations. Complete list available upon request.\vspace*{.2cm}
+17 in total with 200+ citations. Complete list available upon request.\vspace*{.2cm}
 \begin{enumerate}
  \item {J. Otterbach}, M. Moos, D. Muth, M. Fleischhauer, \textit{Wigner Crystallization of Single Photons in Cold Rydberg Ensemble}, Phys. Rev. Lett. {111}, 113001 (2013).
  \item E. G. Dalla Torre, {J. Otterbach}, E. Demler, V. Vuletic, M. D. Lukin, \textit{Dissipative Preparation of Spin Squeezed Atomic Ensembles in a Steady State}, Phys. Rev. Lett. {110}, 120402 (2013).
@@ -131,7 +132,7 @@ German: Native speaker. English: Fluent. Swedish and French: Basic
 
 \section{\color{ResumeBlue}ACTIVITIES}
 \vspace*{0.2cm}
-Avid boulderer and climber. Enjoys slacklining and a good game of Ultimate Frisbee with friends. Good food or an outdoor trip are always welcome. Kaggle competitor.
+Avid boulderer and climber. Enjoys slacklining and a good game of Ultimate Frisbee with friends. Good food or an outdoor trip are always welcome.
 
 \end{resume}
 \end{document}
