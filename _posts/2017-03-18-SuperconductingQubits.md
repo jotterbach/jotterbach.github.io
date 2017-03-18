@@ -387,6 +387,7 @@ Refering back to the introduction we can now choose two states of our liking to 
 
 With this we arrived at the final step to understand what SPQ actually is: It consists of two states of locked phase and charge in a biased Josephson-Junction. This allows us to use standard electromechanic tools to read and manipulate the qubits and potentially build a quantum computer out of those qubits.
 
+As always here is a [link to the notebook](https://github.com/jotterbach/Data-Exploration-and-Numerical-Experimentation/blob/master/Numerical-Experimentation/SuperConducting_Qubits.ipynb) I used to create some of the blog's graphs.
 
 [^fn-LC-solution]: Dividing by the inductance $$L$$ reveals the equation of motion of a harmonic oscillator with frequency $$\omega\,=\,\sqrt{1/LC}$$.
 
