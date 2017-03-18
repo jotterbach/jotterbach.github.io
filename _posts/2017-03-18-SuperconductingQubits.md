@@ -20,11 +20,11 @@ As always, I hope you enjoy reading the post!
 
 We have all heard about single atoms and electrons that behave in strange ways described by quantum mechanics and --to a certain extent-- have gotten used to it. However, when it comes to macroscopic objects as big as electric circuits we have not yet fully embraced the fact that they can also exhibit quantum-weirdness. One such device type is the Josephson Junction that gives rise to "macroscopic" quantum states that form the basis of modern qubit architectures to lead the quest to quantum computing.
 
-The quantum world enters into these devices through an element called a Josphson Junction, that relies on [superconductivity](https://en.wikipedia.org/wiki/Superconductivity), a quantum state consisting of many electron-electron pairs and allowing electric currents to flow without resistance. Being a quantum state the superconductivity has an amplitude described by the number of electron pairs --corresponding to classical charge and current-- and a quantum phase which has no classical equivalent.
+The quantum world enters into these devices through an element called a Josephson Junction, that relies on [superconductivity](https://en.wikipedia.org/wiki/Superconductivity), a quantum state consisting of many electron-electron pairs and allowing electric currents to flow without resistance. Being a quantum state the superconductivity has an amplitude described by the number of electron pairs --corresponding to classical charge and current-- and a quantum phase which has no classical equivalent.
 
 A simplistic picture of a Superconducting Qubit is a bound state of locked phase and charge in a phase-potential created by a Josephson Junction. The potential exhibits several such states and we choose two of them to encode the logical (quantum) states $$\vert 0 \rangle$$ and $$\vert 1 \rangle$$. This is very similar to a quantum particle in a deep well which exhibits discrete oscillatory motions similar to a (quantum) harmonic oscillator due to the well trapping the particle.
 
-To create a quanutm computer we need many of these qubits to talk to each other and also need to control their behavior. Since SCQs are emerging in  electric circuit elements we can use all the tools of electric engineering to manipulate the qubits and perform computations -- hopefully giving rise to quantum computers at some point in the future.
+To create a quantum computer we need many of these qubits to talk to each other and also need to control their behavior. Since SCQs are emerging in  electric circuit elements we can use all the tools of electrical engineering to manipulate the qubits and perform computations -- hopefully giving rise to quantum computers at some point in the future.
 
 If you are interested in more details about the theory behind Superconducting Qubits, and in particular the Superconducting Phase Qubit, please read on, but also brace yourself for some math ;)
 
@@ -33,7 +33,7 @@ If you are interested in more details about the theory behind Superconducting Qu
 To get started we introduce a few concepts of how to quantize electric circuits and start with a simple LC circuit consisting of a capacitor and an inductor. As the final equation for the LC circuit looks like that of a [quantum mechanical harmonic oscillator](https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator), we will review the latter one first and remind us of some basic properties and the framework of canonical quantization.
 
 ### Canonical Quantization
-In order to approach the challenge of deriving the physics of a SCQ we follow the approach of [canonical quantization](https://en.wikipedia.org/wiki/Canonical_quantization). This framework consists in identifiying the canonical, conjugate variables of teh classical counterpart of the system under consideration and replacing the [Poisson bracket](https://en.wikipedia.org/wiki/Poisson_bracket) algebra with [canonical commutation relations](https://en.wikipedia.org/wiki/Canonical_commutation_relation). The standard example is a harmonic oscillator whose classical Hamiltonian is given by
+In order to approach the challenge of deriving the physics of a SCQ we follow the approach of [canonical quantization](https://en.wikipedia.org/wiki/Canonical_quantization). This framework consists in identifiying the canonical, conjugate variables of the classical counterpart of the system under consideration and replacing the [Poisson bracket](https://en.wikipedia.org/wiki/Poisson_bracket) algebra with [canonical commutation relations](https://en.wikipedia.org/wiki/Canonical_commutation_relation). The standard example is a harmonic oscillator whose classical Hamiltonian is given by
 
 $$
 \begin{align}
@@ -57,7 +57,7 @@ $$
 \end{align}
 $$
 
-and promote the conjugate variables to operator leading to the quantum mechanical Hamiltonian
+and promote the conjugate variables to operators leading to the quantum mechanical Hamiltonian
 
 $$
 \begin{align}
@@ -65,7 +65,7 @@ $$
 \end{align}
 $$
 
-An elegant way to solve the equations for the [quantum mechanical harmonic oscillator](https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator) is a to introduce annihilation and creation operators defined as
+An elegant way to solve the equations for the [quantum mechanical harmonic oscillator](https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator) is to introduce annihilation and creation operators defined as
 
 $$
 \begin{align}
@@ -95,7 +95,7 @@ There is plenty of information on the quantum harmonic oscillator; feel free to 
 
 ### Lagrangian of the LC circuit
 
-On our journey to derive the origin of a SCQ we need to understand how to quantize electromechanic circuit elements. We start this by exploring a simple linear system -- the LC-circuit, an element consisting of a capacitor and a inductor.
+On our journey to derive the origin of a SCQ we need to understand how to quantize electromechanic circuit elements. We start this by exploring a simple linear system -- the LC-circuit, an element consisting of a capacitor and an inductor.
 
 ![LC circuit diagram](/resources/SuperconductingQubits/LC-Circuit.png){: .text.img-right width="40%"}
 
@@ -107,7 +107,7 @@ $$
 \end{align}
 $$
 
-The voltages droping in the simple LC-circuit are
+The voltages dropping in the simple LC-circuit are
 
 - the **capacitor voltage** $$V_C\,=\,\frac{Q}{C}$$ where $$Q$$ is the total charge and $$C$$ is the capacitance of the capacitor.
 - the **inductor voltage** $$V_L\,=\, L \frac{dI}{dt}$$ with $$I\,=\,\frac{dQ}{dt}$$ being the current and $$L$$ the inductance
@@ -120,7 +120,7 @@ L\frac{d^2Q}{dt^2} + \frac{Q}{C} = 0.
 \end{align}
 $$
 
-While we could solve the LC-circuit at this point [^fn-LC-solution] it is instrumental for us to identify the canonically conjugate variable of this problem. To do this we re-express Kirchhoffs law using the energies connected with capacitor and inductor:
+While we could solve the LC-circuit at this point [^fn-LC-solution] it is instrumental for us to identify the canonically conjugate variable of this problem. To do this we re-express Kirchhoff's law using the energies connected with capacitor and inductor:
 
 - the **capacitor energy** is given by $$E_C\,=\,Q^2/2C$$.
 - the **inductor energy** is $$E_L\,=\,LI^2/2\,=\,\Phi^2/2L$$, where we introduced the magnetic flux $$\Phi = LI$$.
@@ -165,7 +165,7 @@ H\,=\, T+U \,=\,\frac{\hat\Phi^2}{2L} + \frac{\hat Q^2}{2C}.
 \end{align}
 $$
 
-with commutiation relations
+with commutation relations
 
 $$
 \begin{align}
@@ -177,7 +177,7 @@ Comparing this to the results of the previous section we see that this system mi
 
 
 
-## The Jospehson Junction
+## The Josephson Junction
 With the procedure to quantize an electromagnetic circuit element we are now equipped to tackle the derivation of a SCQ. First we need to introduce the concept of a quantized magnetic flux (we now also explain what that actually is) and need to understand some basic properties of a Josephson junction.
 
 Let's get started!
