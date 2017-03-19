@@ -33,7 +33,7 @@ If you are interested in more details about the theory behind Superconducting Qu
 To get started we introduce a few concepts of how to quantize electric circuits and start with a simple LC circuit consisting of a capacitor and an inductor. As the final equation for the LC circuit looks like that of a [quantum mechanical harmonic oscillator](https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator), we will review the latter one first and remind us of some basic properties and the framework of canonical quantization.
 
 ### Canonical Quantization
-In order to approach the challenge of deriving the physics of a SCQ we follow the approach of [canonical quantization](https://en.wikipedia.org/wiki/Canonical_quantization). This framework consists in identifiying the canonical, conjugate variables of the classical counterpart of the system under consideration and replacing the [Poisson bracket](https://en.wikipedia.org/wiki/Poisson_bracket) algebra with [canonical commutation relations](https://en.wikipedia.org/wiki/Canonical_commutation_relation). The standard example is a harmonic oscillator whose classical Hamiltonian is given by
+In order to approach the challenge of deriving the physics of a SCQ we follow the approach of [canonical quantization](https://en.wikipedia.org/wiki/Canonical_quantization). This framework consists in identifying the canonical, conjugate variables of the classical counterpart of the system under consideration and replacing the [Poisson bracket](https://en.wikipedia.org/wiki/Poisson_bracket) algebra with [canonical commutation relations](https://en.wikipedia.org/wiki/Canonical_commutation_relation). The standard example is a harmonic oscillator whose classical Hamiltonian is given by
 
 $$
 \begin{align}
@@ -95,7 +95,7 @@ There is plenty of information on the quantum harmonic oscillator; feel free to 
 
 ### Lagrangian of the LC circuit
 
-On our journey to derive the origin of a SCQ we need to understand how to quantize electromechanic circuit elements. We start this by exploring a simple linear system -- the LC-circuit, an element consisting of a capacitor and an inductor.
+On our journey to derive the origin of a SCQ we need to understand how to quantize electromechanical circuit elements. We start this by exploring a simple linear system -- the LC-circuit, an element consisting of a capacitor and an inductor.
 
 ![LC circuit diagram](/resources/SuperconductingQubits/LC-Circuit.png){: .text.img-right width="40%"}
 
@@ -199,7 +199,7 @@ $$
 \end{align}
 $$
 
-where $$B$$ is a constant magnetic field permeating a closed area $$A$$, e.g. a magnetic field permeating a wire loop. This law was one of the fundational observations in the postulation of Maxwell's equations.
+where $$B$$ is a constant magnetic field permeating a closed area $$A$$, e.g. a magnetic field permeating a wire loop. This law was one of the foundational observations in the postulation of Maxwell's equations.
 
 This is where some magical macroscopic quantum physics happens[^fn-flux-quantization]. Consider now a superconductor whose quantum state is described by a macroscopic wave-function
 
@@ -216,7 +216,7 @@ $$
 \vert \psi(x)\rangle\,=\,\vert \psi(x + 2\pi n)\rangle\,
 \end{align}
 $$
-i.e. we can fix the value of the phase function only up tp a factor of $$2\pi n$$, $$n\in \mathbb{Z}$$ due to the periodicity of the complex exponential. Now it turns out that the phase of the quantum mechanical wave-function is proportional to the current flowing in the superconductor [^fn-wf-phase]. This is the origin of the resistance-free perma-current in superconductors. However, as we saw the current also determines the magnetic flux in a system and putting all these things together we arrive at a suprising observations of a [quantized magentic flux](https://en.wikipedia.org/wiki/Magnetic_flux_quantum)
+i.e. we can fix the value of the phase function only up to a factor of $$2\pi n$$, $$n\in \mathbb{Z}$$ due to the periodicity of the complex exponential. Now it turns out that the phase of the quantum mechanical wave-function is proportional to the current flowing in the superconductor [^fn-wf-phase]. This is the origin of the resistance-free perma-current in superconductors. However, as we saw the current also determines the magnetic flux in a system and putting all these things together we arrive at a surprising observations of a [quantized magnetic flux](https://en.wikipedia.org/wiki/Magnetic_flux_quantum)
 
 $$
 \begin{align}
@@ -232,7 +232,7 @@ $$
 \end{align}
 $$
 
-where $$e$$ is the electron charge. This is remarkable if you think about it. A macroscopic object, i.e. a superconducting ring, exposes quantized behavior in the magnetic field that can penetrate the ring. All non-interger components of the flux cannot enter the area enclosed by the conductor!
+where $$e$$ is the electron charge. This is remarkable if you think about it. A macroscopic object, i.e. a superconducting ring, exposes quantized behavior in the magnetic field that can penetrate the ring. All non-integer components of the flux cannot enter the area enclosed by the conductor!
 
 ### Josephson Effect
 ![Josephson Junction diagram](/resources/SuperconductingQubits/Single_josephson_junction.png){: .text.img-right width="40%"}
@@ -253,7 +253,7 @@ qV/2 & K \\ K & -qV/2
 \end{align}
 $$
 
-where $$K$$ is a small constant describing the coupling of the states $$\psi_A$$ and $$\psi_B$$ throught the junction. The energy $$qV$$ is proportional to the voltage that is dropping over the junction if the superconductors are terminated by a battery. Making the ansatz for a macroscopic wave-function $$\psi_i\,=\,\sqrt{\rho_i}\textrm{e}^{i\theta_i}$$  it follows that we can describe the current through the junction by
+where $$K$$ is a small constant describing the coupling of the states $$\psi_A$$ and $$\psi_B$$ through the junction. The energy $$qV$$ is proportional to the voltage that is dropping over the junction if the superconductors are terminated by a battery. Making the ansatz for a macroscopic wave-function $$\psi_i\,=\,\sqrt{\rho_i}\textrm{e}^{i\theta_i}$$  it follows that we can describe the current through the junction by
 
 $$
 \begin{align}
@@ -276,7 +276,7 @@ which will become important when deriving the SCQ in the next section.
 ## The Current-Biased Josephson Junction
 
 ![Phase Qubit Schema](/resources/SuperconductingQubits/CurrentBiasedJosephsonJunction.png){: .text.img-left width="50%"}
-To gain insight into the emergence of a superconducting qubit we limit ourselves to a special type of qubit -- the [superconducting phase qubit](https://en.wikipedia.org/wiki/Phase_qubit) (SPQ). The electric circuit consists of a capacitor (C) in series with a Jospehson Junction (JJ). Those elements are furthermore biased with an additional current $$I_b$$ (see figure).
+To gain insight into the emergence of a superconducting qubit we limit ourselves to a special type of qubit -- the [superconducting phase qubit](https://en.wikipedia.org/wiki/Phase_qubit) (SPQ). The electric circuit consists of a capacitor (C) in series with a Josephson Junction (JJ). Those elements are furthermore biased with an additional current $$I_b$$ (see figure).
 
 We will in the following derive the semi-classical Lagrangian for the system by using the macroscopic wave function of the JJ and afterwards use canonical quantization to arrive at the Hamiltonian of the current-biased Josephson Junction that gives rise to the *washboard* potential and superconducting phase qubits.
 
@@ -297,7 +297,7 @@ $$
 \end{align}
 $$
 
-With this we can use the definition of the [Euler-Lagrange equations](https://arxiv.org/pdf/cond-mat/0508729.pdf) and identfy the different energy contributions as **kinetic energy**
+With this we can use the definition of the [Euler-Lagrange equations](https://arxiv.org/pdf/cond-mat/0508729.pdf) and identify the different energy contributions as **kinetic energy**
 
 $$
 \begin{align}
@@ -323,7 +323,7 @@ $$
 
 where we introduced the number of charge pairs $$n=Q/2e$$. As in the case of the LC-circuit we find that the total charge (measured in units of $$2e$$) is canonically conjugate to the phase difference and hence we cannot measure both phase difference and charge in the circuit with arbitrary precision. 
 
-Applying the rules of canonical quantization we can define the conjuate operator of the phase as $$\hat p_\phi\,=\,-i\hbar\frac{\partial}{\partial \phi}$$ which then leads to the pair number operator
+Applying the rules of canonical quantization we can define the conjugate operator of the phase as $$\hat p_\phi\,=\,-i\hbar\frac{\partial}{\partial \phi}$$ which then leads to the pair number operator
 
 $$
 \begin{align}
@@ -351,7 +351,7 @@ It is worthwhile to take a look at this for a bit: The pair number term takes th
 
 ![Josephson Junction diagram](/resources/SuperconductingQubits/washboard_potential.png)
 
-The ratio $$r_I = \frac{I_b}{I_0}$$ of bias to junction current controlls the depth of the potential. For a ratio larger than $$\vert r_I\vert>1$$ all minima vanish which will have implications for the qubit we discuss below. Moreover, for a finite bias-current the potential is slanted and due to the standard tunneling effect particles can still escape the local minima of the potential.
+The ratio $$r_I = \frac{I_b}{I_0}$$ of bias to junction current controls the depth of the potential. For a ratio larger than $$\vert r_I\vert>1$$ all minima vanish which will have implications for the qubit we discuss below. Moreover, for a finite bias-current the potential is slanted and due to the standard tunneling effect particles can still escape the local minima of the potential.
 
 ### The SPQ as Bound States of the Washboard
 
@@ -381,11 +381,11 @@ $$
 
 Remember that $$r=I_b/I_0$$ and hence we can control the frequency and thus energy spacing of the state with the bias current.
 
-Refering back to the introduction we can now choose two states of our liking to define the logical qubit states and be done -- almost. In practice an ideal harmonic oscillator would not be of great use. The energy spacing between the different states of the oscillator $$\langle \hat a^\dagger \hat a\rangle$$ have the same energy and it would be hard to resolve and address just two individual states that we need to create a qubit. Luckily the washboard potential is not harmonic and the second-order expansion is not very good. We can get slightly better using a higher expansion and calculate the states numerically. The influence of the higher-order contributions result in non-equally spaced energies of the states and we can use this fact to resolve two states of interest for us to use as qubit. For a sixth-order expansion the expanison and lowest eigenstates look like
+Referring back to the introduction we can now choose two states of our liking to define the logical qubit states and be done -- almost. In practice an ideal harmonic oscillator would not be of great use. The energy spacing between the different states of the oscillator $$\langle \hat a^\dagger \hat a\rangle$$ have the same energy and it would be hard to resolve and address just two individual states that we need to create a qubit. Luckily the washboard potential is not harmonic and the second-order expansion is not very good. We can get slightly better using a higher expansion and calculate the states numerically. The influence of the higher-order contributions result in non-equally spaced energies of the states and we can use this fact to resolve two states of interest for us to use as qubit. For a sixth-order expansion the expansion and lowest eigenstates look like
 
 ![Superconducting Phase Qubit states](/resources/SuperconductingQubits/eigenstates_sixth_order.png)
 
-With this we arrived at the final step to understand what SPQ actually is: It consists of two states of locked phase and charge in a biased Josephson-Junction. This allows us to use standard electromechanic tools to read and manipulate the qubits and potentially build a quantum computer out of those qubits.
+With this we arrived at the final step to understand what SPQ actually is: It consists of two states of locked phase and charge in a biased Josephson-Junction. This allows us to use standard electromechanical tools to read and manipulate the qubits and potentially build a quantum computer out of those qubits.
 
 As always here is a [link to the notebook](https://github.com/jotterbach/Data-Exploration-and-Numerical-Experimentation/blob/master/Numerical-Experimentation/SuperConducting_Qubits.ipynb) I used to create some of the blog's graphs.
 
