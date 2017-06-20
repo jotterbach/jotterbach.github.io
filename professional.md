@@ -5,13 +5,13 @@ title: Professional
 
 
 ## Short Bio
-Dr. Johannes Otterbach is a Data Scientist at LendUp with a passion for big data technologies and applications to real world problems. He is an established scientist with more than 15 publications in high impact journals and he has won several awards. Before joining LendUp he worked as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is a Quantum Software Engineer at [Rigetti Computing](http://rigetti.com) developing new algorithms for Quantum Computing and Control. He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Rigetti he worked as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resources/resume/Otterbach_resume.pdf)
 
 ## Talks
 
-- [The Curese Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
+- [The Curse Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
 
 - [AI - En Route to Passing Turing's Test](http://jotterbach.github.io/presentations/AI_enRouteToTuringsTest), TU Kaiserslautern, April 2016
 
@@ -19,11 +19,11 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 ## Publications
 
-### 2016 
+### 2017 
 
 - Q. Wang, J. Otterbach, S. F. Yelin  
 	Interacting in-plane molecular dipoles in a zig-zag chain  
-	[arXiv:1607.01851](https://arxiv.org/abs/1607.01851) (sumbitted to PRA)
+	[arXiv:1607.01851](https://arxiv.org/abs/1607.01851) (accepted to PRA)
 
 ### 2014
 
