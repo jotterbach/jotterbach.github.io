@@ -19,11 +19,19 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 ## Publications
 
-### 2017 
+### 2017
 
 - Q. Wang, J. Otterbach, S. F. Yelin  
 	Interacting in-plane molecular dipoles in a zig-zag chain  
 	[arXiv:1607.01851](https://arxiv.org/abs/1607.01851) (accepted to PRA)
+
+- M. Reagor & Rigetti Computing  
+    Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice  
+    [arXiv:1706.06570](https://arxiv.org/abs/1706.06570)
+
+- S. Caldwell & Rigetti Computing  
+    Parametrically-Activated Entangling Gates Using Transmon Qubits  
+    [arXiv:1706.06562](https://arxiv.org/abs/1706.06562)
 
 ### 2014
 
