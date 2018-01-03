@@ -17,96 +17,107 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 - [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
 
+## Press Coverage
+
+- MIT Technology Review: [A Startup Uses Quantum Computing to Boost Machine Learning](https://www.technologyreview.com/s/609804/a-startup-uses-quantum-computing-to-boost-machine-learning/)
+
+- PhysOrg.com: [Artificial magnetic fields for light could illuminate correlated quantum systems](https://phys.org/news/2010-02-artificial-magnetic-fields-illuminate-quantum.html)
+
+
 ## Publications
 
 ### 2017
 
-- Q. Wang, J. Otterbach, S. F. Yelin  
-	Interacting in-plane molecular dipoles in a zig-zag chain  
+- J. Otterbach & Rigetti Computing <br>
+    Unsupervised Machine Learning on a Hybrid Quantum Computer <br>
+    [arxiv:1712.05771](https://arxiv.org/abs/1712.05771)
+
+- Q. Wang, J. Otterbach, S. F. Yelin <br>
+	Interacting in-plane molecular dipoles in a zig-zag chain <br>
 	[arXiv:1607.01851](https://arxiv.org/abs/1607.01851) (accepted to PRA)
 
-- M. Reagor & Rigetti Computing  
-    Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice  
+- M. Reagor & Rigetti Computing <br>
+    Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice <br>
     [arXiv:1706.06570](https://arxiv.org/abs/1706.06570)
 
-- S. Caldwell & Rigetti Computing  
-    Parametrically-Activated Entangling Gates Using Transmon Qubits  
+- S. Caldwell & Rigetti Computing <br>
+    Parametrically-Activated Entangling Gates Using Transmon Qubits <br>
     [arXiv:1706.06562](https://arxiv.org/abs/1706.06562)
 
 ### 2014
 
-- J. Otterbach and M. Lemeshko  
-	Dissipative Preparation of Spatial Order in Rydberg-Dressed Bose-Einstein Condensates  
+- J. Otterbach and M. Lemeshko <br>
+	Dissipative Preparation of Spatial Order in Rydberg-Dressed Bose-Einstein Condensates <br>
 	[Phys. Rev. Lett. 113, 070401](http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.070401)
 
-- F. Bariani, J. Otterbach, H. Tan, P. Meystre  
-	Single-atom quantum control of macroscopic mechanical oscillators  
+- F. Bariani, J. Otterbach, H. Tan, P. Meystre <br>
+	Single-atom quantum control of macroscopic mechanical oscillators <br>
 	[Phys. Rev. A 89, 011801(R) (2014)](http://pra.aps.org/abstract/PRA/v89/i1/e011801)
 
 ### 2013
 
-- J. Otterbach, M. Moos, D. Muth, M. Fleischhauer  
-	Wigner Crystallization of Single Photons in Cold Rydberg Ensembles  
+- J. Otterbach, M. Moos, D. Muth, M. Fleischhauer <br>
+	Wigner Crystallization of Single Photons in Cold Rydberg Ensembles <br>
 	[Phys. Rev. Lett. 111, 113001 (2013)](http://prl.aps.org/abstract/PRL/v111/i11/e113001)
 
-- E. G. Dalla Torre, J. Otterbach, E. Demler, V. Vuletic, M. D. Lukin  
-	Dissipative Preparation of Spin Squeezed Atomic Ensembles in a Steady State  
+- E. G. Dalla Torre, J. Otterbach, E. Demler, V. Vuletic, M. D. Lukin <br>
+	Dissipative Preparation of Spin Squeezed Atomic Ensembles in a Steady State <br>
 	[Phys. Rev. Lett. 110, 120402 (2013)](http://prl.aps.org/abstract/PRL/v110/i12/e120402)
 
-- S. D. Bennett, N. Y. Yao, J. Otterbach, P. Zoller, P. Rabl, M. D. Lukin  
-	Phonon-induced spin-spin interactions in diamond nanostructures: application to spin squeezing  
+- S. D. Bennett, N. Y. Yao, J. Otterbach, P. Zoller, P. Rabl, M. D. Lukin <br>
+	Phonon-induced spin-spin interactions in diamond nanostructures: application to spin squeezing <br>
 	[Phys. Rev. Lett. 110, 156402 (2013)](http://prl.aps.org/abstract/PRL/v110/i15/e156402)
 
 ### 2012
 
-- M. J. Edmonds, J. Otterbach, R. G. Unanyan, M. Fleischhauer, M. Titov, P. Öhberg  
-	From Anderson to anomalous localization in cold atomic gases with effective spin-orbit coupling  
+- M. J. Edmonds, J. Otterbach, R. G. Unanyan, M. Fleischhauer, M. Titov, P. Öhberg <br>
+	From Anderson to anomalous localization in cold atomic gases with effective spin-orbit coupling <br>
 	[New J. Phys. 14, 073056 (2012)](http://iopscience.iop.org/1367-2630/14/7/073056/)
 
 ### 2011
 
-- J. Ruseckas, V. Kudriasov, G. Juzeliunas, R. G. Unanyan, J. Otterbach, M. Fleischhauer  
-	Photonic band-gap properties for two-component slow light  
+- J. Ruseckas, V. Kudriasov, G. Juzeliunas, R. G. Unanyan, J. Otterbach, M. Fleischhauer <br>
+	Photonic band-gap properties for two-component slow light <br>
 	[Phys. Rev. A 83, 063811 (2011)](http://pra.aps.org/abstract/PRA/v83/i6/e063811)
 
-- A. V. Gorshkov, J. Otterbach, M. Fleischhauer, T. Pohl, M. D. Lukin  
-	Photon-Photon Interactions via Rydberg Blockade  
+- A. V. Gorshkov, J. Otterbach, M. Fleischhauer, T. Pohl, M. D. Lukin <br>
+	Photon-Photon Interactions via Rydberg Blockade <br>
 	[Phys. Rev. Lett. 107, 133602 (2011)](http://link.aps.org/doi/10.1103/PhysRevLett.107.133602)
 
-- D. Petrosyan, J. Otterbach, and M. Fleischhauer  
-	Electromagnetically induced transparency with Rydberg atoms  
+- D. Petrosyan, J. Otterbach, and M. Fleischhauer <br>
+	Electromagnetically induced transparency with Rydberg atoms <br>
 	[Phys. Rev. Lett. 107, 213601 (2011)](http://link.aps.org/doi/10.1103/PhysRevLett.107.213601)
 
 ### 2010
 
-- J. Otterbach, J. Ruseckas, R. G. Unanyan, G. Juzeliunas, and M. Fleischhauer  
-	Effective magnetic fields for stationary light  
+- J. Otterbach, J. Ruseckas, R. G. Unanyan, G. Juzeliunas, and M. Fleischhauer <br>
+	Effective magnetic fields for stationary light <br>
 	[Phys. Rev. Lett. 104, 033903 (2010)](http://prl.aps.org/abstract/PRL/v104/i3/e033903)
 
-- A. V. Gorshkov, J. Otterbach, E. Demler, M. Fleischhauer, and M. D. Lukin  
-	Photonic Phase Gate via an Exchange of Fermionic Spin Waves in a Spin Chain  
+- A. V. Gorshkov, J. Otterbach, E. Demler, M. Fleischhauer, and M. D. Lukin <br>
+	Photonic Phase Gate via an Exchange of Fermionic Spin Waves in a Spin Chain <br>
 	[Phys. Rev. Lett. 105, 060502 (2010)](http://prl.aps.org/abstract/PRL/v105/i6/e060502)
 
-- R. G. Unanyan, J. Otterbach, M. Fleischhauer, J. Ruseckas, V. Kudriasov, and G. Juzeliunas  
-	Spinor Slow-Light and Dirac particles with variable mass  
+- R. G. Unanyan, J. Otterbach, M. Fleischhauer, J. Ruseckas, V. Kudriasov, and G. Juzeliunas <br>
+	Spinor Slow-Light and Dirac particles with variable mass <br>
 	[Phys. Rev. Lett. 105, 173603 (2010)](http://prl.aps.org/abstract/PRL/v105/i17/e173603)
 
 ### 2009
 
-- J. Otterbach, R. G. Unanyan, M. Fleischhauer  
-	Confining stationary light: Dirac dynamics and Klein tunneling  
+- J. Otterbach, R. G. Unanyan, M. Fleischhauer <br>
+	Confining stationary light: Dirac dynamics and Klein tunneling <br>
 	[Phys. Rev. Lett. 102, 063602 (2009)](http://link.aps.org/abstract/PRL/v102/e063602)
 
-- R. G. Unanyan, J. Otterbach, M. Fleischhauer  
-	Confinement Limit of Dirac particles in scalar 1D potentials  
+- R. G. Unanyan, J. Otterbach, M. Fleischhauer <br>
+	Confinement Limit of Dirac particles in scalar 1D potentials <br>
 	[Phys. Rev. A 79, 044101 (2009)](http://pra.aps.org/abstract/PRA/v79/i4/e044101)
 
 ### 2008
 
-- F. E. Zimmer, J. Otterbach, R. G. Unanyan, B. W. Shore, M. Fleischhauer  
-	Dark-State Polaritons for multi-component and stationary light fields  
+- F. E. Zimmer, J. Otterbach, R. G. Unanyan, B. W. Shore, M. Fleischhauer <br>
+	Dark-State Polaritons for multi-component and stationary light fields <br>
 	[Phys. Rev. A 77, 063823 (2008)](http://link.aps.org/abstract/PRA/v77/e063823)
 
-- M. Fleischhauer, J. Otterbach, R. G. Unanyan  
-	Bose-Einstein condensation of stationary-light polaritons  
+- M. Fleischhauer, J. Otterbach, R. G. Unanyan <br>
+	Bose-Einstein condensation of stationary-light polaritons <br>
 	[Phys. Rev. Lett. 101, 163601 (2008)](http://link.aps.org/abstract/PRL/v101/e163601)

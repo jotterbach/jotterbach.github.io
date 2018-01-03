@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 
+title:
 ---
 
 ![Johannes' profile](/resources/johannes2.jpg){: .profile.img display="inline"}
