@@ -5,7 +5,7 @@ title: Professional
 
 
 ## Short Bio
-Dr. Johannes Otterbach is a Quantum Software Engineer at [Rigetti Computing](http://rigetti.com) developing new algorithms for Quantum Computing and Control. He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Rigetti he worked as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is a Research Scientist and Quantum Software Engineer at [Rigetti Computing](http://rigetti.com) developing new algorithms for Quantum Computing and Control. He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Rigetti he worked as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resources/resume/Otterbach_resume.pdf)
 
@@ -17,13 +17,6 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 - [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
 
-## Press Coverage
-
-- MIT Technology Review: [A Startup Uses Quantum Computing to Boost Machine Learning](https://www.technologyreview.com/s/609804/a-startup-uses-quantum-computing-to-boost-machine-learning/)
-
-- PhysOrg.com: [Artificial magnetic fields for light could illuminate correlated quantum systems](https://phys.org/news/2010-02-artificial-magnetic-fields-illuminate-quantum.html)
-
-
 ## Publications
 
 ### 2017
@@ -32,9 +25,16 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
     Unsupervised Machine Learning on a Hybrid Quantum Computer <br>
     [arxiv:1712.05771](https://arxiv.org/abs/1712.05771)
 
+    Coverage:<br>
+    - MIT Technology Review: [A Startup Uses Quantum Computing to Boost Machine Learning](https://www.technologyreview.com/s/609804/a-startup-uses-quantum-computing-to-boost-machine-learning/)
+
+    - Superposition.com: [Rigetti Computing Advances Machine Learning on a Quantum Computer](https://superposition.com/2018/01/04/rigetti-computing-advances-machine-learning-on-a-quantum-computer/)
+
+    - EdgyLabs.com: [Introducing: Quantum Machine Learning](https://edgylabs.com/introducing-quantum-machine-learning)
+
 - Q. Wang, J. Otterbach, S. F. Yelin <br>
 	Interacting in-plane molecular dipoles in a zig-zag chain <br>
-	[arXiv:1607.01851](https://arxiv.org/abs/1607.01851) (accepted to PRA)
+    [Phys. Rev. A 96, 043615](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.043615)
 
 - M. Reagor & Rigetti Computing <br>
     Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice <br>
@@ -93,6 +93,9 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 - J. Otterbach, J. Ruseckas, R. G. Unanyan, G. Juzeliunas, and M. Fleischhauer <br>
 	Effective magnetic fields for stationary light <br>
 	[Phys. Rev. Lett. 104, 033903 (2010)](http://prl.aps.org/abstract/PRL/v104/i3/e033903)
+    
+    Coverage:<br>
+    - PhysOrg.com: [Artificial magnetic fields for light could illuminate correlated quantum systems](https://phys.org/news/2010-02-artificial-magnetic-fields-illuminate-quantum.html)
 
 - A. V. Gorshkov, J. Otterbach, E. Demler, M. Fleischhauer, and M. D. Lukin <br>
 	Photonic Phase Gate via an Exchange of Fermionic Spin Waves in a Spin Chain <br>
