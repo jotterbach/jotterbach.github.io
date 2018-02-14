@@ -35,7 +35,7 @@ where the noise is drawn from a Gaussian distribution:
 
 ![Toy data showing a causal relation](/resources/ffn_mdn_blog/ToyData.png){: img width="90%" }
 
-###Causal relation
+### Causal relation
 
 The structure of the data is simple with a clear input and target variable. To model the relationship we will train a FFN with a single input and output neuron and one hidden layer containing 25 neurons with a `tanh` activation. During training we record the loss of the training as well using a similarly generated training set.
 
@@ -55,7 +55,7 @@ Fits pretty well to the data! The minimization objective clearly worked, with so
 
 It should be pointed out that the used network is not a "deep" network as it contains only a single layer with only 25 neurons (and I saw similar results with even less neurons). Nevertheless the data fits remarkably well. (Now I'm curious to see how it compares to a Random Forest Regressor with limited depth. Maybe a topic of another post ...)
 
-###Non-causal relation with a Feed-Forward Network
+### Non-causal relation with a Feed-Forward Network
 
 ![Multivalued input-output relation](/resources/ffn_mdn_blog/NonCausalRelation_Data.png){: .text.img-left width="55%"}
 The story changes dramatically when the data we are trying to learn has not such the nice property of a one-to-one or many-to-one mapping, such as single-valued functions. Exchanging the input and target variable, the resulting relation is now multi-valued. E.g. at input $$x=0$$ we find (at least) three values of the target variable.
@@ -119,7 +119,7 @@ The MDN does exactly what we wanted it to do: It is very narrow in the regions w
 
 With this we can also understand what the simple FFN was trying to learn when faced with the multi-valued input: It tried the best possible approximation given all the inputs, which is given by the conditional average of the probability distribution $$p(t \vert \mathbb{x}) = \sum_i^K \pi_i(\mathbb{x}) p_i(t \vert \mathbb{x})$$. However, the average of several solution is not necessarily a solution itself and hence in general fails to approximate the data.
 
-###What's the take-away?
+### What's the take-away?
 
 We saw that a FFN is able to approximate complicated functions as long as they are single-valued and follow a causal relationship. However, when this setting is violated the network fails to find any reasonable approximation to the data. We can repair this by allowing the network to learn a probability distribution rather than an exact input-output relation.
 

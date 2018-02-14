@@ -11,6 +11,12 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
 ## Talks
 
+- Unsupervised Machine Learning on a Hybrid Quantum Computer ([pdf](/resources/talks/yCombinator_meetup.pdf), [pptx](/resources/talks/yCombinator_meetup.pptx)), Bay Area Quantum Computing Meetup, YCombinator, February 2018
+
+- Quantum Cloud Computing ([pdf](/resources/talks/KL_QuantumCloudComputing.pdf), [pptx](/resources/talks/KL_QuantumCloudcomputing.pptx)), TU Kaiserslautern, Germany, January 2018
+
+- OQaml - A OCaml-based QASM, ([pdf](/resources/talks/OQaml_MeetUp.pdf), [pptx](/resources/talks/OQaml_MeetUp.pptx)), Bay Area Quantum Computing Meetup, Rigetti, August 2017
+
 - [The Curse Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
 
 - [AI - En Route to Passing Turing's Test](http://jotterbach.github.io/presentations/AI_enRouteToTuringsTest), TU Kaiserslautern, April 2016
@@ -18,6 +24,12 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 - [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
 
 ## Publications
+
+### 2018
+
+- M. Reagor & Rigetti Computing <br>
+    Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice <br>
+    [Science Advances, 4, eaao3603 (2018)](http://advances.sciencemag.org/content/4/2/eaao3603)
 
 ### 2017
 
@@ -32,13 +44,12 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 
     - EdgyLabs.com: [Introducing: Quantum Machine Learning](https://edgylabs.com/introducing-quantum-machine-learning)
 
+    - quantamagazine.org: [Job One for Quantum Computers: Boost Artificial Intelligence](https://www.quantamagazine.org/job-one-for-quantum-computers-boost-artificial-intelligence-20180129/) (reprint in [Wired](https://www.wired.com/story/job-one-for-quantum-computers-boost-artificial-intelligence/))
+
 - Q. Wang, J. Otterbach, S. F. Yelin <br>
 	Interacting in-plane molecular dipoles in a zig-zag chain <br>
     [Phys. Rev. A 96, 043615](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.043615)
 
-- M. Reagor & Rigetti Computing <br>
-    Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice <br>
-    [arXiv:1706.06570](https://arxiv.org/abs/1706.06570)
 
 - S. Caldwell & Rigetti Computing <br>
     Parametrically-Activated Entangling Gates Using Transmon Qubits <br>

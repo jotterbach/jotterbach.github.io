@@ -10,7 +10,7 @@ First Big Data and Data Science, then Data Driven and Data Informed. Even before
 
 Data Science is an incredibly young and [flaming hot](https://speakerd.s3.amazonaws.com/presentations/c47f606815d34e7e8b7b1ca8be55eff1/Why_Data_Science__2_.pdf) field (Searching for 'Data Science' on Google Search yields about 283,000,000 results in 0.48 seconds [!] and the count is rising). The promises---and accordingly the stakes---of Data Science are high, and seem to follow a classic [Hype Cycle](https://en.wikipedia.org/wiki/Hype_cycle). Nevertheless, Data Science is already having major impacts on all aspects of life, with personalized advertisement and [self-quantification](https://en.wikipedia.org/wiki/Quantified_Self) leading the charge. But is there a place for Data Science in Academia? To try and answer this question, we will first dive into trying to understand more about Data Science itself, from lofty promises to practical workflows, and later point out some potential (big-picture) academic applications.
 
-##Yet another attempt at defining Data Science ...
+## Yet another attempt at defining Data Science ...
 
 There are gazillions of blogs, articles, diagrams, and other information channels that aim to define this new and still-fuzzy term "Data Science," and it will still be some years before we achieve consensus. But at least for now there is some agreement surrounding the main ingredients; Drew Conway summarizes them nicely in his [Venn diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
 
@@ -31,7 +31,7 @@ The most formalized definition I've come across is from NIST's [Big Data Framewo
 I won't elaborate on these terms here, but I do want to draw the attention to the modest word *actionable*. This is the key component of Data Science that distinguishes it from mere data analysis, and the implementation of which gives rise to the dichotomy of Data Driven vs. Data Informed.
 
 
-##Promises and shortcomings of Data Science: The Hype Cycle
+## Promises and shortcomings of Data Science: The Hype Cycle
 
 The [Gartner 2014 Hype Cycle report](http://www.gartner.com/newsroom/id/2819918) on emerging technologies places *Data Science* just past the threshold of the region of inflated expectations.
 
@@ -44,7 +44,7 @@ Data Science, and in particular Applied Machine Learning, is not completely agno
 > The most sophisticated [Machine Learning] algorithm we can conceive of has the same average performance (over all possible tasks) as merely predicting that every point belongs to the same class. Fortunately, these results hold only when we average over *all* possible data generating distributions. If we make assumptions about the kinds of probability distributions we encounter in real-world applications, then we can design learning algorithms that perform well on these distributions.
 
 
-##Actionable business insights: Data Driven vs. Data Informed
+## Actionable business insights: Data Driven vs. Data Informed
 
 The oft-quoted expression "*Be data informed, not data driven*'' seems to originate with Adam Mosseri's (from Facebook) [2010 talk](https://www.youtube.com/watch?v=bKZiXAFeBeY). He coined these terms to distinguish two different approaches to a data problem.
 
@@ -64,7 +64,7 @@ Data-Informed decisions leverage the best of two worlds: the analysis of data gi
 
 [![Data Science Process](/resources/cdl_blog/Blitzstein_DataScientistWorkflow.png)](http://cs109.org)
 
-##What about Data Science in Academia?
+## What about Data Science in Academia?
 There have long been calls to Academia to better prepare students (especially Ph.D. graduates) for the job market. The explosion of Data Science as the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/) is fueling the creation of an increasing number of [Data Science Master programs](http://www.mastersindatascience.org/). The value of these programs remains to be tested, as few graduates have hit the market, but the trend reveals that Academia is at least trying to respond to calls for reform.
 
 Apart from preparing students for careers outside the academy, is there space for applying Data Science to traditional academic fields, and maybe establishing it as a field unto itself? Data Science involves much more than statistical data analysis, encompassing aspects of data management, data warehousing, reproducibility, and data best practices. To advance Science as a whole, it will be necessary for researchers and staff to develop a $$\pi$$-shaped skills profile (as coined by [Alex Szalay](http://www.sdss.jhu.edu/~szalay/))
@@ -77,5 +77,5 @@ This feeds into the second, to-be-developed, leg, which represents advanced comp
 
 > As long as the centuries continue to unfold, the number of books will grow continually, and one can predict that a time will come when it will be almost as difficult to learn anything from books as from the direct study of the whole universe. It will be almost as convenient to search for some bit of truth concealed in nature as it will be to find it hidden away in an immense multitude of bound volumes.
 
-##Next steps ...
+## Next steps ...
 It's clear that Data Science will have [major impacts](http://www.pewinternet.org/2014/08/06/future-of-jobs/) on our digital and non-digital lives. The Internet of Things already transcends our individual internet presence by connecting everyday devices—such as thermostats, fridges, cars, etc.—to the internet, and thus makes them available to optimizations using Data Science. The extent of these impacts, though, will depend on our ability to make sense of the data and develop tools and intuitions to check computerized predictions against reality. Moreover, we require a better understanding of the limitations of Data Science as well as its mathematical-statistical foundations. Without thorough [basic knowledge](http://www.pewinternet.org/2014/11/25/web-iq/), Data Science and Machine Learning, will be seen as belonging to the Dark Arts and [raise skepticism](http://www.pewinternet.org/2014/04/03/older-adults-and-technology-use/). This is true for data of all sizes and depends strongly on whether we succeed in making data discoverable and processable. Data Science has a role to play in this (both in industry as well as the Academy). To succeed we first need to rethink the way scientific information is produced, stored, and prepared for further investigations. And this goal hinges on overdue changes of incentives within the academy.

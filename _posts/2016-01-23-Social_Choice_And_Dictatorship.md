@@ -27,10 +27,10 @@ The suprising result of [Kenneth Arrow](https://en.wikipedia.org/wiki/Kenneth_Ar
 
 We will not be deriving this result here, but there is a nice [paper](https://15bdb8d0-a-62cb3a1a-s-sites.googlegroups.com/site/philipjreny/arrow-gibbard-satterthwaite-econ-lett-2001.pdf) giving a very intuitive proof. Instead we will discuss some popular voting systems and their seemingly paradoxical outcomes. This will help to understand why the above statement might be true.
 
-###Popular Voting Systems and Examples
+### Popular Voting Systems and Examples
 Let us look at some simple example to understand what the theorem implies and gain intuition about the complexity of election systems.
 
-####Example 1
+#### Example 1
 We look at three groups of voters with their preference profiles after an election given by
 
 $$
@@ -52,7 +52,7 @@ Depending on the voting schemes the outcome of the election is very different. L
 
 - **Plurality with elimination** (also called *instant runoff* or *transferable voting*): The alternative with the majority of votes is the winner. If there is no winner eliminate the alternative with the fewest votes and repeat until there is a winner. In the above case alternative $$c$$ would be the winner: $$b$$ has the fewest votes and hence will be eliminated, consequently we need to distribute the votes to candidates $$a$$ and $$c$$ after which $$c$$ is the winner.
 
-####Example 2
+#### Example 2
 Let us have a look at a different election with the outcomes:
 
 $$
@@ -70,9 +70,9 @@ $$
 
 The other voting schemes produce $$a$$ as the Condorcet, Borda and simple plurality winner and $$b$$ as the plurality with elimination winner.
 
-###Some Shortcomings
+### Some Shortcomings
 
-####Condorcet cycles
+#### Condorcet cycles
 
 It seems that the Condorcet system is a very sensible choice for a voting system, however there are cases without such a winner. An example of this is *rock-paper-scissor*
 
@@ -86,7 +86,7 @@ $$
 
 This example belongs to the more general class of [Condorcet cycles](http://rangevoting.org/CondorcetCycles.html) paradox. Within [rank ordering vote systems](https://en.wikipedia.org/wiki/Ranked_voting_system) this problem can unfortunately not be solved and one has to resort to [range voting systems](https://en.wikipedia.org/wiki/Range_voting). We will not go into further detail on those.
 
-####Successive Elimination
+#### Successive Elimination
 
 Let's look at the case where we introduce a fourth alternative $$d$$ Before the election we agree on the elimination scheme $$a, b, c, d$$. The preference profile after the vote is:
 
@@ -103,7 +103,7 @@ Who is the winner? Comparing $$a$$ to $$b$$ eliminates $$b$$. Next we compare $$
 Why is this a problem? If we only compared $$b$$ to $$d$$ then $$b$$ is strictly Pareto-dominant over $$d$$. Nevertheless the successive elimination elects $$d$$ as the winner.
 
 
-###Final words
+### Final words
 All of the above voting schemes make significant trade-offs to avoid a dictatorial election system. Most often them give up the independence of irrelevant alternatives (IIA) and introduce dependencies on third party candidates, as they need tie-breakers. In the case of successive elimination, the pre-determined order ensures IIA for the election but then violates the Pareto efficiency (PE) as it allows a strictly dominated candidate to be elected as winner.
 
 What these examples should teach us, is that whenever we have the option to vote, we should! Consequences of not voting are hard to understand and simple arguments are more wrong than right. If you consider not voting, make sure you understand the impacts. Especially in  winner-takes-it-all electorial systems like the US, consequences can be large, as a [few votes can change the outcome of an election](https://en.wikipedia.org/wiki/Florida_election_recount) by giving them inproportional leverage due to the number of electorial votes a state brings to the table.

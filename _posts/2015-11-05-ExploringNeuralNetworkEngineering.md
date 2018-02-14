@@ -9,7 +9,7 @@ So, what is a good engineering way of thinking about Neural Networks? Mathematic
 
 ![Simple FNN with a single hidden unit](/resources/AbstractionInANN/SimpleNN.svg)
 
-###Neurons, Layers and Activations
+### Neurons, Layers and Activations
 The graph has some hierarchical structure in it, where the nodes are called **units or neurons** and the collection of neurons within a level form a **layer**. The size of the input layer corresponds to the number of features in the input data and its dimension equals the number of input data we are trying to learn from. The final level is the output layer with a size corresponding to the dimensionality of the target variable we are interested in (e.g. for a binary classification we have two units -- one for each class). The full magic of FFNs happen in between these two layers, i.e. in the hidden layers. Within such a layer, the input of the previous layer is being processed and the output is being fed forward as input to the next layer until we arrive at the final output layer. For a single layer $$i$$, we can write the processing as a simple matrix multiplication
 
 \begin{equation}
@@ -40,7 +40,7 @@ $$
 
 The goal of the NN is to learn the weights $$W_i$$ and the biases $$b_i$$ for a given sample set, so that it can give the most accurate answer to a new, previously unseen sample.
 
-###Loss Functions and Minimization Procedures
+### Loss Functions and Minimization Procedures
 To 'learn' the data and give reasonably accurate answers for the new samples, we need to define an objective/cost function that determines what good learning is. If $$y_i$$ is the actual target variable and $$\hat y_i$$ is the prediction we want to minimize the deviations of the predictions from the actual outcome and want to penalize those deviations. If $$\ell(y_i, \hat y_i)$$ denotes that penalty then a well trained model minimizes the total loss
 
 $$
@@ -59,7 +59,7 @@ $$
 
 The most commonly used loss function (for continuous outputs) is the squared error loss $$\ell_\text{MSE}(y_i, \hat y_i) = (\hat y_i - y_i)^2$$, which can be motivated through various different ways, but mainly has advantages when it actually comes to numerically finding the optimal values $$W_i^*$$, $$b_i^*$$. Procedures to find those values are numerous, such as [steepest gradient descent](https://en.wikipedia.org/wiki/Gradient_descent), [stochastic gradient descent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent) and [conjugate gradient descent](https://en.wikipedia.org/wiki/Conjugate_gradient_method) to just name a few. All these techniques fall into the much broader category of [optimization](https://en.wikipedia.org/wiki/Mathematical_optimization).
 
-###The Network itself - stringing it all together
+### The Network itself - stringing it all together
 Finally we need to tie everything up in an over-arching structure that takes the input and feeds it into the network and either triggers the minimization or predicts an outcome from a new sample input. Basically it should only delegate the work and be a central place-holder for all the ingredients. With this all pieces are into place to build a useful system of abstractions to think about:
 
 * The network:
@@ -81,7 +81,7 @@ Finally we need to tie everything up in an over-arching structure that takes the
 
 There is an argument to be made that the loss function should be part of the layer, as there are different types of layers for different problems, e.g. for so-called Mixture Density Models. However, I think it is better to have several types (think of interfaces) of loss functions that can be plugged into the layers, which might only accept certain types of loss function implementations. This increases the modularity and reusability.
 
-###Final words ...
+### Final words ...
 I wrote a [small library](https://github.com/jotterbach/SimpleNeuralNets) for personal use with these guidelines in mind (contributions are of course more than welcome!). The layout does not (yet!) quite adhere to the above abstractions (python's base classes are not quite as powerful as Java interfaces it seems and I need to figure that out), and is hence not quite as flexible. I hope to improve and refactor it over time as I go along and explore different Neural Networks.
 
 For the implementation I used [Theano](http://www.deeplearning.net/software/theano/) as it has some useful predefined abstractions and lets you easily transfer the algorithms to run on a GPU. For completnes I also want to point out other popular libraries in the open source wilderness, such as [Keras](http://keras.io/), [Lasagne](http://lasagne.readthedocs.org/en/latest/) and [Caffe](http://caffe.berkeleyvision.org/).
