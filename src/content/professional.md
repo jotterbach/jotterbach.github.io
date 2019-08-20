@@ -1,5 +1,6 @@
 ---
 title: Professional
+type: Content
 ---
 
 

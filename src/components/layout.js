@@ -23,7 +23,7 @@ const Header = () => (
     </div>
     <div>
       <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
+        <ListLink to="/blog-list">Blog</ListLink>
         <ListLink to="/professional/">Professional</ListLink>
       </ul>
     </div>
@@ -55,7 +55,7 @@ export default ({ children }) => (
     <div>
       <Header />
     </div>
-    <div>{children}</div>
+    <div className="Content">{children}</div>
     <div>
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 ---
 title: About
+type: Content
 ---
 
 
