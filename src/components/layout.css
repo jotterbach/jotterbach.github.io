@@ -16,12 +16,16 @@
 }
 
 .FooterLink {
-  display: inline-block;
-  margin-right: 1rem;
-  min-width: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-align: "center";
 }
 
 .Footer {
-  margin-top: 2.5rem
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  flex-wrap: wrap
 }

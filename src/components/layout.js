@@ -29,23 +29,21 @@ const Header = () => (
 
 const Footer = () => (
   <footer className="Footer">
-    <ul style={{ listStyle: `none`, textAlign: `center` }}>
-      <li className="FooterLink">
-        <a href="https://linkedin.com/in/jotterbach" alt="linkedin">
-          <FontAwesomeIcon icon={faLinkedinIn} size={`2x`} color={`#606060`} />
-        </a>
-      </li>
-      <li className="FooterLink">
-        <a href="https://www.github.com/jotterbach" alt="github">
-          <FontAwesomeIcon icon={faGithub} size={`2x`} color={`#606060`} />
-        </a>
-      </li>
-      <li className="FooterLink">
-        <a href="https://www.twitter.com/jsotterbach" alt="twitter">
-          <FontAwesomeIcon icon={faTwitter} size={`2x`} color={`#606060`} />
-        </a>
-      </li>
-    </ul>
+    <div className="FooterLink">
+      <a href="https://linkedin.com/in/jotterbach" alt="linkedin">
+        <FontAwesomeIcon icon={faLinkedinIn} size={`2x`} color={`#606060`} />
+      </a>
+    </div>
+    <div className="FooterLink">
+      <a href="https://www.github.com/jotterbach" alt="github">
+        <FontAwesomeIcon icon={faGithub} size={`2x`} color={`#606060`} />
+      </a>
+    </div>
+    <div className="FooterLink">
+      <a href="https://www.twitter.com/jsotterbach" alt="twitter">
+        <FontAwesomeIcon icon={faTwitter} size={`2x`} color={`#606060`} />
+      </a>
+    </div>
   </footer>
 )
 
