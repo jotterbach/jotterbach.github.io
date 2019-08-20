@@ -7,12 +7,21 @@
   min-height: 0vh;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center
+  justify-content: center;
 }
 
 .NavBarLink {
   display: inline-block;
   margin-right: 1rem;
+}
+
+.Header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-items: center;
 }
 
 .FooterLink {
@@ -27,5 +36,5 @@
   flex-direction: row;
   justify-content: space-evenly;
   justify-items: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
