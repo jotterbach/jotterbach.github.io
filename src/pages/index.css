@@ -1,0 +1,35 @@
+.Container {
+  display: flex;
+  min-height: 0vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Item-top {
+  align-self: flex-start;
+}
+
+.Item {
+  min-width: 250px;
+  max-width: 400px;
+  flex-basis: auto;
+  flex-grow: 2;
+}
+
+.Item-bottom {
+  align-self: flex-end;
+}
+
+.Item-content {
+    max-width: 95%;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center
+}
