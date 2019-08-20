@@ -11,11 +11,11 @@ export default ({ data }) => (
         <div className="Item-top" />
         <div className="Item">
           <div className="Item-content">
-          <Img
-            fluid={data.file.childImageSharp.fluid}
-            fadeIn={true}
-            alt="Gatsby Docs are awesome"
-          />
+            <Img
+              fluid={data.file.childImageSharp.fluid}
+              fadeIn={true}
+              alt="Gatsby Docs are awesome"
+            />
           </div>
           <div className="Item-bottom" />
         </div>

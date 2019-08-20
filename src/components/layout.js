@@ -17,15 +17,15 @@ const ListLink = props => (
 const Header = () => (
   <header className="Header">
     <div>
-    <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-      <h3 style={{ display: `inline-block` }}>Johannes Otterbach</h3>
-    </Link>
+      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+        <h3 style={{ display: `inline-block` }}>Johannes Otterbach</h3>
+      </Link>
     </div>
     <div>
-    <ul style={{ listStyle: `none`, float: `right` }}>
-      <ListLink to="/">Home</ListLink>
-      <ListLink to="/professional/">Professional</ListLink>
-    </ul>
+      <ul style={{ listStyle: `none`, float: `right` }}>
+        <ListLink to="/">Home</ListLink>
+        <ListLink to="/professional/">Professional</ListLink>
+      </ul>
     </div>
   </header>
 )
