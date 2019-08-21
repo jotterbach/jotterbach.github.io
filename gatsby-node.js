@@ -18,29 +18,36 @@ exports.createPages = async ({ graphql, actions }) => {
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
   const { createPage } = actions
   const result = await graphql(`
-      query {
-        allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } }) {
-          edges {
-            node {
-              fields {
-                slug
-              }
+    query {
+      allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            html
+            frontmatter {
+              title
             }
           }
         }
       }
-    `)
-  console.log("RESULT", result)
+    }
+  `)
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    // Using Gatsby v2 prevents you from using StaticQueries in the template
+    // files. Hence use the PageQuery to gather all data to hand to the 
+    // template as compile time.
+    // See https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/ 
+    // and https://github.com/gatsbyjs/gatsby/issues/15977
+    const slug = node.fields.slug
     createPage({
-      path: node.fields.slug,
+      path: slug,
       component: path.resolve(`./src/pages/blog-template.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
+        html: node.html,
+        title: node.frontmatter.title
       },
     })
   })
-  // console.log(JSON.stringify(result, null, 4))
 }
