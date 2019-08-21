@@ -38,7 +38,7 @@ f(y, x) \,=\, x^3 + 2  x^2 - 3^x.
 $$
 
 No worries about any interpretation of this equation, I made it up. However, we can already see that any analytic solution is hard to come by and we would like to understand how a solution of this ODE flows through the parameter space.
-![Direction Field](/resources/mc_ode/direction_field.png){: .text.img-left width="70%"}
+![Direction Field](./imgs/direction_field.png)
 The direction field induced by this equation is shown to the left. The first observation we might have is that the pattern is repeating itself along the $$y$$-direction. This is to be expected for this ODE, as $$f$$ does not depend on $$y$$. Second, we observe that on the left side, the solution has steep negative gradiends, indicating a strong decay, before a flatter region followed by a steep rise on the right side. At this point I feel, we already have a decent understanding how potential solutions to this ODE will generally behave and we postpone the actual numerical solution towards a later point.
 
 Before moving on to the next section, I need to point out that we can always convert the first-order ODE given above into an integral equation:
@@ -122,7 +122,7 @@ I = 2 * 3.5 * np.mean(yr)
 
 We compare this with the exact solution obtained using the [$$\texttt{scipy.integrate.quadrature}$$](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quadrature.html) functionality. Putting this all into a single figure we obtain
 
-![MC integration of sinc function](/resources/mc_ode/mc_integration.png){: img width="100%"}
+![MC integration of sinc function](./imgs/mc_integration.png)
 
 Let's take this plot apart. The central curve of the main plot shows the `sinc` function. The red straight line shows the value of the exact integral over the `sinc` obtain using scipy, whereas the black dashed line shows the estimated integral value using Monte Carlo. The grey bar shows the three standard-deviation confidence interval of the estimate. We see that the exact and Monte Carlo values overlap within the confidence bounds. To obtain the MC value we sample $$500$$ independent $$x$$-values and compute their corresponding function value $$y=f(x)$$. The upper histogram shows the distribution of the sampled $$x$$-values, whereas the right histogram shows the distribution of corresponding $$y$$ values. The MC value of the integral is obtained by computing the mean of the sampled $$yy$$ values multiplied by the length of the sampling interval of the $$x$$-values.
 
@@ -202,7 +202,7 @@ def f(x):
 
 
 Plugging everything together we can solve and plot the ODE.
-![Solved linear ODE](/resources/mc_ode/solution_direction_field.png){: img width="100%"}
+![Solved linear ODE](./imgs/solution_direction_field.png)
 As expected the solution flows along the direction field lines. Moreover the MC solution also lets us estimate the confidence in the solution as visualized by the three standard deviation green band around the solution.
 
 
@@ -257,7 +257,7 @@ def f(y, x):
 ```
 
 Throwing this into the solver with the initial conditions $$(x_0, y_0) = (-4, 4)$$ we get a nice plot
-![Solved nonlinear ODE](/resources/mc_ode/nl_solution_direction_field.png){: img width="100%"}
+![Solved nonlinear ODE](./imgs/nl_solution_direction_field.png)
 This method works amazingly well as can be seen when compared to the [$$\texttt{scipy.integrate.odeint}$$](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html) solver. The inset shows the absolute difference between the solutions, which is small compared to the absolute scale. Also it is nice to see that the solution again hugs the flow of the direction field, showing the power of this visualization method.
 
 ## Conclusion

@@ -46,7 +46,7 @@ export default function HTML(props) {
         <script dangerouslySetInnerHTML={{__html: MathJaxConfig}} />
           <script
             defer
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+            async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
             type="text/javascript"
           />
       </body>
