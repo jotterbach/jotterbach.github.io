@@ -6,18 +6,16 @@ title: Monte Carlo methods for solving Ordinary Differential Equations
 
 I found myself recently refreshing my knowledge about [Ordinary Differential Equations](https://en.wikipedia.org/wiki/Ordinary_differential_equation) (ODEs) and methods of how to solve them. Since I haven't blogged for a while, I thought this might be a nice topic to pick up this habit again.
 
-In this post, I want to share some--rather na&iuml;ve--ways of how to solve ODEs with Monte-Carlo techniques. This is not typically done for simple ODEs as there are more powerful tools, such as the various [Runge-Kutta methods](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods), but it builds intuition of how they work in cases when applied to high-dimensional _Partial Differential Equations_ (PDEs) or _Stochastic Differential Equations_ (SDEs). As always the code to produce all the plots can be found in an [IPython Notebook](https://github.com/jotterbach/Data-Exploration-and-Numerical-Experimentation/blob/master/Numerical-Experimentation/Monte%20Carlo%20Methods%20to%20solve%20ODEs.ipynb)[^fn-paper]
+In this post, I want to share some--rather na&iuml;ve--ways of how to solve ODEs with Monte-Carlo techniques. This is not typically done for simple ODEs as there are more powerful tools, such as the various [Runge-Kutta methods](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods), but it builds intuition of how they work in cases when applied to high-dimensional _Partial Differential Equations_ (PDEs) or _Stochastic Differential Equations_ (SDEs). As always the code to produce all the plots can be found in an [IPython Notebook](https://github.com/jotterbach/Data-Exploration-and-Numerical-Experimentation/blob/master/Numerical-Experimentation/Monte%20Carlo%20Methods%20to%20solve%20ODEs.ipynb)[^1]
 
 ## First-order Ordinary Differential Equations
-To start off, let me introduce the mathematical form of _first-order_ ODEs, the equations we will study in this post[^fn-ode-book]:
+To start off, let me introduce the mathematical form of _first-order_ ODEs, the equations we will study in this post[^2]:
 
 $$
-\begin{align}
 \frac{dy}{dx} \,=\, f(y(x), x), \text{ such that } y(x_0) = y_0.
-\end{align}
 $$
 
-The function $$f(y, x)$$ can be arbitrarily complex and non-linear in both arguments and the value pair $$(x_0, y_0)$$ defines the intial values for the equation. This form of the ODE is known as the [_Initial Value Problem_](https://en.wikipedia.org/wiki/Initial_value_problem). To guarantee the existence of a solution one typically assumes that the $$f$$ is contiuous over the domain we want to solve it over and fulfills the [Lipschitz condition](https://christiancosgrove.com/blog/2018/01/04/spectral-normalization-explained.html) in order to guarantee uniqueness of this solution. To reason why this equation is called _first-order_ lies in the fact that only the first derivative on $$y$$ is present in the equation. To round out all the nomenclature, the ODE is called _linear_ if $$f(y, x)$$ is at most linear in the dependent variable $$y$$, i.e. is of the form $$f(y,x) = s(x) + y(x) t(x)$$.
+The function $f(y, x)$ can be arbitrarily complex and non-linear in both arguments and the value pair $(x_0, y_0)$ defines the intial values for the equation. This form of the ODE is known as the [_Initial Value Problem_](https://en.wikipedia.org/wiki/Initial_value_problem). To guarantee the existence of a solution one typically assumes that the $$f$$ is contiuous over the domain we want to solve it over and fulfills the [Lipschitz condition](https://christiancosgrove.com/blog/2018/01/04/spectral-normalization-explained.html) in order to guarantee uniqueness of this solution. To reason why this equation is called _first-order_ lies in the fact that only the first derivative on $$y$$ is present in the equation. To round out all the nomenclature, the ODE is called _linear_ if $$f(y, x)$$ is at most linear in the dependent variable $$y$$, i.e. is of the form $$f(y,x) = s(x) + y(x) t(x)$$.
 
 The function $$f(y, x)$$ represents the gradient of the function $$y(x)$$ given the function value $$y(x)$$ at point $$x$$ and can be best visualized using a [Direction Field](http://tutorial.math.lamar.edu/Classes/DE/DirectionFields.aspx)--a kind of vector field for ODEs. This vector is defined as 
 
@@ -90,7 +88,7 @@ $$
 \end{align}
 $$
 
-What we achieved here is to turn integration into a sampling problem! The equation we derived is rather simplistic and there exist much more advanced strategies of how to sample. However, all of these techniques go back to the same basic intuition of trying to estimate the mean value of the function $$f$$ over the domain of interest. It is worth mentioning that the above description already allows us some rather intriguing insight into of MC: As we calculate averages, we know that the variance of the estimator decreases as $$1/\sqrt{M}$$ and hence we might need a lot of samples to get an accurate value[^fn-variance-reduction]. However, this convergence rate is _independent_ of the dimensionality of the integral and so ideally suited for high-dimensional problems! 
+What we achieved here is to turn integration into a sampling problem! The equation we derived is rather simplistic and there exist much more advanced strategies of how to sample. However, all of these techniques go back to the same basic intuition of trying to estimate the mean value of the function $$f$$ over the domain of interest. It is worth mentioning that the above description already allows us some rather intriguing insight into of MC: As we calculate averages, we know that the variance of the estimator decreases as $$1/\sqrt{M}$$ and hence we might need a lot of samples to get an accurate value[^3]. However, this convergence rate is _independent_ of the dimensionality of the integral and so ideally suited for high-dimensional problems! 
 
 To put this into context, we consider the exemplary function:
 
@@ -161,7 +159,7 @@ y(x_i) \,=\, & y(x_{i-1}) + \frac{x_i - x_{i-1}}{K} \sum_{k=1}^K f(x_k), \\
 \end{align}
 $$
 
-This is amazing! What we achieved now is the ability to solve a differential equation by uniformly sampling random points in space and evaluating the gradient function $$f$$. We do not need any intricate step size estimation, adaptive grid technique or other method. Just random sampling is enough![^fn-importance-sampling] MC not only allows us to compute tricky integrals, but also to solve differential equations.
+This is amazing! What we achieved now is the ability to solve a differential equation by uniformly sampling random points in space and evaluating the gradient function $$f$$. We do not need any intricate step size estimation, adaptive grid technique or other method. Just random sampling is enough![^4] MC not only allows us to compute tricky integrals, but also to solve differential equations.
 
 This method can also easily be implemented in a few lines of code. First let us define the MC integration routine:
 
@@ -265,15 +263,15 @@ I hope you enjoyed this little introduction into differential equation and Monte
 
 
 #### Footnotes
-[^fn-paper]: After writing this up, I also came across the paper [Solving Initial Value Ordinary Differential Equations By Monte Carlo Method](http://static.bsu.az/w24/PIAMV4%20N2%202015/6%20Akhtar.pdf) by M. Akhtar et al. (Proc. IAM, 4, 2, 2015, p 149--184). The presentation is quite similar, but deals with implicit ODEs and is less introductory.
+[^1]: After writing this up, I also came across the paper [Solving Initial Value Ordinary Differential Equations By Monte Carlo Method](http://static.bsu.az/w24/PIAMV4%20N2%202015/6%20Akhtar.pdf) by M. Akhtar et al. (Proc. IAM, 4, 2, 2015, p 149--184). The presentation is quite similar, but deals with implicit ODEs and is less introductory.
 
-[^fn-ode-book]: A good book with introductory as well as more advanced topics on ODEs has been written [by Agarwal, R. P., & O'Regan, D. (2008). An introduction to ordinary differential equations](https://books.google.com/books?hl=en&lr=&id=myd2ULPJYn0C&oi=fnd&pg=PP6&dq=An+Introduction+to+Ordinary+Differential+Equations+Universitext&ots=eSbQxunJWy&sig=NbNrjfP-cj3jKC9MURodau753UY).
+[^2]: A good book with introductory as well as more advanced topics on ODEs has been written [by Agarwal, R. P., & O'Regan, D. (2008). An introduction to ordinary differential equations](https://books.google.com/books?hl=en&lr=&id=myd2ULPJYn0C&oi=fnd&pg=PP6&dq=An+Introduction+to+Ordinary+Differential+Equations+Universitext&ots=eSbQxunJWy&sig=NbNrjfP-cj3jKC9MURodau753UY).
 
-[^fn-variance-reduction]: This is where more advanced sampling techniques such as importance sampling, rejection sampling and others come into play. The basic idea is to come up with strategies to reduce the variance and speed up convergence of the estimator.
+[^3]: This is where more advanced sampling techniques such as importance sampling, rejection sampling and others come into play. The basic idea is to come up with strategies to reduce the variance and speed up convergence of the estimator.
 
-[^fn-importance-sampling]: Note that this also gives us a way to change the distribution we are sampling under. This becomes important when we have a feeling for the function we want to integrate and want to emphasize certain regions more. This is known as importance sampling and the estimator then becomes $$\mathbb{E}_{x \sim \mathcal{U}(a, b)}[f(x)] = \mathbb{E}_{x \sim p}[f(x) / p(x)]$$
+[^4]: Note that this also gives us a way to change the distribution we are sampling under. This becomes important when we have a feeling for the function we want to integrate and want to emphasize certain regions more. This is known as importance sampling and the estimator then becomes $$\mathbb{E}_{x \sim \mathcal{U}(a, b)}[f(x)] = \mathbb{E}_{x \sim p}[f(x) / p(x)]$$
 
-[^fn-approximation]: There are of course many more advanced approximations, but for our purposes this naive approach is sufficient. 
+[^5]: There are of course many more advanced approximations, but for our purposes this naive approach is sufficient. 
 
 
 
