@@ -11,7 +11,7 @@ export default ({ data }) => (
         <div className="Item-top" />
         <div className="Item">
           <div className="Item-content">
-            <Img
+            <Img className='ProfileImg'
               fluid={data.file.childImageSharp.fluid}
               fadeIn={true}
               alt="Gatsby Docs are awesome"
@@ -46,7 +46,7 @@ export const query = graphql`
         }
       }
     }
-    file(relativePath: { eq: "johannes2.jpg" }) {
+    file(relativePath: { eq: "profile.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
