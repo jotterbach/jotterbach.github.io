@@ -5,7 +5,7 @@ type: Content
 
 
 ## Short Bio
-Dr. Johannes Otterbach is a Fellow at [OpenAI](https://www.openai.com) working on fundamental research question to build safe Artifical General Intelligence (AGI). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining OpenAI he worked as a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is a Machine Learning and Algorithms Researcher at [OpenAI](https://www.openai.com) working on fundamental question to build safe Artifical General Intelligence (AGI). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining OpenAI he worked as a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resources/resume/Otterbach_resume.pdf)
 
@@ -104,7 +104,7 @@ More details are in the (more or less up-to-date) [resume](/resources/resume/Ott
 - J. Otterbach, J. Ruseckas, R. G. Unanyan, G. Juzeliunas, and M. Fleischhauer <br>
 	Effective magnetic fields for stationary light <br>
 	[Phys. Rev. Lett. 104, 033903 (2010)](http://prl.aps.org/abstract/PRL/v104/i3/e033903)
-    
+
     Coverage:<br>
     - PhysOrg.com: [Artificial magnetic fields for light could illuminate correlated quantum systems](https://phys.org/news/2010-02-artificial-magnetic-fields-illuminate-quantum.html)
 
