@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Intelligble Models - The Gradient Boosted GAM</title>
+
+        <meta name="description" content="Intelligble Models - The Gradient Boosted GAM">
+        <meta name="author" content="Johannes S. Otterbach">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black_customized.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section id="title">
+                    <h2>Intelligble Models - The Gradient Boosted GAM</h2>
+                    <p>
+                        <small>Data Science Seminar, LendUp, San Francisco</small><br>
+                        <small>&copy; <a href="https://jotterbach.github.io/professional/">Dr. Johannes S. Otterbach</a> / <a href="http://twitter.com/jsotterbach">@jsotterbach</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Overview and Intuition</h2>
+                </section>
+
+                <section id="xkcd_watson">
+                    <h3>What does it all mean?</h3>
+                    <a href="https://www.explainxkcd.com/wiki/index.php/1619:_Watson_Medical_Algorithm"> <img height="500" data-src="resources/watson_medical_algorithm.png"> </a>
+                    <p align="center">xkcd interpretation of IBM's Watson</p>
+                </section>
+
+                <section id="Interpretability">
+                    <p align="center">
+                        <span class="fragment">Model Interpretability vs. Performance</span>
+                        <br>
+                        <span class="fragment">Parametric vs. Non-Parametric Models</span>
+                    </p>
+                    <span class="fragment"><img height="300" data-src="resources/what_does_it_all_mean.jpg"></span>
+                </section>
+
+                <section id="model_tradeoffs">
+                    <h3>Modeling Tradeoffs</h3>
+                    <a href="http://doi.acm.org/10.1145/2339530.2339556">
+                        <img height="200" data-src="resources/Intelligibility_vs_accuracy.png">
+                    </a>
+                    <ul>
+                        <span class="fragment"><li>Biased Data + Adv. Learner (RF, NN, SVM) = Danger Zone</li></span>
+                        <span class="fragment"><li>Tendency to overfit spurious patterns introduced by bias [<a href="http://doi.acm.org/10.1145/2783258.2788613">Caruana et al., 2015</a>]</li></span>
+                    </ul>
+                    <span class="fragment"><p align="center">Focusing on Generalized Additive Models (GAMs)</p></span>
+                </section>
+
+                <section id="model_tradeoffs">
+                    <h3>What is a <a href="https://web.stanford.edu/~hastie/Papers/gam.pdf">GAM</a>?</h3>
+                    <ul>
+                        <span class="fragment"><li>Introduced by Hastie & Tibshirani, <a href="https://web.stanford.edu/~hastie/Papers/gam.pdf">Stat. Sci. 1986, 297</a></li></span>
+                        <span class="fragment"><li>Functional form: $$g(y) = \sum_{i=1}^{p} f_i(x_i)$$ </li></span>
+                        <span class="fragment"><li>$g(y)$: link function </li></span>
+                        <span class="fragment"><li>$f_i(x_i)$: shape function of variable $i$ at value $x_i$ </li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Intuition</h3>
+                    <ul>
+                        <span class="fragment"><li>Logit:
+                            <ul>
+                                <li>$f_i(x_i) = \theta_ix_i$</li>
+                                <li>$g(y) = \text{log}[y / (1-y)]$</li>
+                            </ul>
+                        </li></span>
+                        <span class="fragment"><li>Score Cards, e.g. <a href="http://www.fico.com/en/node/8140?file=7900">FICO</a> : $$ \text{Score} = S_0 + \sum_{i=1}^{p} H_i(c_i)$$
+                            <ul>
+                                <li>$c_i$: ScoreCard characteristic</li>
+                                <li>$H_i$: Characteristic score</li>
+                            </ul>
+                        </li></span>
+                        <span class="fragment"><li>Explicit interactions are intentionally broken!</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Intuition</h3>
+                    <ul>
+                        <span class="fragment"><li>Shape functions can be nonlinear</li></span>
+                        <span class="fragment"><li>Think about Taylor expansions:
+                            $$ f(x) = f(0) + f'(0)\; x +\frac{1}{2} f''(0)\; x^2 + \dots $$
+                        </li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Example: Pneumonia study</h3>
+                    <a href="http://doi.acm.org/10.1145/2783258.2788613"><img height="300" data-src="resources/Caruana2015_GAM_plots.png"></a>
+                    <ul>
+                        <span class="fragment"><li>Goal: predict prob. of death for high risk intervention</li></span>
+                        <span class="fragment"><li>has asthma, has chestpain, is really old $\rightarrow$ lower risk?</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Example: Pneumonia study</h3>
+                    <a href="http://doi.acm.org/10.1145/2783258.2788613"><img height="400" data-src="resources/Caruana2015_ModelPerfomance.png"></a>
+                    <ul>
+                        <span class="fragment"><li>GAM discoveres spurious patterns induced by bias</li></span>
+                        <span class="fragment"><li>GAM outperforms other advanced learners on AUC</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>... before it get's technical</h3>
+                    <ul>
+                        <span class="fragment"><li>SGB GAMs are interpretable</li></span>
+                        <span class="fragment"><li>SGB GAMs are powerful and non-parametric</li></span>
+                        <span class="fragment"><li>Python implementation at <a href="https://github.com/jotterbach/dstk">github.com/jotterbach/dstk</a></li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Oh Boy ... Technical Details</h2>
+                </section>
+
+                <section>
+                    <h3>What is 'shaping' a feature?</h3>
+                    <ul>
+                        <span class="fragment"><li>linear models can't learn non-linear features</li></span>
+                        <span class="fragment"><li>How do we learn shapes?
+                            <ul>
+                                <span class="fragment"><li><a href="https://web.stanford.edu/~hastie/Papers/gam.pdf">local smoothing, local likelihood, rolling averages: potentially biased</a></li></span>
+                                <span class="fragment"><li><a href="http://multithreaded.stitchfix.com/assets/files/gam.pdf">splines: restricted to polynomials; what degree do we choose?</a></li></span>
+                                <span class="fragment"><li><a href="http://doi.acm.org/10.1145/2339530.2339556">recursive partitioning, a.k.a. Trees</a></li></span>
+                            </ul>
+
+                        </li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Stochastic Gradient Boosted GAM</h3>
+                    <p align="center">
+                        <a href="http://doi.acm.org/10.1145/2339530.2339556"><img height="400" data-src="resources/GBGAM_features.png"></a>
+                    </p>
+                    <ul>
+                        <span class="fragment"><li>P-LS for splines vs SGB GAM</li></span>
+                        <span class="fragment"><li>SGB GAM needs only capacity limit vs. hyper-parameter optimization of P-LS</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>GAM training &dash; Backfitting algorithm</h3>
+                    <ul>
+                        <span class="fragment"><li>Initialize: $s_0 = E(Y)$ and $s_k(X_k)=0$</li></span>
+                        <span class="fragment"><li>Iterate: $m = m+1$:
+                            <ul>
+                                <span class="fragment"><li>for $i=1$ to $p$ do:
+                                    <ul>
+                                        <span class="fragment"><li>$R_i = Y - s_0 - \sum_{k=1}^{j-1} s^m_k(x_k) - \sum_{k=j+1}^p s^{m-1}_k(x_k)$</li></span>
+                                        <span class="fragment"><li>$s^m_i = E(R_i|X_i)$</li></span>
+                                    </ul>
+                                </li></span>
+                            </ul>
+                        </li></span>
+                        <span class="fragment"><li>Terminate: $RSS = E(Y - s_0 - \sum_{k=1}^{p} s^m_k(x_k))^2$ fails to decrease</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>GAM training &dash; Backfitting algorithm</h3>
+                    <ul>
+                        <span class="fragment"><li>$s_i$ typically parameterized</li></span>
+                        <span class="fragment"><li>less flexible as limited in capacity</li></span>
+                        <span class="fragment"><li>approximate shape needs to be known a-priori to choose good model</li></span>
+                    </ul>
+                    <span class="fragment"><p>Better alternatives?</p></span>
+                </section>
+
+                <section>
+                    <h3>Gradient Boosting</h3>
+                    <ul>
+                        <span class="fragment"><li>Loss function for classification:
+                            $$ L(y, F(x)) = \text{log}\left[1+\text{e}^{-2yF(x)}\right]$$
+                        </li></span>
+                        <span class="fragment"><li>assume $y=\pm 1$; to minimize loss: $$yF(x) \gg 0$$
+                        </li></span>
+                        <span class="fragment"><li>Want to optimize over function space; gradient:
+                            $$- \frac{\partial}{\partial F} L(y, F(x)) = \frac{2y}{1+\text{e}^{2yF(x)}}$$
+                        </li></span>
+                        <span class="fragment"><li>Negative gradient is called pseudo-response (PR)</li></span>
+                        <span class="fragment"><li>PR$\in (-2, 2)$;  measures how strongly misclassified $x_i$ is</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Gradient Boosted GAM &dash; pseudo-code</h3>
+                    <ul>
+                        <span class="fragment"><li>Initialize: $f_0 = log[p(y=1)/p(y=-1)]$</li></span>
+                        <span class="fragment"><li>Iterate while $m \leq M$:
+                            <ul>
+                                <span class="fragment"><li>for $j=1$ to $p$ do:
+                                    <ul>
+                                        <span class="fragment"><li>calculate PR $\tilde{y}_{i}$</li></span>
+                                        <span class="fragment"><li>fit $K$-leaf tree: $\{R_{km}\}_1^K = \text{tree}_{m}^K(\{\tilde{y}_{i}, x_{i,j}\})$</li></span>
+                                        <span class="fragment"><li>calculate update $\gamma_{km} = \frac{\sum_{x_{i,j} \in R_{km}} \tilde{y}_{i}}  {\sum_{x_{i,j} \in R_{km}} |\tilde{y}_{i}|(2-|\tilde{y}_{i}|)}$</li></span>
+                                        <span class="fragment"><li>update $f_j = f_j + \sum_{k=1}^K \gamma_{km} \mathbb{1}_{x_{i,j} \in R_{km}}$</li></span>
+                                    </ul>
+                                </li></span>
+                            </ul>
+                        </li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Gradient Boosted GAM</h3>
+                    <ul>
+                        <span class="fragment"><li>Single regression tree based updates leads to overfitting</li></span>
+                        <ul>
+                            <span class="fragment"><li>Slow updates as PR converges</li></span>
+                            <span class="fragment"><li>only little variation in the resulting partitioning</li></span>
+                        </ul>
+                        <span class="fragment"><li>To avoid overfitting</li></span>
+                        <ul>
+                            <span class="fragment"><li>Induce randomness</li></span>
+                            <span class="fragment"><li>Modify update velocity</li></span>
+                        </ul>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3><a href="http://www.sciencedirect.com/science/article/pii/S0167947301000652">Stochastic Gradient Boosting</a></h3>
+                    <ul>
+                        <span class="fragment"><li>Introduce randomness by sampling $\tilde N < N$ records</li></span>
+                        <span class="fragment"><li>Update GAM on subsample $\{ x_{\pi(i)},y_{\pi(i)}\}_1^{\tilde N}$</li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>SGB GAM &dash; pseudo-code</h3>
+                    <ul>
+                        <span class="fragment"><li>Initialize: $f_0 = log[p(y=1)/p(y=-1)]$</li></span>
+                        <span class="fragment"><li>Iterate while $m \leq M$:
+                            <ul>
+                                <span class="fragment"><li>take sample $\{ x_{\pi(i)},y_{\pi(i)}\}_1^{\tilde N}$</li></span>
+                                <span class="fragment"><li>for $i=1$ to $p$ do:
+                                    <ul>
+                                        <span class="fragment"><li>calculate PR $\tilde{y}_{\pi(i),j}$</li></span>
+                                        <span class="fragment"><li>fit $K$-leaf tree: $T_{m}^K(\{\tilde{y}_{\pi(i),j}, x_{\pi(i),j}\})$</li></span>
+                                        <span class="fragment"><li>calculate update $\gamma_{km} = \frac{\sum_{x_{\pi(i),j} \in R_{km}} \tilde{y}_{\pi(i)}}  {\sum_{x_{\pi(i),j} \in R_{km}} |\tilde{y}_{\pi(i)}|(2-|\tilde{y}_{\pi(i)}|)}$</li></span>
+                                        <span class="fragment"><li>update $f_j = f_j + \nu \cdot \sum_{k=1}^K \gamma_{km} \mathbb{1}_{x_{\pi(i),j} \in R_{km}}$</li></span>
+                                    </ul>
+                                </li></span>
+                            </ul>
+                        </li></span>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3><a href="http://www.sciencedirect.com/science/article/pii/S0167947301000652">Stochastic Gradient Boosting</a></h3>
+                    <ul>
+                        <span class="fragment"><li>Randomness averages over spurious data patterns</li></span>
+                        <span class="fragment"><li>Shrinkage parameter (learning rate) $\nu \lesssim 0.1$ prevents big jumps in updates</li></span>
+                    </ul>
+
+                    <div class="equaltwocolmask">
+                        <div class="equaltwocolleft">
+                            <div class="equaltwocol1" align="center">
+                                <span class="fragment"><a href="http://www.sciencedirect.com/science/article/pii/S0167947301000652"><img height="300" data-src="resources/SGB_SamplingFractionDependence.png"></a></span>
+                            </div>
+                            <div class="equaltwocol2" align="center">
+                                <span class="fragment"><a href="http://www.sciencedirect.com/science/article/pii/S0167947301000652"><img height="300" data-src="resources/SGB_LeafSizeDependence.png"></a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="theEnd">
+                    <h3>Take away ...</h3>
+                    <ul>
+
+                        <span class="fragment"><li>SGB GAM combines ideas from
+                        <ul>
+                            <span class="fragment"><li>Interpretable GAMs</li></span>
+                            <span class="fragment"><li>Nonparametric recursive partitioning</li></span>
+                            <span class="fragment"><li>Stochastic Gradient descent</li></span>
+                        </ul>
+                        </li></span>
+                        <br>
+                        <span class="fragment"><li>Python implementation at <a href="https://github.com/jotterbach/dstk">github.com/jotterbach/dstk</a></li></span>
+
+                    </ul>
+
+                    <br>
+                    <span class="fragment">
+                        <blockquote>Thanks!</blockquote>
+                    </span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>References</h3>
+                    <font size="5">
+                    <ul>
+                        <li><a href="http://doi.acm.org/10.1145/2339530.2339556">Y. Lou et al., Intelligible Models for Classification and Regression, KDD'12, 150</a></li>
+                        <li><a href="http://multithreaded.stitchfix.com/assets/files/gam.pdf">K. Larsen, GAM: The Predictive Modeling Silver Bullet, Stitchfix Blog</a></li>
+                        <li><a href="http://doi.acm.org/10.1145/2783258.2788613">R. Caruana et al., Intelligible Models for HealthCare, KDD'15, 1721</a></li>
+                        <li><a href="https://web.stanford.edu/~hastie/Papers/gam.pdf">T. Hastie, R. Tibshirani, Generalized Additive Model, Stat. Sci. 1 (1986), 297</a></li>
+                        <li><a href="http://www.sciencedirect.com/science/article/pii/S0167947301000652">J.H. Friedman, Greedy Function Approximation, Ann. Stat. 29 (2001), 1189</a></li>
+                        <li><a href="http://projecteuclid.org/euclid.aos/1013203451">J.H. Friedman, Stochastic Gradient Boosting, Comp. Stat. 38 (2002), 367</a></li>
+                        <li><a href="http://www.fico.com/en/node/8140?file=7900">FICO ScoreCard ModelBuilder white paper (2006)</a></li>
+                    </ul>
+                    </font>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

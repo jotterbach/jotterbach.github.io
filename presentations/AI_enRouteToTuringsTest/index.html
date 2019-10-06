@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Artificial Intelligence - En Route to Passing Turing's Test</title>
+
+        <meta name="description" content="A talk on AI and Machine Learning">
+        <meta name="author" content="Johannes S. Otterbach">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black_customized.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section id="title">
+                    <h2>Artificial Intelligence</h2>
+                    <h4>En Route to Passing Turing's Test</h4>
+                    <p>
+                        <small>Special Physics Seminar, TU Kaiserslautern, Germany</small><br>
+                        <small>&copy; <a href="https://jotterbach.github.io/professional/">Dr. Johannes S. Otterbach</a> / <a href="http://twitter.com/jsotterbach">@jsotterbach</a></small>
+                    </p>
+
+                    <aside class="notes">
+                        Thank you for ... <br>
+                        I'm happy to tell you a little bit about the theoretical foundations of my recent work at LendUp connected with Artificial Intelligence and an event called "the singularity" when AI passes the so-called Turing test <br>
+                    </aside>
+                </section>
+
+                <section id="AIinPopCulture">
+                    <h3>AI &amp; Sci-Fi</h3>
+                    <div class="colmask">
+                        <div class="colmid">
+                            <div class="colleft">
+                                <div class="col1">
+                                    <span class="fragment" data-fragment-index="2">
+                                        <img width="300" data-src="resources/Movie_war_game.jpg" alt="War Games movie">
+                                        <img width="300" data-src="resources/irobot_movie.jpg" alt="I Robot">
+                                    </span>
+                                </div>
+                                <div class="col2">
+                                    <span class="fragment" data-fragment-index="1">
+                                        <img width="300" data-src="resources/star_wars.png" alt="Star Wars">
+                                    </span>
+                                </div>
+                                <div class="col3">
+                                    <span class="fragment" data-fragment-index="3">
+                                        <img width="300" data-src="resources/her_movie.jpg" alt="Her movie">
+                                        <img width="300" data-src="resources/ex_machina_movie.png" alt="Ex Machina">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="notes">
+                            <ol>
+                                <li>How did we imagine AI in the 70's 80's and now?</li>
+                                <li>Is there a common theme? What is AI?</li>
+                            </ol>
+                        </aside>
+
+                </section>
+
+                <section id="whatIsAi">
+                    <h3>AI?</h3>
+                    <img width="178" data-src="resources/ai_brain.jpg" alt="AI Brain">
+                    <p>
+                        <table>
+                            <tr>
+                                <td>think like humans</td>
+                                <td>think rationally</td>
+                            </tr>
+                            <tr>
+                                <td>act like humans</td>
+                                <td>act rationally</td>
+                            </tr>
+
+                        </table>
+                    </p>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>AI as agent</li>
+                            <li>agents categorized along "reasoning" and "behavioral" dimensions
+                                <ol>
+                                    <li>thinking rationally: What are the laws of thought? Pure logic; problems with informal knowledge.</li>
+                                    <li>thinking humanly: inside human understanding; cognitive science</li>
+                                    <li>acting rationally: rational agent; acts according to "best expected outcome" in face of uncertainty</li>
+                                    <li>acting humanly: Turing test!</li>
+                                </ol>
+
+                            </li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="TuringTest">
+                    <h3>Turing's Test</h3>
+                    <p align="left"><i>A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.
+                        </i></p>
+                    <p align="right">— Alan Turing</p>
+
+                    <img width="300" data-src="resources/turing_test.jpg" alt="TuringTest">
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Blinded test vs. non blinded test</li>
+                            <li>What are the requirements?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="HumanSenses">
+                    <h3>What does it take to create AI?</h3>
+                    <p>Human "senses" necessary for most task:</p>
+                    <ul>
+                        <span class="fragment"><li>Speaking / Hearing</li></span>
+                        <span class="fragment"><li>Seeing</li></span>
+                        <span class="fragment"><li>Experience / Knowledge</li></span>
+                        <span class="fragment"><li>Logical Deductions</li></span>
+                        <span class="fragment"><li>Motion (walking, lifting, ...)</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>Most needed human senses for daily life</li>
+                            <li>What about touch and smell? I leave that open ...</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="properties">
+                    <h3>
+                        Necessary "computational" properties
+                    </h3>
+                    <ul>
+                        <span class="fragment"><li>Natural Language Processing (NLP)</li></span>
+                        <span class="fragment"><li>Computer Vision</li></span>
+                        <span class="fragment"><li>Knowledge Representation</li></span>
+                        <span class="fragment"><li>Automated Reasoning</li></span>
+                        <span class="fragment"><li>Machine Learning</li></span>
+                        <span class="fragment"><li>Robotics</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>Each different "sense" has it's own academic field!</li>
+                            <li>For me the most interesting one is ML as it bleeds into NLP, CV, KR ...</li>
+                        </ol>
+                    </aside>
+                </section>
+
+
+
+                <section id="FocusOfTalk">
+                    <h3>in this talk</h3>
+                    <p> focus on Machine Learning</p>
+                    <ul>
+                        <span class="fragment"><li>What is ML and Pattern Recognition</li></span>
+                        <span class="fragment"><li>Supervised vs. Unsupervised</li></span>
+                        <span class="fragment"><li>(Deep) Neural Networks and Statistical Mechanics</li></span>
+                        <span class="fragment"><li>Modern Applications</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>Hence I will focus on .... </li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="whatIsLearning">
+                    <h3>What is <i>Learning</i>?</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+
+                            <div class="twocol1" align="center">
+                                <br><br>
+                                <ul>
+                                    <span class="fragment"><li>Remembering</li></span>
+                                    <span class="fragment"><li>Adapting</li></span>
+                                    <span class="fragment"><li>Generalizing</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <img width="300" data-src="resources/path_planning.png" alt="PathPlanning">
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <ol>
+                            <li>To understand what ML is about we need to understand what learning is.</li>
+                            <li>simple example: Child learns that heat is connected to pain. Candle -> Oven</li>
+                            <li>complex example: Ants build supply trails
+                                <ol>
+                                    <li>first ant randomly explores and marks</li>
+                                    <li>second ant follows marks and optimizes</li>
+                                    <li>third ant follows seconds' marks and optimizes</li>
+                                    <li>...</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="patternDiscovery">
+                    <h3>Pattern Recognition</h3>
+
+                    <div class="equaltwocolmask">
+                        <div class="equaltwocolleft">
+
+                            <div class="equaltwocol1">
+                                <span class="fragment" data-fragment-index="3">
+                                <p>dot in corner?</p>
+                                <img height="100" data-src="resources/dotInCorner.png" alt="PathPlanning"></span>
+                                <br>
+                                <span class="fragment" data-fragment-index="4"><img height="100" data-src="resources/dotInSpace.png" alt="PathPlanning"></span>
+                            </div>
+                            <div class="equaltwocol2">
+                                <span class="fragment" data-fragment-index="1">
+                                <p>dot in circle?</p>
+                                <img height="100" data-src="resources/dotInClosedCircle.png" alt="PathPlanning"></span>
+                                <br>
+                                <span class="fragment" data-fragment-index="2"><img height="100" data-src="resources/dotInOpenCircle.png" alt="PathPlanning"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <span class="fragment" data-fragment-index="5"><li>easy for humans to recognize</li></span>
+                        <span class="fragment" data-fragment-index="6"><li>much harder for a computer! <br> (what rule would you write for that?)</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>patterns are needed for generalization -> Pattern recognition</li>
+                            <li>dot in circle. Easy for humans, potentially hard for a machine</li>
+                            <li>what rule for not exactly closed circle?</li>
+                            <li>dot in corner</li>
+                            <li>second dot in corner is not even clear for humans</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="cancerDetection">
+                    <h3><i>Example:</i> Cancer detection</h3>
+                    <img height="300" data-src="resources/mitosis.gif" alt="mitosis">
+                    <br>
+                    <a href="http://people.idsia.ch/~juergen/deeplearningwinsMICCAIgrandchallenge.html">Contest on Mitosis Detection, J&uuml;rgen Schmidhuber</a>
+                    <br>
+                    <span class="fragment">Can also be used for detection of new features</span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>More real world examples of this ... Computers better than humans!</li>
+                            <li>New Cancer features discovered due to machine learning!</li>
+                            <li>So how do we do this ... ?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="mlAsFitting">
+                    <h3>ML as a fitting problem</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1" align="center">
+                                <img height="300" data-src="resources/logit_data.png" alt="PathPlanning">
+                            </div>
+                            <div class="twocol2">
+                                <table>
+                                    <tr>
+                                        <th>feature</th>
+                                        <th>label</th>
+                                    </tr>
+                                    <tr>
+                                        <td>0.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-0.3</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>...</td>
+                                        <td>...</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Ultimately data is represented as numbers</li>
+                            <li>each data point has several components carrying information, so-called features.</li>
+                            <li>Data for a particular problem is an embedding in a high dimensional space</li>
+                            <li>embedding controlled by the label (think of it as a constraint)</li>
+                            <li>we can now make a fit!</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="correctModelChoice">
+                    <h3> What is the correct model? </h3>
+
+                    <div class="equaltwocolmask">
+                        <div class="equaltwocolleft">
+
+                            <div class="equaltwocol1">
+                                <span class="fragment" data-fragment-index="2"><img height="300" data-src="resources/logit_data_and_fit.png" alt="PathPlanning"></span>
+                            </div>
+                            <div class="equaltwocol2">
+                                <span class="fragment" data-fragment-index="1"><img height="300" data-src="resources/logit_data_and_overfit.png" alt="PathPlanning"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="fragment" data-fragment-index="3">
+                        <p>Generalization is a guiding principle</p>
+                    </span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Problem: Choosing the "right" fit?</li>
+                            <li>Introducing a new point in the left plot is error-prone: huge change of function; overfit!</li>
+                            <li>Intuitively right plot is "more correct"</li>
+                            <li>right plot "generalizes" better!</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="curseOfDim1">
+                    <h3>Curse of dimensionality</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br><br>
+                                <ul>
+                                    <span class="fragment"><li>Einstein is $512 \times 512$ px</li></span>
+                                    <span class="fragment"><li>Einstein is colorful</li></span>
+                                    <span class="fragment"><li>Dimensionality: $512^2 \times 3 = 786432$!</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <img height="300" data-src="resources/transparent_einstein.png" alt="PathPlanning">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>As mentioned before: space is high dimensional -> Curse Of Dim!</li>
+                            <li>simple example: colorful Einstein (even though he doesn't look like it!)</li>
+                            <li>Each pixel is a feature (dimension)!</li>
+                            <li>Each color channel is a dimension!</li>
+                            <li>Is this a problem? Technologically: no (exp. improvement of comp. power). Theoretically: YES!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="curseOfDim2">
+                    <h3>Curse of dimensionality - cont'd</h3>
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br>
+                                <ul>
+                                    <span class="fragment"><li>$d$-dimensional unit ball:
+                                    $$ V(d) \sim \frac{\text{e}^{d}}{d^{d-1/2}} \stackrel{d\rightarrow\infty}{\longrightarrow} 0$$</li></span>
+                                    <span class="fragment"><li>$\mathbb{x} \in \text{Unif}^d(0,1)$</li></span>
+                                    <span class="fragment"><li>Most data lies outside unit ball!</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <img height="300" data-src="resources/transparent_einstein.png" alt="PathPlanning">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <ul>
+                        <span class="fragment"><li>data becomes sparse</li></span>
+                        <span class="fragment"><li>difficult to detect patterns!</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>So why is this a problem?</li>
+                            <li>Volume of unit ball is vanishingly small in high dimensions</li>
+                            <li>now take random point in unit cube</li>
+                            <li>most points will lie OUTSIDE of the unit ball</li>
+                            <li>on average points are further and further apart (think of epsion-delta criterion)</li>
+                            <li>hence: sparse data and no patterns</li>
+                            <li>this is a design constraint for ML systems!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="keyConcepts">
+                    <h3>key concepts</h3>
+                    <ul>
+                        <span class="fragment"><li>Not simple curve fitting, but pattern recognition</li></span>
+                        <span class="fragment"><li>Model selection</li></span>
+                        <span class="fragment"><li>Feature selection</li></span>
+                        <span class="fragment"><li>Generalizablity to "new data points"</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>Learning is all about Pattern Recognition</li>
+                            <li>We need to make informed model choices to adjust to the data; on the other hand models that don't
+                            work give us also information! It can help us build a model!</li>
+                            <li>Curse of dimensionality forces us to think about our feature space!</li>
+                            <li>Generalizability is the guiding principle!</li>
+                            <li>Let's dive into some learning models</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="supervisedLearning">
+                    <h3>Supervised learning</h3>
+                    <ul>
+                        <span class="fragment"><li>Learning from labeled data: $$f_\theta(\mathbb{x_i}) = \hat y_i$$</li></span>
+                        <span class="fragment"><li>Loss function:$$L = \sum_i \ell(y_i, \hat y_i)$$</li></span>
+                        <span class="fragment"><li>Regularization: $$R(\theta) = -\lambda_1 |\theta| -\lambda_2 \theta^2$$ </li></span>
+                        <span class="fragment"><li>Learning as Optimization problem:
+                            $$\theta_\text{opt} = \text{min } [L(\theta) + R(\theta)]$$
+                        </li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Generally there are two classes of modeling; unsupervised and supervised</li>
+                            <li>Want to learn parameterized function that maps input x to labeled outcome y</li>
+                            <li>Need to infer parameters theta</li>
+                            <li>introduce a "loss function" that measures how bad deviations from the actual outcome are!</li>
+                            <li>Might need to "regularize" theta to avoid them being large</li>
+                            <li>To estimate best parameters: use optimization</li>
+                            <li>Most of ML can be cast into an Optimization Problem!</li>
+                            <li>Task: Make Optimization P (ideally linear) not NP</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="classificationAndRegression">
+                    <h3>Classification And Regression</h3>
+                    <ul>
+                        <span class="fragment"><li>Regression:
+                            <ul>
+                                <li>$\hat y \in \mathbb{R}^n$</li>
+                                <li>example: $\ell(y, \hat y) = (y - \hat y)^2$</li>
+                            </ul>
+                        </li></span>
+                        <span class="fragment"><li>Classification:
+                            <ul>
+                                <li>$y \in \{0,1\}$ and $\hat y = p(y = 1 | \mathbb{x}) \in [0,1]$</li>
+                                <li>log loss (cross-entropy): $\ell(y, \hat y) = y \ln\hat y - (1-y) \ln(1-\hat y)$</li>
+                                <li>example: $\hat y = \frac{1}{1+\text{exp} [-\theta^T\mathbb{x}]}$</li>
+                            </ul>
+                        </li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>Example: loss is mean-squared-error for regression</li>
+                            <li>Example: loss is cross-entropy for binary classification</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="supervisedAlgos">
+                    <h3>(Some) Supervised ML Algos</h3>
+                    <ul>
+                        <span class="fragment"><li>Logistic Regression</li></span>
+                        <span class="fragment"><li><a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/">Decision Tree</a>
+                            <br>
+                            <img height="200" data-src="resources/decisionTree.png" alt="PathPlanning">
+                        </li></span>
+                        <span class="fragment"><li>Random Forest</li></span>
+                        <span class="fragment"><li>Support Vector Machine</li></span>
+                        <span class="fragment"><li>Na&iuml;ve Bayes (for text data)</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>different algos</li>
+                            <li>RF can learn efficiently in high-dim spaces</li>
+                            <li>SVMs can even be used for infinite dim spaces</li>
+                            <li>Classification algos are the most used (for now)</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="applicationsInPhysics">
+                    <h3>Applications in Physics</h3>
+                    <div class="equaltwocolmask">
+                        <div class="equaltwocolleft">
+                            <div class="equaltwocol1">
+                                <span class="fragment" data-fragment-index="3">
+                                    <a href="https://www.kaggle.com/c/mdm"><img height="100" data-src="resources/kaggle_DarkMatter.png" alt="KaggleHiggsChallenge"></a>
+                                    <br>
+                                    Dark Matter Mapping Challenge
+                                </span>
+
+                                <br>
+                                <br>
+
+                                <span class="fragment" data-fragment-index="4">
+                                    <a href="https://www.kaggle.com/c/flavours-of-physics"><img height="100" data-src="resources/kaggle_FlavourFinding.png" alt="KaggleHiggsChallenge"></a>
+                                    <br>
+                                    Finding $\tau \rightarrow 3\mu$ decay in LHC data
+                                </span>
+
+
+                            </div>
+                            <div class="equaltwocol2">
+                                <span class="fragment" data-fragment-index="1">
+                                    <a href="https://www.kaggle.com/c/higgs-boson"><img height="100" data-src="resources/kaggle_higgs.png" alt="KaggleHiggsChallenge"></a>
+                                </span>
+
+                                <br>
+                                <br>
+
+                                <span class="fragment" data-fragment-index="2">
+                                    <a href="http://www.nature.com/articles/srep19375"><img height="300" data-src="resources/KRR_BandGaps.jpg" alt="KaggleHiggsChallenge"></a>
+                                    <br>
+                                    Pilana et al., Scientific Reports 6, 19375
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <ol>
+                            <li>some example in Physics</li>
+                            <li>Higgs: Improve signal detection (discovery significance) using advanced ML</li>
+                            <li>high T_c: predict bandgap from material constants without solving Hamiltonian</li>
+                            <li>DarkMatter: gravitational lensing detection from DM distortions on images with noise and point spread functions using adv. ML algos</li>
+                            <li>FlavorPhysics: Searching for "new Physics" for lepton flavour violation (intermixed data from LHC with simulation)</li>
+                            <li>What happens if labels not known?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="unsupervisedLearning">
+                    <h3>Unsupervised Learning</h3><h4> a.k.a. Clustering</h4>
+                    <ul>
+                        <span class="fragment" data-fragment-index="1"><li>What happens if we have no labeled data?</li></span>
+                        <span class="fragment" data-fragment-index="2"><li>Labeling data is expensive (human, time, money)!</li></span>
+                    </ul>
+                        <div class="twocolmask">
+                            <div class="twocolleft">
+                                <div class="twocol1">
+                                    <br>
+                                    <br>
+                                    <ul>
+                                        <span class="fragment" data-fragment-index="3"><li>outlier detection </li></span>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <span class="fragment" data-fragment-index="4"><li>segmentation problems</li></span>
+                                    </ul>
+                                </div>
+                                <div class="twocol2">
+                                    <span class="fragment" data-fragment-index="3">
+                                        <a href="http://techblog.netflix.com/2015/07/tracking-down-villains-outlier.html"><img height="200" data-src="resources/NetflixOutliers.png" alt="PathPlanning"></a>
+                                    </span>
+                                    <span class="fragment" data-fragment-index="4">
+                                        <a href="http://people.sissa.it/~laio/Research/Res_clustering.php"><img height="200" data-src="resources/clustering_example.jpg" alt="PathPlanning"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>other kind of ML&PR is unsupervised</li>
+                            <li>why expensive:
+                                <ul>
+                                    <li>human time to label data</li>
+                                    <li>unsecured credit to get repayment data</li>
+                                    <li>might need long time to obtain labels in long running exp</li>
+                                    <li>labels might be "soft/informal", e.g. where do I set a threshold</li>
+                                </ul>
+                            </li>
+                            <li>why useful: outlier detection; segmentation problems (assign label to cluster)</li>
+
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="clustering">
+                    <h3>Clustering cont'd</h3>
+                    <ul>
+                        <span class="fragment" data-fragment-index="1"><li>Pre-processing to "generate labels"</li></span>
+                        <span class="fragment" data-fragment-index="2"><li>Visualization of high-dimensional data when combined with dimensionality reduction techniques</li></span>
+                    </ul>
+                    <span class="fragment" data-fragment-index="2"><a href="https://lvdmaaten.github.io/tsne/"><img height="450" data-src="resources/mnist_tsne.jpg" alt="PathPlanning"></a></span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>why is this important!</li>
+                            <li>Visualization will give you intuitions if you can expect a classification algorithm to work at all</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section data-background="resources/sklearn_ml_map.png" id="sklearnMlMap">
+                    <h3><font color="black">explosion of models and options</font></h3>
+                    <aside class="notes">
+                        <ol>
+                            <li>Scikit-Learn is a powerful ML & data library for python</li>
+                            <li>Jungle of possibilities</li>
+                            <li>ML in practice takes a lot of experience in addition to knowledge</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="recommenders">
+                    <h3>Recommender Engines</h3>
+                    <ul>
+                        <span class="fragment"><li>How to recommend items to a new customer?</li></span>
+                        <span class="fragment"><li>Collaborative filtering (Factor analysis)</li></span>
+                    <span class="fragment">
+                        <a href="https://www.mapr.com/ebooks/spark/08-recommendation-engine-spark.html"><img height="250" data-src="resources/mllib_rec_engine.png" alt="PathPlanning"></a>
+                    </span>
+                        <span class="fragment"><li>E.g. Amazon, <a href="https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf">Netflix</a>, Yelp, Foursquare, ...</li></span>
+                        <span class="fragment"><li>E.g. imputation of missing data</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Finally let us briefly talk about what happens if we have missing data!</li>
+                            <li>Need for imputation!</li>
+                            <li>Online sellers do this a lot</li>
+                            <li>Factor out hidden variables and decompose data into user and item features!</li>
+                            <li>Non-Negative-Matrix-Approximation, but we will not go into the details here</li>
+                            <li>Fun story: Netflix and the Human Centipede</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="ImageNet">
+                    <h3>ImageNet Challenge</h3>
+                    <ul>
+                        <span class="fragment"><li><a href="http://image-net.org/about-stats">ImageNet</a>: $14,197,122$ images & $21,831$ categories</li></span>
+                        <span class="fragment"><li>Human classification error rate: $5\%$</li></span>
+                    </ul>
+                    <span class="fragment">
+                        <a href="http://blog.agi.io/2015/02/the-real-risks-of-ai_17.html"><img height="450" data-src="resources/ImageNetError.png" alt="ImageNetError"></a>
+                    </span>
+                    <aside class="notes">
+                        <ol>
+                            <li>Let's switch gears and discuss an algorithm that is all the rage recently</li>
+                            <li>To appreciate why this is algorithms is so hyped we should have a look at ImageNet challenges ...</li>
+                            <li>ImageNet data consists of ...</li>
+                            <li>2012: >20% to <14% error. >6% improvment!!!</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="neuralNetworks">
+                    <h3>The rise of Neural Networks</h3>
+
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <br>
+                                <br>
+                                <ul>
+                                    <span class="fragment" data-fragment-index="1"><li>Inspired by brain neurons</li></span>
+                                    <span class="fragment" data-fragment-index="2"><li>Directed graph model</li></span>
+                                    <span class="fragment" data-fragment-index="3"><li>Neurons
+                                        <ul>
+                                            <li>connection matrix $W$</li>
+                                            <li>activation $\varphi$</li>
+                                        </ul>
+                                    </li></span>
+                                    <br>
+                                    <span class="fragment" data-fragment-index="4"><li>Classifier function: <br>
+                                        $$y_i = \varphi \big(W \mathbb{x}_i\big)$$</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <span class="fragment" data-fragment-index="2">
+                                    <a href="https://jotterbach.github.io/2015/11/05/ExploringNeuralNetworkEngineering/"><img height="350" data-src="resources/SimpleNN.png" alt="ImageNetError"></a>
+                                </span>
+                                <span class="fragment" data-fragment-index="3">
+                                    <a href="https://jotterbach.github.io/2015/11/05/ExploringNeuralNetworkEngineering/"><img height="200" data-src="resources/activations.png" alt="ImageNetError"></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <ol>
+                            <li>Improvement possible due to Neural Networks</li>
+                            <li>biological network of neurons that flare up and fire depending on sensory input</li>
+                            <li>Mathematically a DAG</li>
+                            <li>take bias into account by augmenting input x</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="training">
+                    <h3>How do we train it?</h3>
+                    <ul>
+                        <span class="fragment"><li>Optimization using gradient descent: <br>
+                            $$W_{ij}^{(t+1)} = W_{ij}^{(t)} - \eta \frac{\partial L^{(t)}}{\partial W_{ij}^{(t)}}$$
+                        </li></span>
+                        <span class="fragment"><li>Loss function in general not convex</li></span>
+                        <span class="fragment"><li>Optimization can get stuck in local minimum</li></span>
+                        <span class="fragment"><li>Good initialization of weights leads to better results.</li></span>
+                    </ul>
+                    <aside class="notes">
+                        <ol>
+                            <li>We haven't really talked about training ML models, but let's discuss this one here</li>
+                            <li>need to infer weights of W matrix by optimizing L</li>
+                            <li>iterative process, where we update weight by walking into direction of greatest descent</li>
+                            <li>Non-convex optimization makes things hard, but high-dim makes it a bit easier!</li>
+                            <li>Empirically: Global minimum not desirable; probably overfit!</li>
+                            <li>Initialization matters; lots of research being done here!</li>
+                            <li>what are the problems with this?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="problems">
+                    <h3>Problems</h3>
+                    <ul>
+                        <span class="fragment"><li>Simple NN is two step process</li></span>
+                        <span class="fragment"><li>Any function can be approximated</li></span>
+                        <span class="fragment"><li>Requires exponentially many nodes in hidden layer!</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>two steps: Multiply by weight matrix (map) and apply function phi (reduce)</li>
+                            <li>phi can include a non-linear transformation (e.g. logit of all neuron outputs) and then sums the outcomes</li>
+                            <li>Theorem: Any function of the input can be approximated</li>
+                            <li>catch 22: Most often takes exponentially many neurons in the hidden layer. Hard to train!</li>
+                            <li>solution?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="deepNN">
+                    <h3>Solution - Go Deep!</h3>
+                    <ul>
+                        <span class="fragment"><li>Add more layers: Deep NN </li></span>
+                        <span class="fragment"><li>$$ y_i = \varphi_N \circ \varphi_{N-1} \circ ... \circ \varphi_1 \big(W_1 \mathbb{x}_i\big)$$</li></span>
+                        <span class="fragment"><li>Training still hard & time-intensive: <a href="https://colah.github.io/posts/2015-08-Backprop/">Back-propagation</a> </li></span>
+                        <span class="fragment"><li>Technological advances helps mitigate this</li></span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Stack several layers on top of each other</li>
+                            <li>network now composite non-linear multiplications</li>
+                            <li>less memory (non-exponential number of neurons) but longer training time</li>
+                            <li>still hard to train (though easier than simple NN)</li>
+                            <li>back-prop allows you to propagate the error of the final layer backwards through the network to train individual neurons</li>
+                            <li>Technological advances will make this only better! (distributed computing, quantum speedup(?))</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section id="hiddenLayerRepresentation">
+                    <h3>Understanding the NN</h3>
+                    <ul>
+                        <span class="fragment"><li>Linearly inseparable classes</li>
+                            <a href="https://colah.github.io/posts/2015-01-Visualizing-Representations/"><img height="200" data-src="resources/netvis-simple-NoHid.png" alt="ImageNetError"></a>
+                        </span>
+                        <span class="fragment"><li>Layers learn non-linear combinations</li>
+                            <a href="https://colah.github.io/posts/2015-01-Visualizing-Representations/"><img height="200" data-src="resources/netvis-simple-2S.png" alt="ImageNetError"></a>
+                        </span>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Let's try to develop an understanding what NN do in their layers</li>
+                            <li>consider this example: the data (curves) are not separable with a linear function (shaded region)</li>
+                            <li>introduce additional layer: weight matrix plus non-linearity, shears and twists input dimension</li>
+                            <li>linear classifier in this non-linearly twisted space can separate classes perfectly!</li>
+                            <li>We say the network learns representations!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="deepNetworkLayerVisualization">
+                    <h3>Understanding the NN - cont'd</h3>
+                    <p>
+                        Visualizations of images using a Convolutional NN
+                    </p>
+
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <ul>
+                                    <span class="fragment" data-fragment-index="1"><li>Layer 1: primitive features</li>
+                                        <img height="50" data-src="resources/layer_1_raw.png"><img height="50" data-src="resources/layer_1_feat.png">
+                                    </span>
+                                    <span class="fragment"  data-fragment-index="2"><li>Layer 3: simple composite features</li>
+                                        <img height="120" data-src="resources/layer_3_raw.png"><img height="120" data-src="resources/layer_3_feat.png">
+                                    </span>
+                                    <span class="fragment" data-fragment-index="3"><li>Layer 5: complex features</li>
+                                        <img height="120" data-src="resources/layer_5_raw.png"><img height="120" data-src="resources/layer_5_feat.png">
+                                    </span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <span class="fragment" data-fragment-index="1">
+                                    <a href="https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf"><img height="400" data-src="resources/deep-neural-network.png" alt="ImageNetError"></a>
+                                    <br>
+                                    <a href="https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf">Zeiler & Fergus</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Let's continue that avenue of understanding in a much more complicated network: a ConvNet</li>
+                            <li>It's an architecture that does pooling (incremental reduction of patches of an image) and convolutions with filters etc</li>
+                            <li>with increasing layer depth the network learns more complex compositional features: distributed feature learning!</li>
+                            <li>What do we need for obtaining such amazing results?</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="rbm">
+                    <h3>Restricted Boltzmann machines</h3>
+
+                    <div class="twocolmask">
+                        <div class="twocolleft">
+                            <div class="twocol1">
+                                <ul>
+                                    <span class="fragment" data-fragment-index="1"><li>Unsupervised version of a NN</li></span>
+                                    <span class="fragment"><li>probability: $$ p(\mathbb{v},\mathbb{h}) = \text{e}^{-E(\mathbb{v},\mathbb{h})}/Z$$</li></span>
+                                </ul>
+                            </div>
+                            <div class="twocol2">
+                                <span class="fragment" data-fragment-index="1">
+                                    <a href="http://deeplearning.net/tutorial/rbm.html"><img height="120" data-src="resources/rbm.png" alt="ImageNetError"></a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <span class="fragment"><li>energy functional: $$E(\mathbb{v},\mathbb{h}) = -\mathbb{b}^T\mathbb{v} - \mathbb{c}^T\mathbb{h}- \mathbb{h}^TW\mathbb{v} $$</li></span>
+                        <span class="fragment"><li>Objective: Minimize negative Log-likelihood</li></span>
+                        <span class="fragment"><li>Training using Gibbs sampling and <a href="https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine">Contrastive Divergence</a></a> </li></span>
+                        <span class="fragment"><li>empirically: Great initialization for supervised NN training</li></span>
+                    </ul>
+
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Enter Statistical Physics: Boltzmann rules the game!</li>
+                            <li>Start with unsupervised version of NN</li>
+                            <li>no intra-layer connections: Restricted Boltzmann machine</li>
+                            <li>model the joint probability of a given combination of visible input and hidden neurons flaring up together</li>
+                            <li>Great pre-training for supervised NN training</li>
+                            <li>What's the problem?</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="connectionToQM">
+                    <h3>Connection to Quantum Physics</h3>
+                    <ul>
+                        <span class="fragment"><li>Training RBM's is costly due to slow ensemble mixing.</li></span>
+                        <span class="fragment"><li>Wiebe et al.: Speedup with <a href="http://arxiv.org/abs/1412.3489"> Quantum Deep Learning</a> </li></span>
+                        <span class="fragment"><li><a href="http://arxiv.org/abs/1510.06356"> Adachi et al., arXiv:1510.06356</a>
+                            <ul>
+                                <li>RBM as Ising Model</li>
+                                <li>Use annealing to approximate $H_\text{RBM}$</li>
+                            </ul>
+                        </li>
+                        </span>
+
+
+                    </ul>
+                    <span class="fragment">
+                        <a href="http://arxiv.org/abs/1510.06356"><img height="320" data-src="resources/Adachi2015.png" alt="ImageNetError"></a>
+                    </span>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Classical Gibbs mixing is slow, hence pre-training takes a long time!</li>
+                            <li>Can quantum speed up help?</li>
+                            <li>RBM can be reformulates as Ising Model</li>
+                            <li>15 steps of pre-training and 100 supervised training. Quantum RBM outperforms classic RBM</li>
+                            <li>Similar results for longer supervised epochs</li>
+                            <li>Remember: Don't need exact ground-state (overfitting and anyways pretraining only), so annealing can help</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="examplesOfAI">
+                    <h3>Why is this exciting?</h3>
+                    <div class="equaltwocolmask">
+                        <div class="equaltwocolleft">
+                            <div class="equaltwocol1" align="center">
+                                <ul>
+                                    <span class="fragment" data-fragment-index="4">
+                                    Skype Instant Translator <br>
+                                    <a href="http://www.wired.com/2014/12/skype-used-ai-build-amazing-new-language-translator/"><img height="100" data-src="resources/Skype-Translator.jpg" alt="WiredAlphaGp"></a>
+                                    </span>
+                                    <span class="fragment" data-fragment-index="5">
+                                    <br> Self Driving Cars <br>
+                                    <a href="http://www.wired.com/2016/01/google-autonomous-vehicles-human-intervention/"><img height="100" data-src="resources/GoogleSelfDrivingCar.jpg" alt="WiredAlphaGp"></a>
+                                    </span>
+                                    <span class="fragment" data-fragment-index="6">
+                                    <br> Biometrics <br>
+                                    <a href="http://www.wired.com/2016/03/biometrics-coming-along-serious-security-concerns/"><img height="100" data-src="resources/BiometricsWired.jpg" alt="WiredAlphaGp"></a>
+                                    </span>
+                                </ul>
+                            </div>
+                            <div class="equaltwocol2" align="center">
+                                <span class="fragment" data-fragment-index="1">
+                                    AlphaGo <br>
+                                    <a href="http://www.wired.com/2016/01/in-a-huge-breakthrough-googles-ai-beats-a-top-player-at-the-game-of-go/"><img height="100" data-src="resources/DeepMind_Go.jpg" alt="WiredAlphaGp"></a>
+                                </span>
+                                <span class="fragment" data-fragment-index="2">
+                                    <br> RankBrain <br>
+                                    <a href="http://www.wired.com/2016/02/ai-is-changing-the-technology-behind-google-searches/"><img height="100" data-src="resources/CKBrainPower.jpg" alt="WiredAlphaGp"></a>
+                                </span>
+                                <span class="fragment" data-fragment-index="3">
+                                    <br> Google Translate <br>
+                                    <a href="http://www.engadget.com/2016/03/11/google-is-using-neural-networks-to-improve-translate/"><img height="100" data-src="resources/google-translate-ai.jpg" alt="WiredAlphaGp"></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Soo many cool and mind-blowing applications!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+                <section id="moreExamplesOfAI">
+                    <h3>many more</h3>
+                    <ul>
+                        <li>Health Care</li>
+                        <li><a href="http://www.wired.com/insights/2014/11/the-internet-of-things-bigger/">Internet of Thing (IoT)</a></li>
+                        <li>Online Advertisement</li>
+                        <li>Automated Trading</li>
+                        <li>Online Auction Systems (PayPal, Ebay, ...)</li>
+                        <li>Just-In-Time production optimization</li>
+                        <li>...</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>Soooo many more and so much potential!</li>
+                            <li>Let's wrap it up!</li>
+                        </ol>
+                    </aside>
+                </section>
+
+
+                <section id="theEnd">
+                    <img height="250" data-src="resources/Futurama.jpg" alt="Futurama">
+                    <ul>
+                        <span class="fragment"><li>AI is already surrounding us</li></span>
+                        <span class="fragment"><li>AI is powerful: huge potential & risk</li></span>
+                        <br>
+                        <span class="fragment"><li>Don't be opposed, but keep an open mind</li></span>
+                        <span class="fragment"><li>Be deliberate with your data, but not protective</li></span>
+
+                    </ul>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>People argue that the advent of AI will have similar impact to Industrial Revolution</li>
+                            <li>Automation of "creative" tasks as opposed to "mechanical" task during Ind. Rev.</li>
+                            <li>AI already impacting our lives</li>
+                            <li>My personal take on it: Embrace deliberately. Not everything shines, but good things will come of it. You can decide what people do with your data and shape the future.</li>
+                            <li>This starts with your personal data, but also research data (remember the use for high T_C)</li>
+                            <li>Thanks!</li>
+                        </ol>
+                    </aside>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
