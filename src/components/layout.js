@@ -19,6 +19,11 @@ const Layout = styled.div`
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  // font-family: "Arial", sans-serif;
+  a {
+    color: darkblue;
+    text-decoration: none;
+  }
 `
 
 const Head = styled.header`
@@ -34,10 +39,6 @@ const Head = styled.header`
 const NavBarLink = styled.li`
   display: inline-block;
   margin-right: 1rem;
-  a {
-    color: darkblue;
-    text-decoration: none;
-  }
 `
 
 const FooterLink = styled.div`

@@ -11,10 +11,6 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  a {
-    color: darkblue;
-    text-decoration: none;
-  }
 `
 
 const Aligner = styled.div`

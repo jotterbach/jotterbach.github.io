@@ -5,10 +5,6 @@ import Layout from "../components/layout"
 
 const BlogItem = styled.div`
   padding: 10px;
-  a {
-    color: darkblue;
-    text-decoration: none;
-  }
 `
 
 const Title = styled.div`
