@@ -7,15 +7,15 @@ type: Content
 ## Short Bio
 Dr. Johannes Otterbach is a Machine Learning and Algorithms Researcher at [OpenAI](https://www.openai.com) working on fundamental question to build safe Artifical General Intelligence (AGI). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining OpenAI he worked as a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
-More details are in the (more or less up-to-date) [resume](/resources/resume/Otterbach_resume.pdf)
+More details are in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
 
 ## Talks
 
-- Unsupervised Machine Learning on a Hybrid Quantum Computer ([pdf](/resources/talks/yCombinator_meetup.pdf), [pptx](/resources/talks/yCombinator_meetup.pptx)), Bay Area Quantum Computing Meetup, YCombinator, February 2018
+- Unsupervised Machine Learning on a Hybrid Quantum Computer ([pdf](/talks/yCombinator_meetup.pdf), [pptx](/talks/yCombinator_meetup.pptx)), Bay Area Quantum Computing Meetup, YCombinator, February 2018
 
-- Quantum Cloud Computing ([pdf](/resources/talks/KL_QuantumCloudComputing.pdf), [pptx](/resources/talks/KL_QuantumCloudcomputing.pptx)), TU Kaiserslautern, Germany, January 2018
+- Quantum Cloud Computing ([pdf](/talks/KL_QuantumCloudComputing.pdf), [pptx](/talks/KL_QuantumCloudcomputing.pptx)), TU Kaiserslautern, Germany, January 2018
 
-- OQaml - A OCaml-based QASM, ([pdf](/resources/talks/OQaml_MeetUp.pdf), [pptx](/resources/talks/OQaml_MeetUp.pptx)), Bay Area Quantum Computing Meetup, Rigetti, August 2017
+- OQaml - A OCaml-based QASM, ([pdf](/talks/OQaml_MeetUp.pdf), [pptx](/talks/OQaml_MeetUp.pptx)), Bay Area Quantum Computing Meetup, Rigetti, August 2017
 
 - [The Curse Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
 
