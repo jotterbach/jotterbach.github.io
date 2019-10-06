@@ -20,9 +20,6 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>
-          Amazing Pandas Eating Things
-        </h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogItem>
             <div key={node.id}>
