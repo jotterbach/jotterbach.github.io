@@ -1,7 +1,7 @@
 ---
 type: post
 date: "2016-12-10"
-title: MDLP and Conditional Inference -- Strategies to prevent Decision Trees from overfitting
+title: MDLP and Conditional Inference. Strategies to prevent Decision Trees from overfitting
 ---
 
 
@@ -105,7 +105,7 @@ Entropy S_2: 0.0
 Information Gain:  0.0989053649013
 ```
 
-Here we considered all possible splits of the full array and calculated the $IG$ we get from that split. Following the numbers we see that the optimal split is after the 4th zero. We also recognize that $S_2$ still has entropy larger than zero and hence we can continue to further split this set into smaller sets. 
+Here we considered all possible splits of the full array and calculated the $IG$ we get from that split. Following the numbers we see that the optimal split is after the 4th zero. We also recognize that $S_2$ still has entropy larger than zero and hence we can continue to further split this set into smaller sets.
 
 We see that this process only terminates when all subsets are pure, i.e. all sets have zero entropy. This means that the corresponding tree might be very deep and horribly overfit. This is where the MDLP stopping criterion comes into play.
 
@@ -140,7 +140,7 @@ The MDLP splitting criterion is very conservative; some datasets exhibit moderat
 
 ## Conditional Inference Partitioning (CIP)
 
-As mentioned above there are situation when we would like to take the information of the independent and dependent variables into account when deciding on a split of a dataset. A scalabale and straight forward way to do this is to calculate a simple correlation such as the [*Pearson's r*](https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) coefficient 
+As mentioned above there are situation when we would like to take the information of the independent and dependent variables into account when deciding on a split of a dataset. A scalabale and straight forward way to do this is to calculate a simple correlation such as the [*Pearson's r*](https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) coefficient
 
 $$
 \rho_{X,Y}\,=\, \frac{\textrm{cov}(X,Y)}{\sigma_X\sigma_Y}

@@ -98,5 +98,6 @@ module.exports = {
         pathToConfigModule: `src/components/typography`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

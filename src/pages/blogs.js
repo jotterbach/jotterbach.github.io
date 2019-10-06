@@ -1,6 +1,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 import Layout from "../components/layout"
+
+const BlogItem = styled.div`
+  padding: 10px;
+  a {
+    color: darkblue;
+    text-decoration: none;
+  }
+`
+
+const Title = styled.div`
+  font-weight: bold;
+  font-size: 1.3em;
+`
 
 export default ({ data }) => {
   return (
@@ -9,21 +23,17 @@ export default ({ data }) => {
         <h1>
           Amazing Pandas Eating Things
         </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-            >
-              <h3>
-                {node.frontmatter.title}{" "}
-                <span>
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
+          <BlogItem>
+            <div key={node.id}>
+              <Link to={node.fields.slug}>
+                <Title>
+                  {node.frontmatter.title}{" "}
+                </Title>
+              </Link>
+              {node.frontmatter.date}
+            </div>
+          </BlogItem>
         ))}
       </div>
     </Layout>
