@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Aligner = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `
 

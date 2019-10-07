@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 const Professional = styled.div`
+  padding: 10px;
   a {
     color: darkblue;
     text-decoration: none;
