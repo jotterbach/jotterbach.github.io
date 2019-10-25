@@ -27,6 +27,10 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 
 ### 2018
 
+- C. M. Wilson, J. S. Otterbach, N. Tezak, R. S. Smith, G. E. Crooks, M. P. da Silva <br>
+	Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers <br>
+	[arxiv:1806.08321](https://arxiv.org/abs/1806.08321)
+
 - M. Reagor & Rigetti Computing <br>
     Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice <br>
     [Science Advances, 4, eaao3603 (2018)](http://advances.sciencemag.org/content/4/2/eaao3603)
