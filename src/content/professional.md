@@ -5,7 +5,7 @@ type: Content
 
 
 ## Short Bio
-Dr. Johannes Otterbach is a Machine Learning and Algorithms Researcher at [OpenAI](https://www.openai.com) working on fundamental question to build safe Artifical General Intelligence (AGI). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining OpenAI he worked as a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is a Machine Learning and Algorithms Researcher at [OpenAI](https://www.openai.com) working on fundamental question to build safe Artificial General Intelligence (AGI). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining OpenAI he worked as a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
 
