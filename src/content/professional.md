@@ -5,11 +5,13 @@ type: Content
 
 
 ## Short Bio
-Dr. Johannes Otterbach is a Machine Learning and Algorithms Researcher at [OpenAI](https://www.openai.com) working on fundamental question to build safe Artifical General Intelligence (AGI). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining OpenAI he worked as a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is the VP of Machine Learning Research at [Merantix Labs](https://www.merantixlabs.com/). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Merantix Labs he worked as a Machine Learning and Algorithms Researcher at OpenAI, a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
 
 ## Talks
+
+- Applying AI in the Wild ([pdf](/talks/Applying_AI_in_the_Wild.pdf)),  Zentrum fuer Optische Quantentechnologien (ZOQ), University of Hamburg, March 2021
 
 - Unsupervised Machine Learning on a Hybrid Quantum Computer ([pdf](/talks/yCombinator_meetup.pdf), [pptx](/talks/yCombinator_meetup.pptx)), Bay Area Quantum Computing Meetup, YCombinator, February 2018
 
@@ -23,9 +25,31 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 
 - [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
 
-## Publications
+## Publications & Patents
+
+### 2021
+
+- D. Sreenivasaiah, J Otterbach & T. Wollmann <br>
+	MEAL: Manifold Embedding-based Active Learning <br>
+	[arxiv:2106.11858](https://arxiv.org/abs/2106.11858)
+
+- S. v. Baußnern, J. Otterbach, A. Loy, M. Salzmann & T. Wollmann <br>
+	DAAIN: Detection of Anomalous and Adversarial Input using Normalizing Flows <br>
+	[arxiv:2105.14638](https://arxiv.org/abs/2105.14638)
+
+- J. Otterbach & T. Wollmann <br>
+	Chameleon: A Semi-AutoML framework targeting quick and scalable development and deployment of production-ready ML systems for SMEs <br>
+	[arxiv:2105.03669](https://arxiv.org/abs/2105.03669)
 
 ### 2018
+
+- J. Otterbach, J. Ward, M. P. da Silva, N. C. Rubin <br>
+	Selecting parameters for a quantum approximate optimization algorithm (QAOA) <br>
+	[Patent number: 10846366](https://patents.justia.com/patent/10846366)
+
+- C. M. Wilson & Rigetti Computing <br>
+	Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers  <br>
+	[arxiv:1806.08321](https://arxiv.org/abs/1806.08321)
 
 - M. Reagor & Rigetti Computing <br>
     Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice <br>
