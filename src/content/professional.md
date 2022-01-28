@@ -27,10 +27,17 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 
 ## Publications & Patents
 
+### 2022
+
+- K. Ditschuneit & J. S. Otterbach <br>
+	Auto-Compressing Subset Pruning for Semantic Image Segmentation <br>
+	[arxiv:2201.11103](https://arxiv.org/abs/2201.11103)
+
 ### 2021
 
-- D. Sreenivasaiah, J Otterbach & T. Wollmann <br>
+- D. Sreenivasaiah, J. Otterbach & T. Wollmann <br>
 	MEAL: Manifold Embedding-based Active Learning <br>
+	2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW), 2021, pp. 1029-1037, doi: 10.1109/ICCVW54120.2021.00120 <br>
 	[arxiv:2106.11858](https://arxiv.org/abs/2106.11858)
 
 - S. v. Baußnern, J. Otterbach, A. Loy, M. Salzmann & T. Wollmann <br>
