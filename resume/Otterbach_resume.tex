@@ -7,6 +7,7 @@
 \setlength{\headsep}{0.2in}     % space between header and text
 \setlength{\headheight}{12pt}   % make room for header
 \usepackage{fancyhdr}  % use fancyhdr package to get 2-line header
+\usepackage{hyperref}
 \renewcommand{\headrulewidth}{0.5pt} % suppress line drawn by default by fancyhdr
 \fancyheadoffset[L]{\sectionwidth}
 % \lhead{\hspace*{-\sectionwidth}Johannes S. Otterbach} % force lhead all the way left
@@ -25,69 +26,81 @@
 \thispagestyle{empty} % this page does not have a header
 
 % Center the name over the entire width of resume:
-\moveleft.5\hoffset\centerline{\Large\bf Johannes S. Otterbach, Ph.D.}
+\moveleft.5\hoffset\centerline{\Large\bf Dr. Johannes S. Otterbach}
 % Draw a horizontal line the whole width of resume:
 \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
-\moveleft.5\hoffset\centerline{67 Glen Ave \#308, Oakland, CA 94611 $\vspace*{.2cm}\bullet\vspace*{.2cm}$ (857) 756-2022 $\vspace*{.2cm}\bullet\vspace*{.2cm}$ johannesotterbach@gmail.com }
-\vspace{-.7cm}
+\moveleft.5\hoffset\centerline{johannesotterbach@gmail.com $\vspace*{.2cm}\bullet\vspace*{.2cm}$ +49 1520 3437776}
+\vspace{-.3cm}
 \moveleft.5\hoffset\centerline{linkedin.com/in/jotterbach $\vspace*{.2cm}\bullet\vspace*{.2cm}$ jotterbach.github.io $\vspace*{.2cm}\bullet\vspace*{.2cm}$ github.com/jotterbach}
 
 \vspace*{-1.5cm}
 \begin{resume}
 \vspace{0.4cm}
 
-\section{\color{ResumeBlue}PROFILE}
-Self-motivated Ph.D.-level Physicist with a curious, analytical mind and a passion for all things AI, quantum \& data. Experience managing and analyzing data using Python (NumPy, SciPy, pandas, scikit-learn), Apache Spark (SparkSQL, MLlib), TensorFlow, Postgres, MATLAB, {\sc Mathematica} and developing algorithms and software for near-term quantum hardware. Extensive experience with advanced mathematics, statistics and applied machine learning, as well as presenting and visualizing complex concepts to diverse audiences.
+% \section{\color{ResumeBlue}PROFILE}
+% Self-motivated Ph.D.-level Physicist with a curious, analytical mind and a passion for all things AI, quantum \& data. Experience managing and analyzing data using Python (NumPy, SciPy, pandas, scikit-learn), Apache Spark (SparkSQL, MLlib), TensorFlow, Postgres, MATLAB, {\sc Mathematica} and developing algorithms and software for near-term quantum hardware. Extensive experience with advanced mathematics, statistics and applied machine learning, as well as presenting and visualizing complex concepts to diverse audiences.
 
 \section{\color{ResumeBlue}PROFESSIONAL DEVELOPMENT}
-{\bf Machine Learning Researcher} \hfill06/2018 - present \\
+{\bf VP of Machine Learning Research} \hfill04/2021 - present \\
+{\it Merantix Labs, Berlin, Germany}
+% \begin{itemize}
+%   \item Growing and leading the research division through mentoring, coaching, active code development.
+%   \item Support of research project managment through high-level direction setting and conceptualization
+% \end{itemize}
+
+{\bf Scientific AI Advisor to Syntegra.io } \hfill10/2019 - present \\
+{\it Syntegra.io, San Francisco, CA}
+
+{\bf Machine Learning Researcher} \hfill06/2018 - 02/2021 \\
 {\it OpenAI, San Francisco, CA}
-\begin{itemize}
-  \item Basic research in the area of Unsupervised and Generative Models with focus on Energy-Based Models and Normalizing Flows.
-\end{itemize}
+% \begin{itemize}
+%   \item Basic research in the area of Unsupervised and Generative Models with focus on Energy-Based Models and Normalizing Flows.
+%   \item Contributed to the rollout to the OpenAI API by close iteration with launch dedicated partners.
+%   \item Investigated the generalization of GPT-3 for multi-language support.
+% \end{itemize}
 
 {\bf Research Scientist and Software Engineer} \hfill04/2017 - 05/2018 \\
 {\it Rigetti Quantum Computing, Berkeley, CA}
-\begin{itemize}
-  \item Prototyping and demonstrating applications for near-term quantum devices, such as Quantum Machine Learning and Combinatorial Optimization Problems.
-  \item Developing and maintaining an OCaml-based simulator of a quantum processing unit.
-  \item Managing, coordinating and actively participating in a small research team for near-term applications.
-  \item Engaging with customers; estimating benefits using quantum computations and translating problems to quantum algorithms.
-\end{itemize}
+% \begin{itemize}
+%   \item Prototyping and demonstrating applications for near-term quantum devices, such as Quantum Machine Learning and Combinatorial Optimization Problems.
+%   \item Developing and maintaining an OCaml-based simulator of a quantum processing unit.
+%   \item Managing, coordinating and actively participating in a small research team for near-term applications.
+%   \item Engaging with customers; estimating benefits using quantum computations and translating problems to quantum algorithms.
+% \end{itemize}
 
 {\bf Senior Data Scientist} \hfill12/2016 - 03/2017 \\
 {\bf Data Scientist} \hfill08/2015 - 11/2016 \\
 {\it LendUp, San Francisco, CA}
-\begin{itemize}
-  \item Architect of new machine learning model scoring service with ability to serve models developed in several different languages and frameworks.
-  \item Implemented Python variants of various learning algorithms, such as Generalized Additive Models and Constrained Linear Models.
-  \item Contributed to key algorithms to generate model insights and auditability for regulatory compliance.
-  \item Supported Data Scientists with ad-hoc and production algorithms for feature analysis and selection. Provided dashboards and automated reports for business stakeholders.
-  \item Developed and deployed several models for credit underwriting, including models for new products.
-  \item Analysed and integrated new data sources into production systems to increase data redundancy.
-\end{itemize}
+% \begin{itemize}
+%   \item Architect of new machine learning model scoring service with ability to serve models developed in several different languages and frameworks.
+%   \item Implemented Python variants of various learning algorithms, such as Generalized Additive Models and Constrained Linear Models.
+%   \item Contributed to key algorithms to generate model insights and auditability for regulatory compliance.
+%   \item Supported Data Scientists with ad-hoc and production algorithms for feature analysis and selection. Provided dashboards and automated reports for business stakeholders.
+%   \item Developed and deployed several models for credit underwriting, including models for new products.
+%   \item Analysed and integrated new data sources into production systems to increase data redundancy.
+% \end{itemize}
 
 {\bf Infrastructure Quality Engineer} (Machine Learning)\hfill4/2014 - 7/2015 \\
 {\it Palantir Technologies, London, UK (until 1/2015) and Palo Alto, CA}
-\begin{itemize}
-  \item Analyzed TB-sized, disparate customer-dataset and implemented new propensity model pipeline using Apache Spark, surfacing previously unknown churn indicators.
-  \item Solidified and scaled end-to-end PySpark ETL-machine learning pipeline, resulting in a $\sim$5x increase in handled data-scale and $\sim$5x decrease of training time.
-  \item Reduced feature engineering development times by 3x through creating new featurization prototypes in quick iterations with product and data-science teams.
-  \item Deployed, debugged and maintained complex, distributed software stacks, containing Apache Spark, Hadoop HDFS and IPython Notebook servers, on cloud-based AWS systems. Optimized the stacks for best computational performance and stability.
-  \item Developed CometD-based user-scale testing and analytics framework resulting in a $\sim$10x improvement in handled users.
-\end{itemize}
+% \begin{itemize}
+%   \item Analyzed TB-sized, disparate customer-dataset and implemented new propensity model pipeline using Apache Spark, surfacing previously unknown churn indicators.
+%   \item Solidified and scaled end-to-end PySpark ETL-machine learning pipeline, resulting in a $\sim$5x increase in handled data-scale and $\sim$5x decrease of training time.
+%   \item Reduced feature engineering development times by 3x through creating new featurization prototypes in quick iterations with product and data-science teams.
+%   \item Deployed, debugged and maintained complex, distributed software stacks, containing Apache Spark, Hadoop HDFS and IPython Notebook servers, on cloud-based AWS systems. Optimized the stacks for best computational performance and stability.
+%   \item Developed CometD-based user-scale testing and analytics framework resulting in a $\sim$10x improvement in handled users.
+% \end{itemize}
 
 {\bf Postdoctoral Research Fellow} (Theoretical Quantum Physics)\hfill 9/2011 - 3/2014 \\
 {\it Harvard Quantum Optics Center, Cambridge, MA}
-\begin{itemize}
-  \item Studied phase diagrams of strongly interaction 1D cold atom systems with numeric and analytic tools.
-  \item Simulated the time-evolution of models with spatial and temporal randomness using Markov processes and ensemble theory, creating insights into highly correlated states of matter.
-  \item Explained and matched experimental observations to theoretical models using fitted statistical simulations and analytic solutions.
-  \item Presented research results to general as well as expert audiences through invited seminars, conferences, talks and posters.
-  \item Collaborated, influenced and contributed to research projects with international teams.
-\end{itemize}
+% \begin{itemize}
+%   \item Studied phase diagrams of strongly interaction 1D cold atom systems with numeric and analytic tools.
+%   \item Simulated the time-evolution of models with spatial and temporal randomness using Markov processes and ensemble theory, creating insights into highly correlated states of matter.
+%   \item Explained and matched experimental observations to theoretical models using fitted statistical simulations and analytic solutions.
+%   \item Presented research results to general as well as expert audiences through invited seminars, conferences, talks and posters.
+%   \item Collaborated, influenced and contributed to research projects with international teams.
+% \end{itemize}
 
 \section{\color{ResumeBlue}EDUCATION}
 
@@ -96,54 +109,109 @@ Self-motivated Ph.D.-level Physicist with a curious, analytical mind and a passi
  \item[] Theoretical Quantum Optics Group of Prof. Dr. M. Fleischhauer\\ University of Kaiserslautern, Germany
 \end{itemize}
 \vspace*{-0.2cm}
-{\bf B.S./M.S. in Physics}, {\it GPA: 3.93}, 5/2008
+{\bf MSc. (Diploma) in Physics}, {\it GPA: 3.93}, 5/2008
 \begin{itemize}
  \item[] University of Kaiserslautern, Germany
 \end{itemize}
 
-\section{\color{ResumeBlue}TECHNICAL SKILLS}
+% \section{\color{ResumeBlue}TECHNICAL SKILLS}
 
-\vspace*{0.2cm}
-\hspace*{-.9cm}
-\begin{tabular}{p{5.85in}>{\raggedleft\arraybackslash}p{.1in}}
-\begin{itemize}
-  \item Programming languages: Python, Java, Apache Spark, Scala, JavaScript, SQL and Shell scripting. Familiarity with OCaml, Cyton/C, Hadoop HDFS, AWS S3, R as well as ReactJS, Redux and Gatsby.
-  \item Experience with mathematical and statistical Python libraries such as pandas, scikit-learn, NumPy and SciPy, PyTorch, TensorFlow, Owl, and software such as MATLAB and {\sc Mathematica}.
-  \item Advanced mathematics and physics toolset paired knowledge of software best practices and applied machine learning ideally suited to tackle bleeding-edge challenges in AI and Deep Learning.
-\end{itemize}
- & \\
-\end{tabular}
+% \vspace*{0.2cm}
+% \hspace*{-.9cm}
+% \begin{tabular}{p{5.85in}>{\raggedleft\arraybackslash}p{.1in}}
+% \begin{itemize}
+%   \item Programming languages: Python, Java, Apache Spark, Scala, JavaScript, SQL and Shell scripting. Familiarity with OCaml, Cyton/C, Hadoop HDFS, AWS S3, R as well as ReactJS, Redux and Gatsby.
+%   \item Experience with mathematical and statistical Python libraries such as pandas, scikit-learn, NumPy and SciPy, PyTorch, TensorFlow, Owl, and software such as MATLAB and {\sc Mathematica}.
+%   \item Advanced mathematics and physics toolset paired knowledge of software best practices and applied machine learning ideally suited to tackle bleeding-edge challenges in AI and Deep Learning.
+% \end{itemize}
+%  & \\
+% \end{tabular}
 
-\vspace*{-0.2cm}
-\section{\color{ResumeBlue}SELECTED SCHOLARSHIPS AND AWARDS}
+% \vspace*{-0.2cm}
+\section{\color{ResumeBlue}SCHOLARSHIPS AND AWARDS}
 \vspace*{0.2cm}
 \hspace*{-.3cm}
 \begin{tabular}{p{5.0in}>{\raggedleft\arraybackslash}p{.85in}}
+  {OpenAI Fellowship} 
+ &  2018 \\
   {Prize Fellowship} of the Harvard Quantum Optics Center
  &  2011-2013 \\
   {2011 Award} of the Friends of the University of Kaiserslautern for an outstanding scientific performance as a Ph.D. student in physics
- & 6/2012 \\
+ & 2012 \\
+ {2009 Young Talent Award} (Nachwuchspreis) of the Department of Physics of the TU Kaiserslautern for an outstanding MSc thesis& 2009 \\
   {Foundation of German Business} scholarship
  & 2005-2008 \\
 \end{tabular}
-
-\section{\color{ResumeBlue}SELECTED PUBLICATIONS}
-\vspace*{0.2cm}
-20 in total with 200+ citations. Complete list available upon request.\vspace*{.2cm}
-\begin{enumerate}
- \item J. S. Otterbach et. al., \textit{Unsupervised Machine Learning on a Hybrid Quantum Computer}, arxiv:1712.05771.
- \item A. V. Gorshkov, J. Otterbach, E. Demler, M. Fleischhauer, M. D. Lukin, \textit{Photonic Phase Gate via an Exchange of Fermionic Spin Waves in a Spin Chain}, Phys. Rev. Lett. 105, 060502 (2010)
- \item {J. Otterbach}, M. Moos, D. Muth, M. Fleischhauer, \textit{Wigner Crystallization of Single Photons in Cold Rydberg Ensemble}, Phys. Rev. Lett. {111}, 113001 (2013).
-
-\end{enumerate}
 
 \section{\color{ResumeBlue}LANGUAGE SKILLS}
 \vspace*{0.2cm}
 German: Native speaker. English: Fluent. Swedish and French: Basic
 
-\section{\color{ResumeBlue}ACTIVITIES}
+\pagebreak
+\section{\color{ResumeBlue}PUBLICATION LIST}
+Also see: \url{https://scholar.google.com/citations?user=yZS4ce8AAAAJ&hl=en&authuser=1}
 \vspace*{0.2cm}
-Avid boulderer and climber. Enjoys slacklining and a good game of Ultimate Frisbee with friends. Good food or an outdoor trip are always welcome.
+\begin{enumerate}
+  \item K. Ditschuneit, \& J.Otterbach, \textit{Auto-Compressing Subset Pruning for Semantic Image Segmentation}, arXiv:2201.11103
+
+  \item D. Sreenivasaiah, J. Otterbach \& T. Wollmann, \textit{
+    MEAL: Manifold Embedding-based Active Learning}, 2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW), 2021, pp. 1029-1037, doi: 10.1109/ICCVW54120.2021.00120.
+  
+  \item S. v. Baußnern$^\dagger$, J. Otterbach$^\dagger$, A. Loy, M. Salzmann \& T. Wollmann, \textit{DAAIN: Detection of Anomalous and Adversarial Input using Normalizing Flows}, arxiv:2105.14638
+  
+  \item J. Otterbach \& T. Wollmann, \textit{Chameleon: A Semi-AutoML framework targeting quick and scalable development and deployment of production-ready ML systems for SMEs}, arxiv:2105.03669 (Accepted at KI-KMU 2021)
+  
+  \item J. Otterbach, J. Ward, M. P. da Silva, N. C. Rubin,\textit{Selecting parameters for a quantum approximate optimization algorithm (QAOA)}, Patent number: 10846366 (USA).
+  
+  \item C. M. Wilson, J. Otterbach \& Rigetti Computing, \textit{Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers}, arxiv:1806.08321
+  
+  \item S. Caldwell \& Rigetti Computing \textit{Parametrically-Activated Entangling Gates Using Transmon Qubits}, Physical Review Applied 10 (3), 034050 (2018).
+
+  \item M. Reagor \& Rigetti Computing, \textit{Demonstration of Universal Parametric Entangling Gates on a Multi-Qubit Lattice}, Science Advances, 4, eaao3603 (2018)
+  
+  \item J. Otterbach \& Rigetti Computing, \textit{Unsupervised Machine Learning on a Hybrid Quantum Computer}, arxiv:1712.05771
+  
+  \item Q. Wang, J. Otterbach, S. F. Yelin \textit{Interacting in-plane molecular dipoles in a zig-zag chain}, Phys. Rev. A 96, 043615 (2017)
+  
+  \item J. Otterbach \& M. Lemeshko, \textit{Dissipative Preparation of Spatial Order in Rydberg-Dressed Bose-Einstein Condensates}, Phys. Rev. Lett. 113, 070401 (2014).
+  
+  \item F. Bariani, J. Otterbach, H. Tan, P. Meystre, \textit{Single-atom quantum control of macroscopic mechanical oscillators}, Phys. Rev. A 89, 011801(R) (2014).
+  
+  \item J. Otterbach, M. Moos, D. Muth, M. Fleischhauer, \textit{Wigner Crystallization of Single Photons in Cold Rydberg Ensembles}, Phys. Rev. Lett. 111, 113001 (2013).
+  
+  \item E. G. Dalla Torre, J. Otterbach, E. Demler, V. Vuletic, M. D. Lukin, \textit{Dissipative Preparation of Spin Squeezed Atomic Ensembles in a Steady State},, Phys. Rev. Lett. 110, 120402 (2013).
+  
+  \item S. D. Bennett, N. Y. Yao, J. Otterbach, P. Zoller, P. Rabl, M. D. Lukin, \textit{Phonon-induced spin-spin interactions in diamond nanostructures: application to spin squeezing}, Phys. Rev. Lett. 110, 156402 (2013).
+  
+  \item M. J. Edmonds, J. Otterbach, R. G. Unanyan, M. Fleischhauer, M. Titov, P. Öhberg, \textit{From Anderson to anomalous localization in cold atomic gases with effective spin-orbit coupling}, New J. Phys. 14, 073056 (2012).
+  
+  \item J. Ruseckas, V. Kudriasov, G. Juzeliunas, R. G. Unanyan, J. Otterbach, M. Fleischhauer, \textit{Photonic band-gap properties for two-component slow light}, Phys. Rev. A 83, 063811 (2011).
+  
+  \item A. V. Gorshkov, J. Otterbach, M. Fleischhauer, T. Pohl, M. D. Lukin, \textit{Photon-Photon Interactions via Rydberg Blockade}, Phys. Rev. Lett. 107, 133602 (2011).
+  
+  \item D. Petrosyan, J. Otterbach, and M. Fleischhauer, \textit{Electromagnetically induced transparency with Rydberg atoms}, Phys. Rev. Lett. 107, 213601 (2011).
+  
+  \item J. Otterbach, J. Ruseckas, R. G. Unanyan, G. Juzeliunas, and M. Fleischhauer, \textit{Effective magnetic fields for stationary light}, Phys. Rev. Lett. 104, 033903 (2010).
+  
+  \item A. V. Gorshkov, J. Otterbach, E. Demler, M. Fleischhauer, and M. D. Lukin, \textit{Photonic Phase Gate via an Exchange of Fermionic Spin Waves in a Spin Chain}, Phys. Rev. Lett. 105, 060502 (2010).
+  
+  \item R. G. Unanyan, J. Otterbach, M. Fleischhauer, J. Ruseckas, V. Kudriasov, and G. Juzeliunas, \textit{Spinor Slow-Light and Dirac particles with variable mass}, Phys. Rev. Lett. 105, 173603 (2010).
+  
+  \item J. Otterbach, R. G. Unanyan, M. Fleischhauer, \textit{Confining stationary light: Dirac dynamics and Klein tunneling}, Phys. Rev. Lett. 102, 063602 (2009).
+  
+  \item R. G. Unanyan, J. Otterbach, M. Fleischhauer, \textit{Confinement Limit of Dirac particles in scalar 1D potentials}, Phys. Rev. A 79, 044101 (2009).
+  
+  \item F. E. Zimmer, J. Otterbach, R. G. Unanyan, B. W. Shore, M. Fleischhauer, \textit{Dark-State Polaritons for multi-component and stationary light fields}, Phys. Rev. A 77, 063823 (2008).
+  
+  \item M. Fleischhauer, J. Otterbach, R. G. Unanyan, \textit{Bose-Einstein condensation of stationary-light polaritons}, Phys. Rev. Lett. 101, 163601 (2008).
+
+\end{enumerate}
+
+
+
+% \section{\color{ResumeBlue}ACTIVITIES}
+% \vspace*{0.2cm}
+% Avid boulderer and climber. Enjoys slacklining and a good game of Ultimate Frisbee with friends. Good food or an outdoor trip are always welcome.
 
 \end{resume}
 \end{document}
