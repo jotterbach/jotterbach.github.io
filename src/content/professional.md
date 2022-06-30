@@ -5,7 +5,7 @@ type: Content
 
 
 ## Short Bio
-Dr. Johannes Otterbach is the VP of Machine Learning Research at [Merantix Labs](https://www.merantixlabs.com/). He has a passion for big data technologies and applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Merantix Labs he worked as a Machine Learning and Algorithms Researcher at OpenAI, a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is the VP of Machine Learning Research at [Merantix Momentum](https://www.merantix-momentum.com/). He has a passion for AI & big data technologies and their applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Merantix Momentum he worked as a Machine Learning and Algorithms Researcher at OpenAI, a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
 
@@ -28,6 +28,16 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 ## Publications & Patents
 
 ### 2022
+
+- W. Lötzsch, S. Ohler & J. S. Otterbach <br>
+	Learning the Solution Operator of Boundary Value Problems using Graph Neural Networks <br>
+	Accepted at the [2nd AI4Science Workshop at the 39th ICML 2022](http://www.ai4science.net/icml22/index.html) <br>
+	[arxiv:2206.14092](https://arxiv.org/abs/2206.14092), [openreview](https://openreview.net/forum?id=4vx9FQA7wiC)
+
+- S. Ohler, D. S. Brady, W. Lötzsch, M. Fleischhauer & J. S. Otterbach <br>
+	Towards Learning Self-Organized Criticality of Rydberg Atoms using Graph Neural Networks <br>
+	Accepted at the [2nd AI4Science Workshop at the 39th ICML 2022](http://www.ai4science.net/icml22/index.html) <br>
+	[openreview](https://openreview.net/forum?id=vPz6S5cbesU)
 
 - K. Ditschuneit & J. S. Otterbach <br>
 	Auto-Compressing Subset Pruning for Semantic Image Segmentation <br>
