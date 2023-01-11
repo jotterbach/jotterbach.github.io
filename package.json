@@ -30,7 +30,7 @@
     "gatsby-remark-prismjs": "^5.7.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.10.0",
     "katex": "^0.13.13",
     "prismjs": "^1.17.1",
