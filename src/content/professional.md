@@ -5,29 +5,51 @@ type: Content
 
 
 ## Short Bio
-Dr. Johannes Otterbach is the VP of Machine Learning Research at [Merantix Momentum](https://www.merantix-momentum.com/). He has a passion for AI & big data technologies and their applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Merantix Momentum he worked as a Machine Learning and Algorithms Researcher at OpenAI, a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is VP of Machine Learning Research at [Merantix Momentum](https://www.merantix-momentum.com/). He has a passion for AI & big data technologies and their applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Merantix Momentum he worked as a Machine Learning and Algorithms Researcher at OpenAI, a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
 
 More details are in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
 
-## Talks
-
-- Applying AI in the Wild ([pdf](/talks/Applying_AI_in_the_Wild.pdf)),  Zentrum fuer Optische Quantentechnologien (ZOQ), University of Hamburg, March 2021
-
-- Unsupervised Machine Learning on a Hybrid Quantum Computer ([pdf](/talks/yCombinator_meetup.pdf), [pptx](/talks/yCombinator_meetup.pptx)), Bay Area Quantum Computing Meetup, YCombinator, February 2018
-
-- Quantum Cloud Computing ([pdf](/talks/KL_QuantumCloudComputing.pdf), [pptx](/talks/KL_QuantumCloudcomputing.pptx)), TU Kaiserslautern, Germany, January 2018
-
-- OQaml - A OCaml-based QASM, ([pdf](/talks/OQaml_MeetUp.pdf), [pptx](/talks/OQaml_MeetUp.pptx)), Bay Area Quantum Computing Meetup, Rigetti, August 2017
-
-- [The Curse Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
-
-- [AI - En Route to Passing Turing's Test](http://jotterbach.github.io/presentations/AI_enRouteToTuringsTest), TU Kaiserslautern, April 2016
-
-- [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
-
 ## Publications & Patents
 
+### 2023
+
+- O. Kondrateva, S. Dietzel, M. Schambach, J. S. Otterbach & B. Scheuermann <br>
+  Filling the Gap: Fault-Tolerant Updates of On-Satellite Neural Networks Using Vector Quantization <br>
+  Accepted at [IFIP Networking 2023](https://networking.ifip.org/2023/)
+
+
+- A. Koenig, M. Schambach & J. S. Otterbach <br>
+    Uncovering the Inner Workings of STEGO for Safe Unsupervised Semantic Segmentation <br>
+	Accepted at [SAIAD @ ICCV 2023](https://sites.google.com/view/saiad2023/home) <br>
+
+
+- J. Siems, M. Schambach, S. Schulze & J. S. Otterbach <br>
+    Interpretable Reinforcement Learning via Neural Additive Models for Inventory Management <br>
+	Accepted at [AI4ABM @ ICLR 2023](https://ai4abm.org/workshop_callforpapers_iclr2023/) workshop <br>
+	[arxiv:2303.10382](https://arxiv.org/abs/2303.10382), [openreview](https://openreview.net/forum?id=YlreO6OpwE7)
+
+- K. Ditschuneit, A. Frenk, M. Frings, V. Rudel, S. Dietzel & J. S. Otterbach<br>
+  NAM-CAM: Neural-Additive Models for Semi-Analytic Descriptions of CAM Simulations <br>
+  Accepted at the [FAIM 2023](https://www.faimconference.org/#) <br>
+  Link to the [pdf](/papers/NAM-CAM_FAIM-2023.pdf)
+
+- [LEAM:AI](https://leam.ai/) consortium <br>
+	Große KI-Modelle für Deutschland ([pdf](https://leam.ai/wp-content/uploads/2023/01/LEAM-MBS_KIBV_webversion_mitAnhang_V2_2023.pdf) in German only) <br>
+	On behalf of the Federal Ministry for Economic Affairs and Climate Action (BMWK)
+
+- J. S. Otterbach, C. M. Wilson, M. P. da Silva, N. A. Tezak, G. E. Crooks<br>
+  Using a quantum processor unit to preprocess data<br>
+  [Patent number: US-11551127-B1](https://patents.google.com/patent/US11551127B1/en)
+
 ### 2022
+
+- M. J. Reagor, B. R. Johnson, M. P. da Silva. J. S. Otterbach, N. A. Tezak, C. T. Rigetti<br>
+  Utilizing multiple quantum processor unit (QPU) instances<br>
+  [Patent number: US-11521103-B1](https://patents.google.com/patent/US11521103B1/en)
+
+- R. S. Smith, N. C. Rubin, J. S. Otterbach<br>
+  Quantum state blockchain<br>
+  [Patent number: US-11477015-B1](https://patents.google.com/patent/US11477015B1/en)
 
 - W. Lötzsch, S. Ohler & J. S. Otterbach <br>
 	Learning the Solution Operator of Boundary Value Problems using Graph Neural Networks <br>
@@ -37,11 +59,12 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 - S. Ohler, D. S. Brady, W. Lötzsch, M. Fleischhauer & J. S. Otterbach <br>
 	Towards Learning Self-Organized Criticality of Rydberg Atoms using Graph Neural Networks <br>
 	Accepted at the [2nd AI4Science Workshop at the 39th ICML 2022](http://www.ai4science.net/icml22/index.html) <br>
-	[openreview](https://openreview.net/forum?id=vPz6S5cbesU)
+	[arxiv:2207.08927](https://arxiv.org/abs/2207.08927), [openreview](https://openreview.net/forum?id=vPz6S5cbesU)
 
 - K. Ditschuneit & J. S. Otterbach <br>
 	Auto-Compressing Subset Pruning for Semantic Image Segmentation <br>
-	[arxiv:2201.11103](https://arxiv.org/abs/2201.11103)
+	Accepted at [GCPR 2022](https://www.dagm-gcpr.de/year/2022) <br>
+	[arxiv:2201.11103](https://arxiv.org/abs/2201.11103), [accepted version](https://link.springer.com/chapter/10.1007/978-3-031-16788-1_2)
 
 ### 2021
 
@@ -62,7 +85,7 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 
 - J. Otterbach, J. Ward, M. P. da Silva, N. C. Rubin <br>
 	Selecting parameters for a quantum approximate optimization algorithm (QAOA) <br>
-	[Patent number: 10846366](https://patents.justia.com/patent/10846366)
+	[Patent number: US-10846366-B1](https://patents.google.com/patent/US10846366B1/en)
 
 - C. M. Wilson & Rigetti Computing <br>
 	Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers  <br>
@@ -176,3 +199,63 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 - M. Fleischhauer, J. Otterbach, R. G. Unanyan <br>
 	Bose-Einstein condensation of stationary-light polaritons <br>
 	[Phys. Rev. Lett. 101, 163601 (2008)](http://link.aps.org/abstract/PRL/v101/e163601)
+
+## Public Appearances & Media
+
+
+
+- Hannah Schwär (Capital Magazin, 2023)<br>
+  KI - plötzlich sehen wir ganz schön alt aus<br>
+  [Link](https://shop.capital.de/de_DE/einzelhefte/einzelausgaben/capital-epaper-04-2023/2114727.html)
+
+- Impact of LLMs On Energy & Sustainability ([youtube](https://youtu.be/Qt3eb33296A?t=1596)), NLP + Climate Tech Event by [briink](https://www.briink.com/), AI Campus Berlin
+
+- Hanna Sissmann @ eco Verband<br>
+  Mit der LEAM-Initiative unterstützen wir Unternehmen, große KI-Sprachmodelle zu trainieren<br>
+  [Link (German)](https://www.eco.de/news/mit-der-leam-initiative-unterstuetzen-wir-unternehmen-grosse-ki-sprachmodelle-zu-trainieren-5-fragen-an-dr-johannes-otterbach-von-merantix/), [Link (English)](https://www.dotmagazine.online/issues/bridging-the-gaps/upporting-smes-in-training-ai)
+
+- KI Park Tech Talk - GPT-3 and OpenAI Dall-e<br>
+  [youtube](https://www.youtube.com/watch?v=KZW83rCdYqQ)
+
+- GovTech Session: Countering Manipulation & Fake News - AI, the Silver Bullet?<br>
+  [youtube](https://www.youtube.com/watch?v=57iBp4vHLLU)
+
+- Gradient Dissent — The Weights & Biases Podcast with Lukas Biewald<br>
+  Unlocking ML for Traditional Companies<br>
+  [Link](https://wandb.ai/wandb_fc/gradient-dissent/reports/Johannes-Otterbach-Unlocking-ML-for-Traditional-Companies--VmlldzoxOTMzODg5?galleryTag=podcast)
+
+- Applying AI in the Wild ([pdf](/talks/Applying_AI_in_the_Wild.pdf)),  Zentrum fuer Optische Quantentechnologien (ZOQ), University of Hamburg, March 2021
+
+- Philipp Lorenz @ Stiftung Neue Verantwortung <br>
+  Die 1-Milliarde-Dollar-Organisation, die ethische KI entwickelt<br>
+  [Transcript (German only)](https://www.stiftung-nv.de/de/publikation/die-1-milliarde-dollar-organisation-die-ethische-ki-entwickelt)
+
+- Unsupervised Machine Learning on a Hybrid Quantum Computer ([pdf](/talks/yCombinator_meetup.pdf), [pptx](/talks/yCombinator_meetup.pptx)), Bay Area Quantum Computing Meetup, YCombinator, February 2018
+
+- Quantum Cloud Computing ([pdf](/talks/KL_QuantumCloudComputing.pdf), [pptx](/talks/KL_QuantumCloudcomputing.pptx)), TU Kaiserslautern, Germany, January 2018
+
+- OQaml - A OCaml-based QASM, ([pdf](/talks/OQaml_MeetUp.pdf), [pptx](/talks/OQaml_MeetUp.pptx)), Bay Area Quantum Computing Meetup, Rigetti, August 2017
+
+- [The Curse Of Dimensionality - Visualizing High-Dimensional Datasets using t-SNE](http://jotterbach.github.io/presentations/TSNE_KL-divergence), MemSQL, June 2016
+
+- [AI - En Route to Passing Turing's Test](http://jotterbach.github.io/presentations/AI_enRouteToTuringsTest), TU Kaiserslautern, April 2016
+
+- [Data Science - WTH?](http://jotterbach.github.io/presentations/DataScience_WTH), TU Kaiserslautern, April 2016
+
+## Honorable Mentions:
+
+In this section, I want to collect pieces of work of other scientist with some honorable mention of mine. All credit goes to the authors and I claim no contribution to their work. It is merely intended as a ongoing list of topics I have had exchanges with the authors.
+
+- P. Hacker, A. Engel, M. Mauer <br>
+  Regulating ChatGPT and other Large Generative AI Models<br>
+  [arxiv:2302.02337](https://arxiv.org/abs/2302.02337)
+
+- M. Kiefer-Emmanouilidis, R. Unanyan, M. Fleischhauer, and J. Sirker<br>
+  Evidence for Unbounded Growth of the Number Entropy in Many-Body Localized Phases<br>
+  [Phys. Rev. Lett. 124, 243601 (2020)](https://www.physik.uni-kl.de/agfleischhauer/dokuwiki/lib/exe/fetch.php?media=publications:physrevlett.124.243601.pdf)
+
+- P. Lorenz & K. Saslow (2019)<br>
+  Demystifying AI & AI Companies — What foreign policy makers need to know about the global AI industry<br>
+  [pdf](https://www.stiftung-nv.de/sites/default/files/demystifying_ai_and_ai_companies.pdf)
+
+
