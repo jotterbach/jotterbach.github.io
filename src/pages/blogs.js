@@ -37,8 +37,10 @@ export default Blog_FN
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC },
-         filter: {frontmatter: {type: {eq: "post"}}}) {
+    allMarkdownRemark(
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {type: {eq: "post"}}}
+    ) {
       totalCount
       edges {
         node {

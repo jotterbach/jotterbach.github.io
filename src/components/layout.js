@@ -98,7 +98,7 @@ const Footer = () => (
   </Foot>
 )
 
-export default ({ children }) => (
+const Layout_FN = ({ children }) => (
   <Layout>
     <div>
       <Header />
@@ -109,3 +109,6 @@ export default ({ children }) => (
     </div>
   </Layout>
 )
+
+
+export default Layout_FN
