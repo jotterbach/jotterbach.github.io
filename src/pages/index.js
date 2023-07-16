@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 
@@ -44,7 +44,7 @@ const ItemContent = styled.div`
 `
 
 
-const ProfileImg = styled(Img)`
+const ProfileImg = styled(GatsbyImage)`
   border-radius: 10px;
 `
 
@@ -56,7 +56,7 @@ const Index_FN = ({ data }) => (
         <Item>
           <ItemContent>
             <ProfileImg
-              fluid={data.file.childImageSharp.fluid}
+              image={getImage(data.file)}
               fadeIn={true}
               alt="Image of me"
             />
@@ -93,9 +93,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: "profile.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
