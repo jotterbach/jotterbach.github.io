@@ -11,7 +11,7 @@ const Professional = styled.div`
   }
 `
 
-export default ({ data }) => (
+const Professional_FN = ({ data }) => (
   <Layout>
     <Professional
       dangerouslySetInnerHTML={{
@@ -20,6 +20,8 @@ export default ({ data }) => (
     />
   </Layout>
 )
+
+export default Professional_FN
 
 export const query = graphql`
   query {

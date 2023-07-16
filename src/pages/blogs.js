@@ -12,7 +12,7 @@ const Title = styled.div`
   font-size: 1.3em;
 `
 
-export default ({ data }) => {
+const Blog_FN = ({ data }) => {
   return (
     <Layout>
       <div>
@@ -32,6 +32,8 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default Blog_FN
 
 export const query = graphql`
   query {

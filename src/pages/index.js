@@ -48,7 +48,7 @@ const ProfileImg = styled(Img)`
   border-radius: 10px;
 `
 
-export default ({ data }) => (
+const Index_FN = ({ data }) => (
   <Layout>
     <Container>
       <Aligner>
@@ -79,6 +79,8 @@ export default ({ data }) => (
     </Container>
   </Layout>
 )
+
+export default Index_FN
 
 export const query = graphql`
   query {
