@@ -29,6 +29,7 @@ More details can be found in the (more or less up-to-date) [resume](/resume/Otte
 - A. Koenig, M. Schambach & J. S. Otterbach <br>
     Uncovering the Inner Workings of STEGO for Safe Unsupervised Semantic Segmentation <br>
 	Accepted at [SAIAD @ ICCV 2023](https://sites.google.com/view/saiad2023/home)
+	[arxiv:2304.07314](https://arxiv.org/abs/2304.07314)
 
 
 - J. Siems, M. Schambach, S. Schulze & J. S. Otterbach <br>
