@@ -9,14 +9,30 @@ const BlogItem = styled.div`
 
 const Title = styled.div`
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1em;
 `
 
-export default ({ data }) => {
+const BlogsList = styled.div`
+
+`
+
+const Foreword = styled.div`
+max-width: 80%;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 5px;
+margin-bottom: 100px;
+align-items: center;
+`
+
+const Blog_FN = ({ data }) => {
   return (
     <Layout>
-      <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+      <Foreword dangerouslySetInnerHTML={{
+              __html: data.content.edges[0].node.html,
+            }}/>
+      <BlogsList>
+        {data.posts.edges.map(({ node }) => (
           <BlogItem>
             <div key={node.id}>
               <Link to={node.fields.slug}>
@@ -28,28 +44,39 @@ export default ({ data }) => {
             </div>
           </BlogItem>
         ))}
-      </div>
+      </BlogsList>
     </Layout>
   )
 }
 
+export default Blog_FN
+
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC },
-         filter: {frontmatter: {type: {eq: "post"}}}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
+query {
+  content: allMarkdownRemark(filter: { frontmatter: { title: { eq: "Blog" } } }) {
+    edges {
+      node {
+        html
+      }
+    }
+  }
+posts: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {type: {eq: "post"}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD MMMM, YYYY")
+        }
+        fields {
+          slug
         }
       }
     }
   }
+}
 `;

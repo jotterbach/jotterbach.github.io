@@ -5,13 +5,21 @@ type: Content
 
 
 ## Short Bio
-Dr. Johannes Otterbach is VP of Machine Learning Research at [Merantix Momentum](https://www.merantix-momentum.com/). He has a passion for AI & big data technologies and their applications to real world problems and is an established scientist with more than 15 publications in high impact journals and has won several awards. Before joining Merantix Momentum he worked as a Machine Learning and Algorithms Researcher at OpenAI, a Quantum Engineer at Rigettti, as a Senior Data Scientist at LendUp and as a software engineer at Palantir Technologies. He earned his Ph.D. in Physics from the University of Kaiserslautern, Germany in topics related to Quantum Computing and held a postdoctoral fellowship in the Harvard Physics department where he broadened his interests in research and computational problems.
+Dr. Johannes Otterbach is the CTO of [nyonic](https://www.nyonic.ai) — an AI startup at the cutting edge of Foundation and Large Language Models. He has decades of experience in the field of AI, big data and computational sciences, aquired through his work as VP of Machine Learning Research at [Merantix Momentum](https://www.merantix-momentum.com/), researcher at [OpenAI](https://www.openai.com), quantum engineer at [Rigetti](https://www.rigetti.com), data scientist at [LendUp / Mission Lane](https://www.missionlane.com) and software engineer at [Palantir](https://www.palantir.com).
 
-More details are in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
+He received his Ph.D. in Physics from the University of Kaiserslautern, Germany while studying light particle interactions in the context [Many-Body properties of Dark-State Polaritons] in the group of Prof. Dr. M. Fleischhauer. Subsequently, he held a postdoctoral fellowship at the [Harvard Quantum Optics Center](http://hqoc.harvard.edu/)
+
+More details can be found in the (more or less up-to-date) [resume](/resume/Otterbach_resume.pdf)
 
 ## Publications & Patents
 
 ### 2023
+
+- J. Siems, K. Ditschuneit, W. Ripken, A. Lindborg, M. Schambach, J. S. Otterbach, M. Genzel <br>
+  Curve Your Enthusiasm: Concurvity Regularization in Differentiable Generalized Additive Models <br>
+  Accepted at [IMLH @ ICML 2023](https://sites.google.com/view/imlh2023/home?authuser=1) <br>
+  [arxiv:2305.11475](https://arxiv.org/abs/2305.11475), [openreview](https://openreview.net/forum?id=2w6w8jek3P)
+
 
 - O. Kondrateva, S. Dietzel, M. Schambach, J. S. Otterbach & B. Scheuermann <br>
   Filling the Gap: Fault-Tolerant Updates of On-Satellite Neural Networks Using Vector Quantization <br>
@@ -20,7 +28,8 @@ More details are in the (more or less up-to-date) [resume](/resume/Otterbach_res
 
 - A. Koenig, M. Schambach & J. S. Otterbach <br>
     Uncovering the Inner Workings of STEGO for Safe Unsupervised Semantic Segmentation <br>
-	Accepted at [SAIAD @ ICCV 2023](https://sites.google.com/view/saiad2023/home) <br>
+	Accepted at [SAIAD @ ICCV 2023](https://sites.google.com/view/saiad2023/home)
+	[arxiv:2304.07314](https://arxiv.org/abs/2304.07314)
 
 
 - J. Siems, M. Schambach, S. Schulze & J. S. Otterbach <br>

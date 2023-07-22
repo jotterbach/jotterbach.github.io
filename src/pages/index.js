@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 
@@ -44,11 +44,11 @@ const ItemContent = styled.div`
 `
 
 
-const ProfileImg = styled(Img)`
+const ProfileImg = styled(GatsbyImage)`
   border-radius: 10px;
 `
 
-export default ({ data }) => (
+const Index_FN = ({ data }) => (
   <Layout>
     <Container>
       <Aligner>
@@ -56,7 +56,7 @@ export default ({ data }) => (
         <Item>
           <ItemContent>
             <ProfileImg
-              fluid={data.file.childImageSharp.fluid}
+              image={getImage(data.file)}
               fadeIn={true}
               alt="Image of me"
             />
@@ -80,6 +80,8 @@ export default ({ data }) => (
   </Layout>
 )
 
+export default Index_FN
+
 export const query = graphql`
   query {
     allMarkdownRemark(filter: { frontmatter: { title: { eq: "About" } } }) {
@@ -91,9 +93,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: "profile.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

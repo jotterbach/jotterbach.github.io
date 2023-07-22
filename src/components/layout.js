@@ -71,8 +71,9 @@ const Header = () => (
     </div>
     <div>
       <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/blogs">Blog</ListLink>
+        <ListLink to="/blogs">Archive</ListLink>
         <ListLink to="/professional/">Professional</ListLink>
+        <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </div>
   </Head>
@@ -98,7 +99,7 @@ const Footer = () => (
   </Foot>
 )
 
-export default ({ children }) => (
+const Layout_FN = ({ children }) => (
   <Layout>
     <div>
       <Header />
@@ -109,3 +110,6 @@ export default ({ children }) => (
     </div>
   </Layout>
 )
+
+
+export default Layout_FN
