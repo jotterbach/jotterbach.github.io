@@ -1,2 +1,0 @@
-(self.webpackChunkjotterbach_github_io=self.webpackChunkjotterbach_github_io||[]).push([[311],{7680:function(e,t,n){"use strict";n.r(t);var l=n(7294),r=n(3766);t.default=function(e){var t=e.pageContext,n=t.html,u=t.title;return l.createElement(r.Z,null,l.createElement("div",null,l.createElement("h1",null,u),l.createElement("div",{dangerouslySetInnerHTML:{__html:n}})))}}}]);
-//# sourceMappingURL=component---src-pages-blog-template-js-0c6d2f22daba58a3eec1.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjotterbach_github_io=self.webpackChunkjotterbach_github_io||[]).push([[311],{8373:function(e,t,l){l.r(t);var n=l(7294),r=l(7791);t.default=e=>{let{pageContext:{html:t,title:l}}=e;return n.createElement(r.Z,null,n.createElement("div",null,n.createElement("h1",null,l),n.createElement("div",{dangerouslySetInnerHTML:{__html:t}})))}}}]);
+//# sourceMappingURL=component---src-pages-blog-template-js-b5cb84dd4f0301ff60e7.js.map
