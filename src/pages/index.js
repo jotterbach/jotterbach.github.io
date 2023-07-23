@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/seo"
 
 
 const Container = styled.div`
@@ -84,7 +84,7 @@ const Index_FN = ({ data }) => (
 export default Index_FN
 
 export const Head = () => (
-  <SEO />
+  <Seo />
 )
 
 export const query = graphql`

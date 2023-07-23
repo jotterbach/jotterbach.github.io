@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from "../components/layout"
 import styled from "styled-components"
 import { useForm } from 'react-hook-form';
@@ -58,7 +58,7 @@ const onSubmit = (data) => { console.log(data) }
 const Contact_FN = () => {
     const { register,
         handleSubmit,
-        formState: { errors }, } = useForm();
+    } = useForm();
     const showForm = (
         <Contact>
             <form method="post" action="https://getform.io/f/2d5919bc-f47f-4eaa-813b-babfa8383248" onSubmit={handleSubmit(onSubmit)}>
