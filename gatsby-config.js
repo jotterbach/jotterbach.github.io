@@ -6,7 +6,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Blog of Johannes Otterbach`,
+    title: `Dr. Johannes Otterbach`,
+    descriotion: `Personal profile page of Johannes Otterbach`,
+    twitterUsername: `@jsotterbach`,
+    image: `/jo_icon.png`,
+    siteUrl: `https://jotterbach.github.io`
   },
   plugins: [
     {
