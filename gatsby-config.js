@@ -6,9 +6,25 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Blog of Johannes Otterbach`,
+    title: `Dr. Johannes Otterbach`,
+    descriotion: `Personal profile page of Johannes Otterbach`,
+    twitterUsername: `@jsotterbach`,
+    image: `/jo_icon.png`,
+    siteUrl: `https://jotterbach.github.io`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Website of Dr. Johannes Otterbach`,
+        short_name: `J. Otterbach`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/content/jo_icon.png`
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -86,6 +102,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
