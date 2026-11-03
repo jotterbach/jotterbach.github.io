@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://johannesotterbach.com/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johannesotterbach.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johannesotterbach.com/"/>
+  </url>
+  <url>
+    <loc>https://johannesotterbach.com/advisory/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johannesotterbach.com/advisory/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johannesotterbach.com/advisory/"/>
+  </url>
+  <url>
+    <loc>https://johannesotterbach.com/about/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johannesotterbach.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johannesotterbach.com/about/"/>
+  </url>
+  <url>
+    <loc>https://johannesotterbach.com/publications/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johannesotterbach.com/publications/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johannesotterbach.com/publications/"/>
+  </url>
+  <url>
+    <loc>https://johannesotterbach.com/imprint/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johannesotterbach.com/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johannesotterbach.com/imprint/"/>
+  </url>
+  <url>
+    <loc>https://johannesotterbach.com/privacy/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johannesotterbach.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johannesotterbach.com/privacy/"/>
+  </url>
+</urlset>

@@ -1,0 +1,45 @@
+# Dr. Johannes Otterbach
+
+> Physicist and engineer (Palantir, Rigetti, OpenAI, Merantix, nyonic) investing in deep tech. Technical due diligence, advisory, and keynotes for AI and quantum.
+
+Johannes Otterbach is a physicist, engineer, and investor based in Berlin. He holds a PhD in quantum physics, built software, quantum, and AI systems at Palantir, Rigetti Computing, and OpenAI, led ML research at Merantix, co-founded nyonic as CTO, and now invests in and advises deep-tech companies. He races long-distance triathlon (Ironman, Xtreme) and trail.
+
+## Pages
+- [Home](https://johannesotterbach.com/): overview
+- [Advisory](https://johannesotterbach.com/advisory/): I help investors and founders in AI and quantum see what the technology can really do, how defensible it is, and where it creates real value for customers.
+- [About](https://johannesotterbach.com/about/): career, endurance racing, highlights of podcasts, talks, and papers
+- [Publications, talks & media](https://johannesotterbach.com/publications/): all papers, patents, talks, podcasts, and press
+
+
+## Advisory
+- Technical due diligence (for VC funds, M&A, and deal teams): From a single expert call to a full review. Does the technology hold up, can it be defended, and how does it carry the business?
+- Advisory & angel investing (for founders, seed to Series B): A sparring partner on technical strategy, team and org design, hiring, and pivots, from someone who has been a CTO. As an advisor, an angel investor, or both.
+- Keynotes & panels (for summits, offsites, and LP meetings): Keynotes with Q&A, panels, and moderation. Topics: frontier AI, compute sovereignty in Europe, and where quantum computing really stands.
+- First step: Whether it's a single expert call or a full review, it starts the same way.
+- Contact: via the contact link on any page; provider details in the [imprint](https://johannesotterbach.com/imprint/).
+
+## Career
+- 2011: PhD in quantum physics, RPTU Kaiserslautern
+- 2011–2014: Postdoc, Harvard Quantum Optics Center
+- 2014–2015: Palantir, Software engineer
+- 2015–2017: LendUp, Data scientist
+- 2017–2018: Rigetti Computing, Quantum engineer
+- 2018–2021: OpenAI, Researcher
+- 2021–2023: Merantix, VP of ML Research
+- 2023–2024: nyonic, Co-founder & CTO
+- Now: SPRIND & angel investor, Deep-tech venture investing
+
+## Endurance
+- Jánošík Slovak Xtreme Triathlon: 3.8 km swim · 180 km bike, 2,600 m up · 42.2 km run, 2,800 m up · 2026
+- Ironman Hamburg: European Championship · 2026
+- Ironman California: 2025
+- MIUT 40: Madeira Island Ultra Trail · +1,500 m / −2,200 m · 2026
+
+## Selected podcasts, talks, and papers
+Full list: https://johannesotterbach.com/publications/
+- [The Race for a Billion](https://aipod.de/the-race-for-a-billion/): Podcast · Industrial AI Podcast · 2026
+- [Next Frontier AI launch session](https://next-frontier.ai/): Talk · EurIPS, Copenhagen · 2025
+- [Unsupervised machine learning on a hybrid quantum computer](https://arxiv.org/abs/1712.05771): Paper · Rigetti Computing · 2017
+
+## Side project
+- [Berlin Swim Times](https://berlin-swim-times.johannesotterbach.com/): public swimming times at Berlin's public pools, updated daily
